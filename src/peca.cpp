@@ -1,10 +1,9 @@
-#include "peca.h"
+#include "peca.hpp"
 
-Peca::Peca(Cor cor) {
-  _cor = cor;
-  _dama = false;
-}
+Peca::Peca(int linha, int coluna):
+    linha(linha),
+    coluna(coluna){}
 
-Cor Peca::get_cor() {
-  return _cor;
+Peca::~Peca(){
+    
 }

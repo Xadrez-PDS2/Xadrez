@@ -1,8 +1,59 @@
-#include <iostream>
 
-#include "tabuleiro.h"
+#include "tabuleiro.hpp"
 
+Tabuleiro::Tabuleiro(int tamanho):
+tamanho(tamanho)
+{
+    for (int i = 0; i < this->tamanho; i++){
+        this->casas.push_back(std::vector<Peca *>());
+        for(int j = 0; j < this->tamanho; j++){
+            this->casas[i].push_back(nullptr);
+        }
+    }
+}
 
+void Tabuleiro::adciona_peca(const std::string &peca, int linha, int coluna){
+    if (peca == "peao")
+        this->casas[linha][coluna] = new Peao(linha, coluna);
+    else if (peca == "torre")
+        this->casas[linha][coluna] = new Torre(linha, coluna);
+    else if (peca == "cavalo")
+        this->casas[linha][coluna] = new Cavalo(linha, coluna);
+    else if (peca == "bispo")
+        this->casas[linha][coluna] = new Bispo(linha, coluna);
+    else if (peca == "dama")
+        this->casas[linha][coluna] = new Dama(linha, coluna);
+    else if (peca == "rei")
+        this->casas[linha][coluna] = new Rei(linha, coluna);
+}
+
+int Tabuleiro::get_tamanho(){
+    return this->tamanho;
+}
+
+void Tabuleiro::imprime(){
+  for (int i = 0; i < this->tamanho; i++){
+    for (int j = 0; j < this->tamanho;j++){
+        if(this->casas[i][j] != nullptr)
+            std::cout << " [" << this->casas[i][j]->get_representacao() << "] ";
+        else
+            std::cout << " [     ] ";
+    }
+    std::cout << std::endl;
+  }
+}
+
+Tabuleiro::~Tabuleiro() {
+  for (std::vector<Peca *> linha : this->casas) {
+    for (Peca *peca_ptr : linha) {
+      if (peca_ptr != nullptr) {
+        delete peca_ptr;
+      }
+    }
+  }
+}
+
+/*
 Tabuleiro::Tabuleiro() {
   int tamanho = 8;
   int inicio = 3;
@@ -75,4 +126,4 @@ void Tabuleiro::imprime() {
     }
     cout << endl;
   }
-}
+}*/

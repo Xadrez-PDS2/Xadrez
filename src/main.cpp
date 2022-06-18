@@ -1,11 +1,8 @@
-#include "tabuleiro.h"
+#include "jogo.hpp"
 
 int main() {
-  Tabuleiro *tab = new Tabuleiro();
-  tab->imprime();
-  while(tab->jogo_valido()) {
-    tab->movimenta();
-  }
-  delete tab;
+  Jogo* jogo = new Jogo();
+  jogo->imprime();
+  delete jogo;
   return 0;
 }
