@@ -3,6 +3,10 @@
 
 #include <string>
 
+enum Cor {
+    BRANCAS, PRETAS
+};
+
 
 class Peca {
     /**
@@ -13,8 +17,9 @@ class Peca {
         * @brief construtor padrão de uma peca
         * @param linha Posicao inicial da linha que a peca ocupa no tabuleiro
         * @param coluna Posicao inicial da coluna que a peca ocupa no tabuleiro
+        * @param cor Cor da peca
         */
-        Peca(int linha, int coluna);
+        Peca(int linha, int coluna, Cor cor);
         /**
         * @brief Destrutor da classe.
         */
@@ -27,10 +32,15 @@ class Peca {
 
 
     private:
+            /**
+            * @brief posicoes de coluna e de linha da peca  
+            */
+        int linha, coluna;
         /**
-        * @brief posicoes na coluna linha e na linha coluna da peca  
-        */
-    int linha, coluna;
+         * @brief Cor da peca
+         * 
+         */
+        Cor cor;
 };
 
 #endif

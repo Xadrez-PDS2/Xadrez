@@ -34,8 +34,9 @@ public:
      * @param peca string do nome da peca
      * @param linha posicao na linha
      * @param coluna posicao na coluna
+     * @param cor  cor da peca
      */
-    void adciona_peca(const std::string &peca, int linha, int coluna);
+    void adciona_peca(const std::string &peca, int linha, int coluna, Cor cor);
     /**
      * @return retorna o tamanho do tabuleiro
      * 

@@ -13,8 +13,9 @@ public:
      * @brief Construtor de um objeto cavalo
      * @param linha Posicao inicial da linha que o cavalo ocupa no tabuleiro
      * @param coluna Posicao inicial da coluna que o cavalo ocupa no tabuleiro
+     * @param cor Cor da peca
      */
-    Cavalo(int linha, int coluna);
+    Cavalo(int linha, int coluna, Cor cor);
     /**
      * @brief Destrutor de um objeto cavalo
      * 

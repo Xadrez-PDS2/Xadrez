@@ -1,8 +1,9 @@
 #include "peca.hpp"
 
-Peca::Peca(int linha, int coluna):
+Peca::Peca(int linha, int coluna, Cor cor):
     linha(linha),
-    coluna(coluna){}
+    coluna(coluna),
+    cor(cor){}
 
 Peca::~Peca(){
     

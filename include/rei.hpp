@@ -13,8 +13,9 @@ public:
      * @brief Construtor de um objeto rei
      * @param linha Posicao inicial da linha que o rei ocupa no tabuleiro
      * @param coluna Posicao inicial da coluna que o rei ocupa no tabuleiro
+     * @param cor Cor da peca
      */
-    Rei(int linha, int coluna);
+    Rei(int linha, int coluna, Cor cor);
     /**
      * @brief Destrutor de um objeto rei
      * 

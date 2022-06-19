@@ -12,19 +12,19 @@ tamanho(tamanho)
     }
 }
 
-void Tabuleiro::adciona_peca(const std::string &peca, int linha, int coluna){
+void Tabuleiro::adciona_peca(const std::string &peca, int linha, int coluna, Cor cor){
     if (peca == "peao")
-        this->casas[linha][coluna] = new Peao(linha, coluna);
+        this->casas[linha][coluna] = new Peao(linha, coluna, cor);
     else if (peca == "torre")
-        this->casas[linha][coluna] = new Torre(linha, coluna);
+        this->casas[linha][coluna] = new Torre(linha, coluna, cor);
     else if (peca == "cavalo")
-        this->casas[linha][coluna] = new Cavalo(linha, coluna);
+        this->casas[linha][coluna] = new Cavalo(linha, coluna, cor);
     else if (peca == "bispo")
-        this->casas[linha][coluna] = new Bispo(linha, coluna);
+        this->casas[linha][coluna] = new Bispo(linha, coluna, cor);
     else if (peca == "dama")
-        this->casas[linha][coluna] = new Dama(linha, coluna);
+        this->casas[linha][coluna] = new Dama(linha, coluna, cor);
     else if (peca == "rei")
-        this->casas[linha][coluna] = new Rei(linha, coluna);
+        this->casas[linha][coluna] = new Rei(linha, coluna, cor);
 }
 
 int Tabuleiro::get_tamanho(){

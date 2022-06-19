@@ -13,8 +13,9 @@ public:
      * @brief Construtor de um objeto dama
      * @param linha Posicao inicial da linha que a dama ocupa no tabuleiro
      * @param coluna Posicao inicial da coluna que a dama ocupa no tabuleiro
+     * @param cor Cor da peca
      */
-    Dama(int linha, int coluna);
+    Dama(int linha, int coluna, Cor cor);
     /**
      * @brief Destrutor de um objeto dama
      * 

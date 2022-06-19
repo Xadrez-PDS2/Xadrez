@@ -6,9 +6,7 @@
 
 #include "tabuleiro.hpp"
 
-enum Cor {
-    BRANCAS, PRETAS
-};
+
 
 class Jogador {
 public:

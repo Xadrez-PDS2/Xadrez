@@ -11,10 +11,11 @@ class Peao : public Peca{
 public:
     /**
      * @brief Construtor de um objeto peao
-     * @param x Posicao inicial x que o peao ocupa no tabuleiro
-     * @param y Posicao inicial y que o peao ocupa no tabuleiro
+     * @param linha Posicao inicial na linha que o peao ocupa no tabuleiro
+     * @param coluna Posicao inicial na coluna que o peao ocupa no tabuleiro
+     * @param cor Cor da peca
      */
-    Peao(int x, int y);
+    Peao(int linha, int coluna, Cor cor);
     /**
      * @brief Destrutor de um objeto peao
      * 

@@ -13,8 +13,9 @@ public:
      * @brief Construtor de um objeto torre
      * @param linha Posicao inicial da linha que a torre ocupa no tabuleiro
      * @param coluna Posicao inicial da coluna que a torre ocupa no tabuleiro
+     * @param cor Cor da peca
      */
-    Torre(int linha, int coluna);
+    Torre(int linha, int coluna, Cor cor);
     /**
      * @brief Destrutor de um objeto torre
      * 
