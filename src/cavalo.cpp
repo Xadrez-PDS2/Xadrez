@@ -6,3 +6,7 @@ Cavalo::Cavalo(int linha, int coluna, Cor cor):
 std::string Cavalo::get_representacao(){
     return " CAV ";
 }
+
+std::string Cavalo::get_tipo(){
+    return "cavalo";
+}

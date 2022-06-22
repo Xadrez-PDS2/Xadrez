@@ -26,6 +26,8 @@ public:
      */
     virtual std::string get_representacao() override;
 
+    virtual std::string get_tipo() override;
+    
 private:
 };
 

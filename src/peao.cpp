@@ -6,3 +6,7 @@ Peao::Peao(int linha, int coluna, Cor cor):
 std::string Peao::get_representacao(){
     return " PAO ";
 }
+
+std::string Peao::get_tipo(){
+    return "peao";
+}

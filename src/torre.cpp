@@ -6,3 +6,7 @@ Torre::Torre(int linha, int coluna, Cor cor):
 std::string Torre::get_representacao(){
     return " TOR ";
 }
+
+std::string Torre::get_tipo(){
+    return "torre";
+}

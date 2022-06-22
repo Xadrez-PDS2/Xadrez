@@ -29,8 +29,16 @@ class Peca {
          * A representacao da peca deve possuir 5 caracteres incluindo um espaco antes e depois
          */
         virtual std::string get_representacao() = 0;
-
-
+        
+        /**
+         * @brief retorna o nome do tipo da peça
+         */
+        virtual std::string get_tipo() = 0;
+        
+        /**
+        * @brief retorna Cor da peça
+        */
+        Cor get_cor();
     private:
             /**
             * @brief posicoes de coluna e de linha da peca  

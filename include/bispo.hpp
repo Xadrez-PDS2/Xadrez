@@ -25,6 +25,9 @@ public:
      * @return retorna a representacao do bispo em forma de string
      */
     virtual std::string get_representacao() override;
+
+    virtual std::string get_tipo() override;
+    
 private:
 
 };

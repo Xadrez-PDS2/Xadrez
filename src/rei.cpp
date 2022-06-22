@@ -6,3 +6,7 @@ Rei::Rei(int linha, int coluna, Cor cor):
 std::string Rei::get_representacao(){
     return " REI ";
 }
+
+std::string Rei::get_tipo(){
+    return "rei";
+}

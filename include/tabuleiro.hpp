@@ -37,12 +37,25 @@ public:
      * @param cor  cor da peca
      */
     void adciona_peca(const std::string &peca, int linha, int coluna, Cor cor);
+
+    /**
+     * @brief Deleta a peça se houver
+     * 
+     * @param linha
+     * @param coluna 
+     */
+    void limpa_casa( int linha, int coluna);
     /**
      * @return retorna o tamanho do tabuleiro
      * 
      */
     int get_tamanho();
-
+    
+      /**
+     * @brief Retorna o ponteiro da casa do tabuleiro
+     */
+    Peca* get_casa(int linha,int coluna);
+    
 private:
     /**
      * @brief Matriz de coordenadas que contem os enderecos das pecas existentes

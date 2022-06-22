@@ -25,6 +25,8 @@ public:
      * @return retorna a representacao da torre em forma de string
      */
     virtual std::string get_representacao() override;
+
+    virtual std::string get_tipo() override;
 private:
 };
 

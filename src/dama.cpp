@@ -6,3 +6,7 @@ Dama::Dama(int linha, int coluna, Cor cor):
 std::string Dama::get_representacao(){
     return " DAM ";
 }
+
+std::string Dama::get_tipo(){
+    return "dama ";
+}

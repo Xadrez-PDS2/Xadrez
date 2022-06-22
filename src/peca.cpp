@@ -8,3 +8,6 @@ Peca::Peca(int linha, int coluna, Cor cor):
 Peca::~Peca(){
     
 }
+Cor Peca::get_cor(){
+    return cor;
+}

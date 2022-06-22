@@ -64,3 +64,6 @@ void Jogador::imprime(){
 Jogador::~Jogador(){
 
 }
+Cor Jogador::get_cor(){
+    return cor;
+}

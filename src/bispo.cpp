@@ -6,3 +6,7 @@ Bispo::Bispo(int linha, int coluna, Cor cor):
 std::string Bispo::get_representacao(){
     return " BIS ";
 }
+
+std::string Bispo::get_tipo(){
+    return "bispo";
+}

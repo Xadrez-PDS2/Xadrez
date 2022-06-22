@@ -30,6 +30,11 @@ public:
      * @param tabuleiro endereco do tabuleiro utilizado
      */
     void constroi_pecas(Tabuleiro* tabuleiro);
+    
+    /**
+    * @brief retorna cor do jogador
+    **/
+    Cor get_cor();
 
 private:
     /**
