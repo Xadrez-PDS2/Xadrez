@@ -1,0 +1,7 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+Arquivo n�o encontrado  - *.cpp
+
+make.exe: Entering directory 'c:/Users/tete1/Desktop/MINHA VERS�O'
+g++  -o main
+make.exe: Leaving directory 'c:/Users/tete1/Desktop/MINHA VERS�O'
+ 

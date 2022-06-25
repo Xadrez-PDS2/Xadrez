@@ -1,9 +1,6 @@
 #ifndef TABULEIRO_HPP
 #define TABULEIRO_HPP
 
-#include <vector>
-#include <iostream>
-
 #include "peca.hpp"
 #include "peao.hpp"
 #include "bispo.hpp"
@@ -12,48 +9,57 @@
 #include "dama.hpp"
 #include "rei.hpp"
 
+#include <vector>
+#include <iostream>
 
-class Tabuleiro {
-public:
-    /**
-    * @brief Construtor de um objeto tabuleiro
-    * @param tamanho define o tamanho para as n colunas e n linhas do tabuleiro
-    */
-    Tabuleiro(int tamanho);
-    /**
-     * @brief Destrutor de um objeto tabuleiro
-     */
-    ~Tabuleiro();
-    /**
-     * @brief Imprime o estado atual do tabuleiro
-     * 
-     */
-    void imprime();
-    /**
-     * @brief Adiciona a peca naquela posicao
-     * @param peca string do nome da peca
-     * @param linha posicao na linha
-     * @param coluna posicao na coluna
-     * @param cor  cor da peca
-     */
-    void adciona_peca(const std::string &peca, int linha, int coluna, Cor cor);
-    /**
-     * @return retorna o tamanho do tabuleiro
-     * 
-     */
-    int get_tamanho();
 
-private:
-    /**
-     * @brief Matriz de coordenadas que contem os enderecos das pecas existentes
-     */
-    std::vector <std::vector <Peca *>> casas;
-    /**
-     * @brief Tamanho do tabuleiro
-     * 
-     */
-    const int tamanho;
+class Tabuleiro 
+{
+    public:
+        /**
+        * @brief Construtor de um objeto tabuleiro
+        * @param tamanho define o tamanho para as n colunas e n linhas do tabuleiro
+        */
+        Tabuleiro(int tamanho);
+        /**
+        * @brief Destrutor de um objeto tabuleiro
+        */
+        ~Tabuleiro();
+        /**
+        * @brief Imprime o estado atual do tabuleiro
+        * 
+        */
+        void imprime();
+        /**
+        * @brief Adiciona a peca naquela posicao
+        * @param peca string do nome da peca
+        * @param linha posicao na linha
+        * @param coluna posicao na coluna
+        * @param cor  cor da peca
+        */
+        void adiciona_peca(const std::string &peca, int linha, int coluna, Cor cor);
+        /**
+        * @brief Deleta a peça se houver
+        * 
+        * @param linha
+        * @param coluna 
+        */
+        void limpa_casa( int linha, int coluna);    
+        /**
+        * @brief Retorna o ponteiro da casa do tabuleiro
+        */
+        Peca* get_casa(int linha, int coluna);
 
+    private:
+        /**
+        * @brief Matriz de coordenadas que contem os enderecos das pecas existentes
+        */
+        std::vector <std::vector <Peca *>> casas;
+        /**
+        * @brief Tamanho do tabuleiro
+        * 
+        */
+        const int tamanho;
 };
 
 #endif

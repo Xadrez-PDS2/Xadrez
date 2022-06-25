@@ -5,6 +5,12 @@ Peca::Peca(int linha, int coluna, Cor cor):
     coluna(coluna),
     cor(cor){}
 
-Peca::~Peca(){
+Peca::~Peca()
+{
     
+}
+
+Cor Peca::get_cor()
+{
+    return cor;
 }

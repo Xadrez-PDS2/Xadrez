@@ -3,15 +3,17 @@
 
 #include <string>
 
-enum Cor {
+
+enum Cor 
+{
     BRANCAS, PRETAS
 };
 
-
-class Peca {
-    /**
-     * @brief Classe que cuida de todas as funcionalidades gerais de uma peca
-     */
+/**
+* @brief Classe que cuida de todas as funcionalidades gerais de uma peca
+*/
+class Peca 
+{
     public:
         /**
         * @brief construtor padrão de uma peca
@@ -28,8 +30,11 @@ class Peca {
          * @return retorna a reprentacao da peca em forma de string
          * A representacao da peca deve possuir 5 caracteres incluindo um espaco antes e depois
          */
-        virtual std::string get_representacao() = 0;
-
+        virtual std::string get_representacao() = 0;        
+        /**
+        * @brief retorna Cor da peça
+        */
+        Cor get_cor();
 
     private:
             /**
