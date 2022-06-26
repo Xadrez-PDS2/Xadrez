@@ -2,6 +2,7 @@
 #define JOGADOR_HPP
 
 #include "tabuleiro.hpp"
+#include "peca.hpp"
 
 #include <string>
 #include <map>

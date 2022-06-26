@@ -7,6 +7,54 @@
 #include <iostream>
 
 
+
+
+class ErroDeJogoException : public std::exception
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Movimentação Inválida!";
+        }
+};
+
+class ForaDoMapaException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "A peça não pode ser movimentada para fora do tabuleiro.";
+        }
+};
+
+class SemPecaParaMovimentarException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não há peça na casa selecionada para realizar a movimentação.";
+        }
+};
+
+class NaoESuaVezException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não é sua vez de realizar a movimentação.";
+        }
+};
+
+class PecaNaFrenteException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "A peça não pode ser movimentada para a casa selecionada porque tem uma peça no caminho.";
+        }
+};
+
+
 class Movimento
 {
     public:
@@ -24,6 +72,7 @@ class Movimento
         *@brief executa o movimento, modificando o tabuleiro
         */
         void executar_movimento();
+        void validar_movimento();
 
     private:
         Tabuleiro *tabuleiro;
