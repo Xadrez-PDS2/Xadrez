@@ -45,7 +45,6 @@ void Jogo::jogada()
     std::cin >> linha_inicial >> coluna_inicial >> linha_final >> coluna_final;
     std::cout << "Posições escolhidas: " << linha_inicial << coluna_inicial << " para " << linha_final << coluna_final << std::endl;
     Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
-    
     int tamanho = 8;
 
     movimento.validar_movimento();
@@ -68,6 +67,16 @@ void Jogo::jogada()
     }
 
     catch(NaoESuaVezException &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    catch(PecaAliadaException &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    catch(MovimentoInvalidoException &e)
     {
         std::cout << e.what() << std::endl;
     }

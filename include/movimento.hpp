@@ -54,6 +54,24 @@ class PecaNaFrenteException : public ErroDeJogoException
         }
 };
 
+class PecaAliadaException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "O jogador não pode tomar as suas próprias pecas";
+        }
+};
+
+class MovimentoInvalidoException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "A peca não pode realizar este movimento.";
+        }
+};
+
 
 class Movimento
 {
@@ -73,6 +91,42 @@ class Movimento
         */
         void executar_movimento();
         void validar_movimento();
+        /**
+         * @brief Checa se a movimentação da peça é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        void checa_movimento_peca();
+        /**
+         * @brief Checa se a movimentação do peão é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        bool checa_movimento_peao();
+        /**
+         * @brief Checa se a movimentação do cavalo é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        bool checa_movimento_cavalo();
+        /**
+         * @brief Checa se a movimentação da torre é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        bool checa_movimento_torre();
+        /**
+         * @brief Checa se a movimentação do bispo é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        bool checa_movimento_bispo();
+        /**
+         * @brief Checa se a movimentação da dama é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        bool checa_movimento_dama();
+        /**
+         * @brief Checa se a movimentação do rei é válida 
+         * @return verdadeiro se a movimentação da peça é válida 
+         */
+        bool checa_movimento_rei();
+
 
     private:
         Tabuleiro *tabuleiro;

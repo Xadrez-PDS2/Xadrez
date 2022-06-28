@@ -37,9 +37,9 @@ class Peca
         Cor get_cor();
 
     private:
-            /**
-            * @brief posicoes de coluna e de linha da peca  
-            */
+        /**
+        * @brief posicoes de coluna e de linha da peca  
+        */
         int linha, coluna;
         /**
          * @brief Cor da peca

@@ -26,6 +26,11 @@ class Peao : public Peca
         * @return retorna a representacao do peao em forma de string
         */
         virtual std::string get_representacao() override;
+    
+        /**
+         * @brief guarda a informação se esta é a primeira movimentação do peão
+         */
+        bool primeiro_movimento;
 };
 
 #endif

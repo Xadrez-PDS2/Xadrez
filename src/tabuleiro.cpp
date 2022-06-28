@@ -48,14 +48,21 @@ void Tabuleiro::imprime()
     {
         for (int j = 0; j < this->tamanho;j++)
         {
-            if(this->casas[i][j] != nullptr)
+            if(this->casas[i][j] != nullptr){
+                if (this->casas[i][j]->get_cor() == Cor::BRANCAS)
+                    std::cout << "\033[7m";
                 std::cout << " [" << this->casas[i][j]->get_representacao() << "] ";
+            }
             else
                 std::cout << " [     ] ";
+            std::cout << "\033[0m";
         }
-
-        std::cout << std::endl;
+        std::cout << "  "<< i << std::endl;
     }
+    for (int i = 0; i < this->tamanho; i++){
+      std::cout << "    " << i << "    ";
+    }
+    std::cout << std::endl;
 }
 
 Tabuleiro::~Tabuleiro() 

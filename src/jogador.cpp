@@ -3,10 +3,9 @@
 
 
 
-Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor)
-    
-    {   this->cor=cor;
-        this->constroi_pecas(tabuleiro);
+Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor){   
+    this->cor = cor;
+    this->constroi_pecas(tabuleiro);
     }
 
 Jogador::~Jogador()
@@ -49,7 +48,7 @@ void Jogador::constroi_pecas(Tabuleiro* tabuleiro)
             tabuleiro->adiciona_peca(" TOR ", 0, 0, this->cor);
             tabuleiro->adiciona_peca(" TOR ", 0, 7, this->cor);
             tabuleiro->adiciona_peca(" CAV ", 0, 1, this->cor);
-            tabuleiro->adiciona_peca(" CAV", 0, 6, this->cor);
+            tabuleiro->adiciona_peca(" CAV ", 0, 6, this->cor);
             tabuleiro->adiciona_peca(" BIS ", 0, 2, this->cor);
             tabuleiro->adiciona_peca(" BIS ", 0, 5, this->cor);
             tabuleiro->adiciona_peca(" DAM ", 0, 3, this->cor);
