@@ -93,39 +93,32 @@ class Movimento
         void validar_movimento();
         /**
          * @brief Checa se a movimentação da peça é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
         void checa_movimento_peca();
         /**
          * @brief Checa se a movimentação do peão é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
-        bool checa_movimento_peao();
+        void checa_movimento_peao();
         /**
          * @brief Checa se a movimentação do cavalo é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
-        bool checa_movimento_cavalo();
+        void checa_movimento_cavalo();
         /**
          * @brief Checa se a movimentação da torre é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
-        bool checa_movimento_torre();
+        void checa_movimento_torre();
         /**
          * @brief Checa se a movimentação do bispo é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
-        bool checa_movimento_bispo();
+        void checa_movimento_bispo();
         /**
          * @brief Checa se a movimentação da dama é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
-        bool checa_movimento_dama();
+        void checa_movimento_dama();
         /**
          * @brief Checa se a movimentação do rei é válida 
-         * @return verdadeiro se a movimentação da peça é válida 
          */
-        bool checa_movimento_rei();
+        void checa_movimento_rei();
 
 
     private:

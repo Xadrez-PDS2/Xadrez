@@ -1,5 +1,4 @@
 #include "jogo.hpp"
-#include <cstddef>
 #include "peca.hpp"
 
 Jogo::Jogo()
@@ -77,6 +76,11 @@ void Jogo::jogada()
     }
 
     catch(MovimentoInvalidoException &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    catch(PecaNaFrenteException &e)
     {
         std::cout << e.what() << std::endl;
     }

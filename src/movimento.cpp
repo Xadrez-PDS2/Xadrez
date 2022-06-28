@@ -62,118 +62,111 @@ void Movimento::validar_movimento(){
 void Movimento::checa_movimento_peca(){
     //peão
     if(peca->get_representacao() == " PEA ")
-        if(!checa_movimento_peao())
-            throw MovimentoInvalidoException();
+        checa_movimento_peao();
     //cavalo
     else if(peca->get_representacao() == " CAV ")
-        if(!checa_movimento_cavalo())
-            throw MovimentoInvalidoException();
+        checa_movimento_cavalo();
     //bispo
     else if(peca->get_representacao() == " BIS ")
-        if(!checa_movimento_bispo())
-            throw MovimentoInvalidoException();
+        checa_movimento_bispo();
     //torre
     else if(peca->get_representacao() == " TOR ")
-        if(!checa_movimento_torre())
-            throw MovimentoInvalidoException();
+        checa_movimento_torre();
     //dama
     else if(peca->get_representacao() == " DAM ")
-        if(!checa_movimento_dama())
-            throw MovimentoInvalidoException();
+        checa_movimento_dama();
     //rei
     else if(peca->get_representacao() == " REI ")
-        if(!checa_movimento_rei())
-            throw MovimentoInvalidoException();
+        checa_movimento_rei();
 }
 /**
  *@todo Implementar a promoção e o 'en passant'
- *@todo bug:Peca consegue realizar o movimento inicial a qualquer momento da partida
+ *@todo bug:Peão consegue realizar o movimento inicial a qualquer momento da partida
 */
-bool Movimento::checa_movimento_peao(){
+void Movimento::checa_movimento_peao(){
     Peao peao = Peao(linha_inicial, coluna_inicial, jogador->get_cor());
     switch (peao.get_cor()){
         case Cor::BRANCAS:
             //verifica se o peao andou mais de duas casas ou para trás
             if (linha_final > linha_inicial+2 || linha_final < linha_inicial)
-                return false;
+                throw MovimentoInvalidoException();
             //verifica se a posição final esta vazia 
             if (tabuleiro->get_casa(linha_final, coluna_final) == nullptr){
                 //verifica se o peao se manteve na coluna
                 if (coluna_final != coluna_inicial)
-                    return false;
+                    throw MovimentoInvalidoException();
                 //verifica se o peao parou em uma posição duas linhas a frente e se é o primeiro movimento
                 else if (linha_final == linha_inicial+2 && peao.primeiro_movimento){
                     //verifica se existe qualquer peca no caminho do peão
                     if (tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
-                        return false;
+                        throw PecaNaFrenteException();
                 }
             }
             //caso haja alguma peça na posição final
             else {
                 //verifica se o peao mudou para uma coluna adjacente
                 if (coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
-                    return false;
+                    throw MovimentoInvalidoException();
                 //verifica se o peao parou em uma posição a frente 
                 else if (linha_final != linha_inicial+1)
-                    return false;
+                    throw MovimentoInvalidoException();
             }
             break;
         case Cor::PRETAS:
             //verifica se o peao andou mais de duas casas ou para trás 
             if (linha_final < linha_inicial-2 || linha_final > linha_inicial)
-                return false;
+                throw MovimentoInvalidoException();
             //verifica se a posição final esta vazia 
             if (tabuleiro->get_casa(linha_final, coluna_final) == nullptr){
                 //verifica se o peao se manteve na coluna
                 if (coluna_final != coluna_inicial)
-                    return false;
+                    throw MovimentoInvalidoException();
                 //verifica se o peao parou em uma posição duas linhas a frente e se é o primeiro movimento
                 else if (linha_final == linha_inicial-2 && peao.primeiro_movimento){
                     //verifica se existe qualquer peca no caminho do peão
                     if (tabuleiro->get_casa(linha_inicial-1, coluna_inicial) != nullptr)
-                        return false;
+                        throw PecaNaFrenteException();
                 } 
             }
             //caso haja alguma peça na posição final
             else {
                 //verifica se o peao mudou para uma coluna adjacente
                 if (coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
-                    return false;
+                    throw MovimentoInvalidoException();
                 //verifica se o peao parou em uma posição a frente 
                 else if (linha_final != linha_inicial-1)
-                    return false;
+                    throw MovimentoInvalidoException();
             }
             break;
     }
-    return true;
 }
 /**
  *@todo Implementar este metodo
 */
-bool Movimento::checa_movimento_cavalo(){
-    return true;
+void Movimento::checa_movimento_cavalo(){
+    
 }
 /**
  *@todo Implementar este metodo
 */
-bool Movimento::checa_movimento_torre(){
-    return true;
+void Movimento::checa_movimento_torre(){
+    
 }
 /**
  *@todo Implementar este metodo
 */
-bool Movimento::checa_movimento_bispo(){
-    return true;
+void Movimento::checa_movimento_bispo(){
+    
 }
 /**
  *@todo Implementar este metodo
 */
-bool Movimento::checa_movimento_dama(){
-    return true;
+void Movimento::checa_movimento_dama(){
+    
 }
 /**
  *@todo Implementar este metodo
 */
-bool Movimento::checa_movimento_rei(){
-    return true;
+void Movimento::checa_movimento_rei(){
+    
 }
