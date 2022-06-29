@@ -36,18 +36,22 @@ void Tabuleiro::adiciona_peca(const std::string &peca, int linha, int coluna, Co
         this->casas[linha][coluna] = new Rei(linha, coluna, cor);
 }
 
-void Tabuleiro::limpa_casa(int linha, int coluna){
-  
-  if(casas[linha][coluna]!=nullptr){delete casas[linha][coluna];}
-  casas[linha][coluna]=nullptr;
+void Tabuleiro::adiciona_peca_existente(Peca *peca, int linha, int coluna){
+  this->casas[peca->get_casas().first][peca->get_casas().second] = nullptr;
+  peca->set_casas(linha, coluna);
+  this->casas[linha][coluna] = peca;
 }
 
-void Tabuleiro::imprime()
-{
-    for (int i = 0; i < this->tamanho; i++)
-    {
-        for (int j = 0; j < this->tamanho;j++)
-        {
+void Tabuleiro::limpa_casa(int linha, int coluna){
+    if(casas[linha][coluna]!=nullptr){
+        delete casas[linha][coluna];
+    }
+    casas[linha][coluna] = nullptr;
+}
+
+void Tabuleiro::imprime(){
+    for (int i = 0; i < this->tamanho; i++){
+        for (int j = 0; j < this->tamanho;j++){
             if(this->casas[i][j] != nullptr){
                 if (this->casas[i][j]->get_cor() == Cor::BRANCAS)
                     std::cout << "\033[7m";
@@ -65,8 +69,7 @@ void Tabuleiro::imprime()
     std::cout << std::endl;
 }
 
-Tabuleiro::~Tabuleiro() 
-{
+Tabuleiro::~Tabuleiro() {
     for(std::vector<Peca *> linha : this->casas) 
     {
         for(Peca *peca_ptr : linha) 
@@ -86,17 +89,17 @@ Peca* Tabuleiro::get_casa(int linha, int coluna)
 
 /*
 Tabuleiro::Tabuleiro() {
-  int tamanho = 8;
-  int inicio = 3;
+    int tamanho = 8;
+    int inicio = 3;
 
-  for (int i = 0; i < tamanho; i++) {
-    _casas.push_back(vector<Peca *>());
-    for (int j = 0; j < tamanho; j++) {
-      _casas[i].push_back(nullptr);
+    for (int i = 0; i < tamanho; i++) {
+        _casas.push_back(vector<Peca *>());
+        for (int j = 0; j < tamanho; j++) {
+        _casas[i].push_back(nullptr);
     }
-  }
+}
 
-  for (int i = 0; i < inicio; i++) {
+for (int i = 0; i < inicio; i++) {
     for (int j = 0; j < tamanho - 1; j+=2) {
       if (i % 2 == 0)
         _casas[i][j] = new Peca(Cor::VERMELHA);

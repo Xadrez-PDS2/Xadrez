@@ -30,12 +30,9 @@ Movimento::Movimento(
         this->jogador = jogador;   
     }
 
-void Movimento::executar_movimento()
-{   
-    const std::string &tipo = peca->get_representacao(); 
+void Movimento::executar_movimento(){    
     tabuleiro->limpa_casa(linha_final, coluna_final);
-    tabuleiro->adiciona_peca(tipo,linha_final, coluna_final, peca->get_cor());
-    tabuleiro->limpa_casa(linha_inicial, coluna_inicial);   
+    tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final);  
 }
 void Movimento::validar_movimento(){
     //Confere se o movimento está dentro do tabuleiro
@@ -81,11 +78,9 @@ void Movimento::checa_movimento_peca(){
 }
 /**
  *@todo Implementar a promoção e o 'en passant'
- *@todo bug:Peão consegue realizar o movimento inicial a qualquer momento da partida
 */
 void Movimento::checa_movimento_peao(){
-    Peao peao = Peao(linha_inicial, coluna_inicial, jogador->get_cor());
-    switch (peao.get_cor()){
+    switch (peca->get_cor()){
         case Cor::BRANCAS:
             //verifica se o peao andou mais de duas casas ou para trás
             if (linha_final > linha_inicial+2 || linha_final < linha_inicial)
@@ -95,11 +90,18 @@ void Movimento::checa_movimento_peao(){
                 //verifica se o peao se manteve na coluna
                 if (coluna_final != coluna_inicial)
                     throw MovimentoInvalidoException();
-                //verifica se o peao parou em uma posição duas linhas a frente e se é o primeiro movimento
-                else if (linha_final == linha_inicial+2 && peao.primeiro_movimento){
-                    //verifica se existe qualquer peca no caminho do peão
-                    if (tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
-                        throw PecaNaFrenteException();
+                //verifica se o peao parou em uma posição duas linhas a frente 
+                else if (linha_final == linha_inicial+2){
+                    //verifica se é o primeiro movimento
+                    if (peca->get_primeiro_movimento()){
+                        //verifica se existe qualquer peca no caminho do peão
+                        if (tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
+                            throw PecaNaFrenteException();
+                    }
+                    //Se não for o primeiro movimento
+                    else {
+                        throw MovimentoInvalidoException();
+                    } 
                 }
             }
             //caso haja alguma peça na posição final
@@ -121,11 +123,18 @@ void Movimento::checa_movimento_peao(){
                 //verifica se o peao se manteve na coluna
                 if (coluna_final != coluna_inicial)
                     throw MovimentoInvalidoException();
-                //verifica se o peao parou em uma posição duas linhas a frente e se é o primeiro movimento
-                else if (linha_final == linha_inicial-2 && peao.primeiro_movimento){
-                    //verifica se existe qualquer peca no caminho do peão
-                    if (tabuleiro->get_casa(linha_inicial-1, coluna_inicial) != nullptr)
-                        throw PecaNaFrenteException();
+                //verifica se o peao parou em uma posição duas linhas a frente
+                else if (linha_final == linha_inicial-2){
+                    //verifica se é o primeiro movimento
+                    if (peca->get_primeiro_movimento()){
+                        //verifica se existe qualquer peca no caminho do peão
+                        if (tabuleiro->get_casa(linha_inicial-1, coluna_inicial) != nullptr)
+                            throw PecaNaFrenteException();
+                    }
+                    //Se não for o primeiro movimento
+                    else {
+                        throw MovimentoInvalidoException();
+                    } 
                 } 
             }
             //caso haja alguma peça na posição final
@@ -139,6 +148,7 @@ void Movimento::checa_movimento_peao(){
             }
             break;
     }
+    peca->set_primeiro_movimento(false);
 }
 /**
  *@todo Implementar este metodo

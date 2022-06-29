@@ -23,9 +23,9 @@ class Peca
         */
         Peca(int linha, int coluna, Cor cor);
         /**
-        * @brief Destrutor da classe.
-        */
-        ~Peca();
+         * @brief Destrutor da peça
+         */
+        virtual ~Peca() {};
         /**
          * @return retorna a reprentacao da peca em forma de string
          * A representacao da peca deve possuir 5 caracteres incluindo um espaco antes e depois
@@ -35,6 +35,25 @@ class Peca
         * @brief retorna Cor da peça
         */
         Cor get_cor();
+        /**
+         * @brief retorna true se a peça ainda não see movimentou
+         */
+        bool get_primeiro_movimento();
+        /**
+         * @brief seta o primeiro_movimento
+         */
+        void set_primeiro_movimento(bool primeiro_movimento);
+        /**
+         * @brief retorna um pair->first que representa a linha atual da peça e pair->second que representa a coluna atual da peça 
+         */
+        std::pair<int, int> get_casas();
+        /**
+         * @brief Seta as posições da peça
+         * @param linha atual
+         * @param coluna atual
+         */
+        void set_casas(int linha, int coluna);
+
 
     private:
         /**
@@ -46,6 +65,11 @@ class Peca
          * 
          */
         Cor cor;
+        /**
+         * @brief guarda true se a peça não se movimentou
+         * 
+         */
+        bool primeiro_movimento;
 };
 
 #endif

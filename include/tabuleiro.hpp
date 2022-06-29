@@ -33,17 +33,26 @@ class Tabuleiro
         /**
         * @brief Adiciona a peca naquela posicao
         * @param peca string do nome da peca
-        * @param linha posicao na linha
-        * @param coluna posicao na coluna
+        * @param linha posição na linha
+        * @param coluna posição na coluna
         * @param cor  cor da peca
         */
         void adiciona_peca(const std::string &peca, int linha, int coluna, Cor cor);
+        /**
+         * @brief Adiciona uma peça existente ao tabuleiro
+         * 
+         * @param peca o endereço da peça que vai ser adicionada
+         * @param linha posição na linha
+         * @param coluna posição na coluna
+         */
+        void adiciona_peca_existente(Peca *peca, int linha, int coluna);
         /**
         * @brief Deleta a peça se houver
         * 
         * @param linha
         * @param coluna 
         */
+        
         void limpa_casa( int linha, int coluna);    
         /**
         * @brief Retorna o ponteiro da casa do tabuleiro
