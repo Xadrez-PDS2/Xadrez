@@ -19,9 +19,8 @@ class Peao : public Peca
         Peao(int linha, int coluna, Cor cor);
         /**
         * @brief Destrutor de um objeto peao
-        * 
         */
-        ~Peao();
+        virtual ~Peao() override;
         /** 
         * @return retorna a representacao do peao em forma de string
         */

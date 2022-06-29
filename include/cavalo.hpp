@@ -21,7 +21,7 @@ class Cavalo : public Peca
         * @brief Destrutor de um objeto cavalo
         * 
         */
-        ~Cavalo();
+        virtual ~Cavalo() override;
         /** 
         * @return retorna a representacao do cavalo em forma de string
         */

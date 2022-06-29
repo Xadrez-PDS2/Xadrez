@@ -21,7 +21,7 @@ class Torre : public Peca
         * @brief Destrutor de um objeto torre
         * 
         */
-        ~Torre();
+        virtual ~Torre() override;
         /** 
         * @return retorna a representacao da torre em forma de string
         */

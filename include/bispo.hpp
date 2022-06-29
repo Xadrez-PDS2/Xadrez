@@ -21,7 +21,7 @@ class Bispo : public Peca
         * @brief Destrutor de um objeto bispo
         * 
         */
-        ~Bispo();
+        virtual ~Bispo() override;
         /** 
         * @return retorna a representacao do bispo em forma de string
         */

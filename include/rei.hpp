@@ -21,7 +21,7 @@ class Rei : public Peca
         * @brief Destrutor de um objeto rei
         * 
         */
-        ~Rei();
+        virtual ~Rei() override;
         /** 
         * @return retorna a representacao do rei em forma de string
         */

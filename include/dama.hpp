@@ -21,7 +21,7 @@ class Dama : public Peca
         * @brief Destrutor de um objeto dama
         * 
         */
-        ~Dama();
+        virtual ~Dama() override;
         /** 
         * @return retorna a representacao da dama em forma de string
         */
