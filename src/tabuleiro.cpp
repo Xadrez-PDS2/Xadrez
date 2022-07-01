@@ -84,8 +84,12 @@ Tabuleiro::~Tabuleiro() {
 
 Peca* Tabuleiro::get_casa(int linha, int coluna)
 {
-  return casas[linha][coluna]; 
+    return casas[linha][coluna]; 
 }
+
+ int Tabuleiro::get_tamanho(){
+    return this->tamanho;
+} 
 
 /*
 Tabuleiro::Tabuleiro() {

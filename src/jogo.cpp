@@ -23,9 +23,11 @@ Jogo::~Jogo()
 
 void Jogo::imprime()
 {
-    p2->imprime();
-    tabuleiro->imprime();
+    p1->atualiza_pecas(tabuleiro);
+    p2->atualiza_pecas(tabuleiro);
     p1->imprime();
+    tabuleiro->imprime();
+    p2->imprime();
     std::cout << std::endl;
 }
 
@@ -35,7 +37,8 @@ bool Jogo::ativo()
 }
 
 void Jogo::jogada()
-{try{
+{
+try{
     int linha_inicial;
     int coluna_inicial;
     int linha_final;

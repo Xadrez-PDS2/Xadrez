@@ -58,6 +58,10 @@ class Tabuleiro
         * @brief Retorna o ponteiro da casa do tabuleiro
         */
         Peca* get_casa(int linha, int coluna);
+        /**
+         * @brief Retorna o tamanho do tabuleiro
+         */
+        int get_tamanho(); 
 
     private:
         /**

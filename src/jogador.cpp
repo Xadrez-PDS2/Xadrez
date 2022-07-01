@@ -2,7 +2,6 @@
 #include "peca.hpp"
 
 
-
 Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor){   
     this->cor = cor;
     this->constroi_pecas(tabuleiro);
@@ -35,13 +34,7 @@ void Jogador::imprime()
 
 void Jogador::constroi_pecas(Tabuleiro* tabuleiro)
 {
-    this->pecas["Peao   "] = 8;
-    this->pecas["Cavalo "] = 2;
-    this->pecas["Bispo  "] = 2;
-    this->pecas["Torre  "] = 2;
-    this->pecas["Dama   "] = 1;
-    this->pecas["Rei    "] = 1;
-    
+    this->zera_pecas();
     switch (this->cor)
     {
         case Cor::BRANCAS:
@@ -70,9 +63,47 @@ void Jogador::constroi_pecas(Tabuleiro* tabuleiro)
                 tabuleiro->adiciona_peca(" PEA ", 6, i, this->cor);
             break;
     }
+    this->atualiza_pecas(tabuleiro);
 }
 
 Cor Jogador::get_cor()
 {
     return cor;
+}
+
+void Jogador::atualiza_pecas(Tabuleiro* tabuleiro) {
+    this->zera_pecas();
+    for(int linha = 0; linha < tabuleiro->get_tamanho(); linha++) 
+    {
+        for(int coluna = 0; coluna < tabuleiro->get_tamanho(); coluna++) 
+        {
+            if (tabuleiro->get_casa(linha, coluna) != nullptr)
+            {
+                std::string peca = tabuleiro->get_casa(linha, coluna)->get_representacao();
+                Cor cor_da_peca = tabuleiro->get_casa(linha, coluna)->get_cor();
+                if (peca == " PEA " && cor_da_peca == this->cor)
+                    pecas["Peao   "]++;
+                else if (peca == " TOR " && cor_da_peca == this->cor)
+                    pecas["Torre  "]++;
+                else if (peca == " CAV " && cor_da_peca == this->cor)
+                    pecas["Cavalo "]++;
+                else if (peca == " BIS " && cor_da_peca == this->cor)
+                    pecas["Bispo  "]++;
+                else if (peca == " DAM " && cor_da_peca == this->cor)
+                    pecas["Dama   "]++; 
+                else if (peca == " REI " && cor_da_peca == this->cor)
+                    pecas["Rei    "]++; 
+            }
+        }
+    }
+}
+
+void Jogador::zera_pecas()
+{
+    this->pecas["Peao   "] = 0;
+    this->pecas["Cavalo "] = 0;
+    this->pecas["Bispo  "] = 0;
+    this->pecas["Torre  "] = 0;
+    this->pecas["Dama   "] = 0;
+    this->pecas["Rei    "] = 0;
 }

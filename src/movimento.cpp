@@ -32,7 +32,7 @@ Movimento::Movimento(
 
 void Movimento::executar_movimento(){    
     tabuleiro->limpa_casa(linha_final, coluna_final);
-    tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final);  
+    tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
 }
 void Movimento::validar_movimento(){
     //Confere se o movimento está dentro do tabuleiro

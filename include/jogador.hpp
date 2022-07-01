@@ -35,6 +35,14 @@ class Jogador
         * @brief retorna cor do jogador
         **/
         Cor get_cor();
+        /**
+         * @brief Atualiza a quantidades de peças do jogador
+         */
+        void atualiza_pecas(Tabuleiro* tabuleiro);
+        /**
+         * @brief Zera os valores de todas pecas
+         */
+        void zera_pecas();
 
     private:
         /**
