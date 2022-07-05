@@ -17,10 +17,12 @@ class Peao : public Peca
         * @param cor Cor da peca
         */
         Peao(int linha, int coluna, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto peao
         */
         virtual ~Peao() override;
+        
         /** 
         * @return retorna a representacao do peao em forma de string
         */

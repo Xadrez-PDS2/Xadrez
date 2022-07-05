@@ -17,11 +17,13 @@ class Dama : public Peca
         * @param cor Cor da peca
         */
         Dama(int linha, int coluna, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto dama
         * 
         */
         virtual ~Dama() override;
+        
         /** 
         * @return retorna a representacao da dama em forma de string
         */

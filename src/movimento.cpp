@@ -233,10 +233,8 @@ void Movimento::checa_movimento_torre()
         {
             for(int c = coluna_inicial; c < coluna_final; c++)
             {
-                if(tabuleiro->get_casa(linha_final, c) != nullptr && c != coluna_inicial){
-                    std::cout << tabuleiro->get_casa(linha_final, c)->get_representacao() <<  " " << linha_final << " " << c << std::endl;
+                if((tabuleiro->get_casa(linha_final, c) != nullptr) && (c != coluna_inicial))
                     throw PecaNaFrenteException();
-                }
             }
         }
 
@@ -244,10 +242,8 @@ void Movimento::checa_movimento_torre()
         {
             for(int c = coluna_inicial; c > coluna_final; c--)
             {
-                if(tabuleiro->get_casa(linha_final, c) != nullptr && c != coluna_inicial){
-                    std::cout << tabuleiro->get_casa(linha_final, c)->get_representacao() <<  " " << linha_final << " " << c << std::endl;
+                if((tabuleiro->get_casa(linha_final, c) != nullptr) && (c != coluna_inicial))
                     throw PecaNaFrenteException();
-                }
             }
         }
     }
@@ -259,10 +255,8 @@ void Movimento::checa_movimento_torre()
         {
             for(int l = linha_inicial; l < linha_final; l++)
             {
-                if(tabuleiro->get_casa(l, coluna_final) != nullptr && l != linha_inicial){
-                    std::cout << tabuleiro->get_casa(l, coluna_final)->get_representacao()  <<  " " << l << " " <<  coluna_final << std::endl;
+                if((tabuleiro->get_casa(l, coluna_final) != nullptr) && (l != linha_inicial))
                     throw PecaNaFrenteException();
-                }
             }
         }
 
@@ -270,10 +264,9 @@ void Movimento::checa_movimento_torre()
         {
             for(int l = linha_inicial; l > linha_final; l--)
             {
-                if(tabuleiro->get_casa(l, coluna_final) != nullptr && l != linha_inicial){
-                    std::cout << tabuleiro->get_casa(l, coluna_final)->get_representacao() <<  " " << l << " " <<  coluna_final << std::endl;
+                if((tabuleiro->get_casa(l, coluna_final) != nullptr) && (l != linha_inicial))
                     throw PecaNaFrenteException();
-                }
+                
             }
         }
     }
@@ -290,7 +283,7 @@ void Movimento::checa_movimento_bispo()
             {
                 for(int l = linha_inicial; l > linha_final; l--)
                 {
-                    if(tabuleiro->get_casa(l, c) != nullptr)
+                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
                         throw PecaNaFrenteException();
                 }
             }
@@ -302,7 +295,7 @@ void Movimento::checa_movimento_bispo()
             {
                 for(int l = linha_inicial; l > linha_final; l--)
                 {
-                    if(tabuleiro->get_casa(l, c) != nullptr)
+                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
                         throw PecaNaFrenteException();
                 }
             }
@@ -318,7 +311,7 @@ void Movimento::checa_movimento_bispo()
             {
                 for(int l = linha_inicial; l < linha_final; l++)
                 {
-                    if(tabuleiro->get_casa(l, c) != nullptr)
+                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
                         throw PecaNaFrenteException();
                 }
             }
@@ -330,7 +323,7 @@ void Movimento::checa_movimento_bispo()
             {
                 for(int l = linha_inicial; l < linha_final; l++)
                 {
-                    if(tabuleiro->get_casa(l, c) != nullptr)
+                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
                         throw PecaNaFrenteException();
                 }
             }

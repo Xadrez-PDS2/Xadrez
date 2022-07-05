@@ -21,15 +21,18 @@ class Tabuleiro
         * @param tamanho define o tamanho para as n colunas e n linhas do tabuleiro
         */
         Tabuleiro(int tamanho);
+        
         /**
         * @brief Destrutor de um objeto tabuleiro
         */
         ~Tabuleiro();
+        
         /**
         * @brief Imprime o estado atual do tabuleiro
         * 
         */
         void imprime();
+        
         /**
         * @brief Adiciona a peca naquela posicao
         * @param peca string do nome da peca
@@ -38,6 +41,7 @@ class Tabuleiro
         * @param cor  cor da peca
         */
         void adiciona_peca(const std::string &peca, int linha, int coluna, Cor cor);
+        
         /**
          * @brief Adiciona uma peça existente ao tabuleiro
          * 
@@ -46,21 +50,20 @@ class Tabuleiro
          * @param coluna posição na coluna
          */
         void adiciona_peca_existente(Peca *peca, int linha, int coluna);
+        
         /**
         * @brief Deleta a peça se houver
         * 
         * @param linha
         * @param coluna 
         */
-        
         void limpa_casa( int linha, int coluna); 
-
-        void limpa_casa_inicial(int linha, int coluna);
 
         /**
         * @brief Retorna o ponteiro da casa do tabuleiro
         */
         Peca* get_casa(int linha, int coluna);
+        
         /**
          * @brief Retorna o tamanho do tabuleiro
          */
@@ -71,6 +74,7 @@ class Tabuleiro
         * @brief Matriz de coordenadas que contem os enderecos das pecas existentes
         */
         std::vector <std::vector <Peca *>> casas;
+        
         /**
         * @brief Tamanho do tabuleiro
         * 

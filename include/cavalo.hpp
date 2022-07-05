@@ -17,11 +17,13 @@ class Cavalo : public Peca
         * @param cor Cor da peca
         */
         Cavalo(int linha, int coluna, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto cavalo
         * 
         */
         virtual ~Cavalo() override;
+        
         /** 
         * @return retorna a representacao do cavalo em forma de string
         */

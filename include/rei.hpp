@@ -17,11 +17,13 @@ class Rei : public Peca
         * @param cor Cor da peca
         */
         Rei(int linha, int coluna, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto rei
         * 
         */
         virtual ~Rei() override;
+        
         /** 
         * @return retorna a representacao do rei em forma de string
         */

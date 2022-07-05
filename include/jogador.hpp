@@ -17,28 +17,34 @@ class Jogador
         * @param cor Define se o jogador jogará com as brancas ou com as pecas pretas
         */
         Jogador(Tabuleiro* tabuleiro, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto jogador
         */
         ~Jogador();
+        
         /**
         * @brief Imprime o status do Jogador
         * 
         */
         void imprime();
+        
         /**
         * @brief Constroi as pecas do jogador no tabuleiro de acordo com a cor fornecida 
         * @param tabuleiro endereco do tabuleiro utilizado
         */
         void constroi_pecas(Tabuleiro* tabuleiro);
+        
         /**
         * @brief retorna cor do jogador
         **/
         Cor get_cor();
+        
         /**
          * @brief Atualiza a quantidades de peças do jogador
          */
         void atualiza_pecas(Tabuleiro* tabuleiro);
+       
         /**
          * @brief Zera os valores de todas pecas
          */
@@ -49,6 +55,7 @@ class Jogador
         * @brief Set que conta todas as peças do jogador
         */
         std::map <std::string, int> pecas;
+        
         /**
         * @brief A cor das peças do jogador
         * 

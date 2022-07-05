@@ -17,11 +17,13 @@ class Bispo : public Peca
         * @param cor Cor da peca
         */
         Bispo(int linha, int coluna, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto bispo
         * 
         */
         virtual ~Bispo() override;
+        
         /** 
         * @return retorna a representacao do bispo em forma de string
         */

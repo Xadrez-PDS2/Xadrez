@@ -17,11 +17,13 @@ class Torre : public Peca
         * @param cor Cor da peca
         */
         Torre(int linha, int coluna, Cor cor);
+        
         /**
         * @brief Destrutor de um objeto torre
         * 
         */
         virtual ~Torre() override;
+        
         /** 
         * @return retorna a representacao da torre em forma de string
         */
