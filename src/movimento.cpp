@@ -270,8 +270,7 @@ void Movimento::checa_movimento_torre()
             for(int l = linha_inicial; l > linha_final; l--)
             {
                 if((tabuleiro->get_casa(l, coluna_final) != nullptr) && (l != linha_inicial))
-                    throw PecaNaFrenteException();
-                
+                    throw PecaNaFrenteException();     
             }
         }
     }
@@ -291,6 +290,9 @@ void Movimento::checa_movimento_bispo()
                 if(tabuleiro->get_casa(l, c) != nullptr)
                     throw PecaNaFrenteException();
             }
+
+            if(!((coluna_final - coluna_inicial) == (linha_inicial - linha_final)))
+                throw MovimentoInvalidoException();
         }
 
         else
@@ -301,6 +303,9 @@ void Movimento::checa_movimento_bispo()
                 if(tabuleiro->get_casa(l, c) != nullptr)
                     throw PecaNaFrenteException();
             }
+
+            if(!((coluna_inicial - coluna_final) == (linha_inicial - linha_final)))
+                throw MovimentoInvalidoException();
         }
     }
 
@@ -315,6 +320,9 @@ void Movimento::checa_movimento_bispo()
                 if(tabuleiro->get_casa(l, c) != nullptr)
                     throw PecaNaFrenteException();
             }
+
+            if(!((coluna_final - coluna_inicial) == (linha_final - linha_inicial)))
+                throw MovimentoInvalidoException();
         }
 
         else
@@ -325,6 +333,9 @@ void Movimento::checa_movimento_bispo()
                 if(tabuleiro->get_casa(l, c) != nullptr)
                     throw PecaNaFrenteException();
             }
+
+            if(!((coluna_inicial - coluna_final) == (linha_final - linha_inicial)))
+                throw MovimentoInvalidoException();
         }
     }
 }
