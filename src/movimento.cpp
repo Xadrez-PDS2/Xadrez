@@ -285,9 +285,9 @@ void Movimento::checa_movimento_bispo()
         //olha se tem peça na frente
         if(coluna_final > coluna_inicial)
         {
-            for(int c = coluna_inicial; c < coluna_final; c++)
+            for(int c = coluna_inicial+1; c < coluna_final; c++)
             {
-                l++;
+                l--;
                 if(tabuleiro->get_casa(l, c) != nullptr)
                     throw PecaNaFrenteException();
             }
@@ -295,9 +295,9 @@ void Movimento::checa_movimento_bispo()
 
         else
         {
-            for(int c = coluna_inicial; c > coluna_final; c--)
+            for(int c = coluna_inicial-1; c > coluna_final; c--)
             {
-                l++;
+                l--;
                 if(tabuleiro->get_casa(l, c) != nullptr)
                     throw PecaNaFrenteException();
             }
@@ -309,7 +309,7 @@ void Movimento::checa_movimento_bispo()
         //olha se tem peça na frente
         if(coluna_final > coluna_inicial)
         {
-            for(int c = coluna_inicial; c < coluna_final; c++)
+            for(int c = coluna_inicial+1; c < coluna_final; c++)
             {
                 l++;
                 if(tabuleiro->get_casa(l, c) != nullptr)
@@ -319,7 +319,7 @@ void Movimento::checa_movimento_bispo()
 
         else
         {
-            for(int c = coluna_inicial; c > coluna_final; c--)
+            for(int c = coluna_inicial-1; c > coluna_final; c--)
             {
                 l++;
                 if(tabuleiro->get_casa(l, c) != nullptr)
