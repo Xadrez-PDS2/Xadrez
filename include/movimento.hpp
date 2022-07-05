@@ -7,8 +7,6 @@
 #include <iostream>
 
 
-
-
 class ErroDeJogoException : public std::exception
 {
     public:
@@ -68,7 +66,7 @@ class MovimentoInvalidoException : public ErroDeJogoException
     public:
         virtual const char* what() const noexcept
         {
-            return "A peca não pode realizar este movimento.";
+            return "A peça não pode realizar este movimento.";
         }
 };
 

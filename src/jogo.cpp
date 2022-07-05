@@ -38,25 +38,33 @@ bool Jogo::ativo()
 
 void Jogo::jogada()
 {
-try{
-    int linha_inicial;
-    int coluna_inicial;
-    int linha_final;
-    int coluna_final;
-    std::cout << "Insira:linha_inicial coluna_inicial linha_final coluna_final" << std::endl;
-    std::cin >> linha_inicial >> coluna_inicial >> linha_final >> coluna_final;
-    std::cout << "Posições escolhidas: " << linha_inicial << coluna_inicial << " para " << linha_final << coluna_final << std::endl;
-    Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
+    try
+    {
+        char li, lf;
+        int linha_inicial;
+        int coluna_inicial;
+        int linha_final;
+        int coluna_final;
 
-    movimento.validar_movimento();
-    movimento.executar_movimento();
+        std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(linha)0-7(coluna)" << std::endl;
+        std::cin >> li >> coluna_inicial >> lf >> coluna_final;
+        std::cout << "Posições escolhidas: de" << li << coluna_inicial << " para " << lf << coluna_final << std::endl;
+        
+        linha_inicial = li - 65;
+        linha_final = lf - 65;
+        
+        Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
 
-    if(da_vez == p1) 
-        da_vez = p2;
-    else
-        {da_vez = p1;
+        movimento.validar_movimento();
+        movimento.executar_movimento();
+
+        if(da_vez == p1) 
+            da_vez = p2;
+        
+        else
+            da_vez = p1;
     }
-    }
+
     catch(ForaDoMapaException &e)
     {
         std::cout << e.what() << std::endl;

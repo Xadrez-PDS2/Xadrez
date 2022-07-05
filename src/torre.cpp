@@ -8,6 +8,4 @@ std::string Torre::get_representacao()
     return " TOR ";
 }
 
-Torre::~Torre(){
-    
-}
+Torre::~Torre(){}

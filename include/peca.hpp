@@ -36,7 +36,7 @@ class Peca
         */
         Cor get_cor();
         /**
-         * @brief retorna true se a peça ainda não see movimentou
+         * @brief retorna true se a peça ainda não se movimentou
          */
         bool get_primeiro_movimento();
         /**

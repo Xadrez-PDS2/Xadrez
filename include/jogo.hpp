@@ -10,8 +10,6 @@
 using namespace std;
 
 
-
-
 /**
 * @brief Define os funcionamentos de um jogo padrao
 */

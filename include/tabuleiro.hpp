@@ -53,7 +53,10 @@ class Tabuleiro
         * @param coluna 
         */
         
-        void limpa_casa( int linha, int coluna);    
+        void limpa_casa( int linha, int coluna); 
+
+        void limpa_casa_inicial(int linha, int coluna);
+
         /**
         * @brief Retorna o ponteiro da casa do tabuleiro
         */
@@ -73,6 +76,8 @@ class Tabuleiro
         * 
         */
         const int tamanho;
+
+        std::vector<std::string> L {"A", "B", "C", "D", "E", "F", "G", "H"};
 };
 
 #endif

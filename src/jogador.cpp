@@ -2,15 +2,13 @@
 #include "peca.hpp"
 
 
-Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor){   
+Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor)
+{   
     this->cor = cor;
     this->constroi_pecas(tabuleiro);
-    }
-
-Jogador::~Jogador()
-{
-
 }
+
+Jogador::~Jogador(){}
 
 void Jogador::imprime()
 {
@@ -28,7 +26,7 @@ void Jogador::imprime()
 
     std::cout << "PECA    :  QUANTIDADE" << std::endl;
     for (auto it = this->pecas.begin(); it != this->pecas.end(); it++)
-        std::cout << it->first << " :  " << it->second <<std::endl;
+        std::cout << it->first << " :  " << it->second <<std::endl; 
     std::cout << std::endl;
 }
 
@@ -63,6 +61,7 @@ void Jogador::constroi_pecas(Tabuleiro* tabuleiro)
                 tabuleiro->adiciona_peca(" PEA ", 6, i, this->cor);
             break;
     }
+
     this->atualiza_pecas(tabuleiro);
 }
 
@@ -71,7 +70,8 @@ Cor Jogador::get_cor()
     return cor;
 }
 
-void Jogador::atualiza_pecas(Tabuleiro* tabuleiro) {
+void Jogador::atualiza_pecas(Tabuleiro* tabuleiro) 
+{
     this->zera_pecas();
     for(int linha = 0; linha < tabuleiro->get_tamanho(); linha++) 
     {
@@ -83,14 +83,19 @@ void Jogador::atualiza_pecas(Tabuleiro* tabuleiro) {
                 Cor cor_da_peca = tabuleiro->get_casa(linha, coluna)->get_cor();
                 if (peca == " PEA " && cor_da_peca == this->cor)
                     pecas["Peao   "]++;
+
                 else if (peca == " TOR " && cor_da_peca == this->cor)
                     pecas["Torre  "]++;
+
                 else if (peca == " CAV " && cor_da_peca == this->cor)
                     pecas["Cavalo "]++;
+
                 else if (peca == " BIS " && cor_da_peca == this->cor)
                     pecas["Bispo  "]++;
+
                 else if (peca == " DAM " && cor_da_peca == this->cor)
                     pecas["Dama   "]++; 
+                    
                 else if (peca == " REI " && cor_da_peca == this->cor)
                     pecas["Rei    "]++; 
             }
