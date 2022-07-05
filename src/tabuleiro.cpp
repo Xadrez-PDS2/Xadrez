@@ -51,11 +51,6 @@ void Tabuleiro::limpa_casa(int linha, int coluna)
     casas[linha][coluna] = nullptr;
 }
 
-void Tabuleiro::limpa_casa_inicial(int linha, int coluna)
-{  
-    casas[linha][coluna] = nullptr;
-}
-
 void Tabuleiro::imprime()
 {
     for (int i = 0; i < this->tamanho; i++)

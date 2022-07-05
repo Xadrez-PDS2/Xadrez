@@ -33,7 +33,6 @@ Movimento::Movimento(
 void Movimento::executar_movimento()
 {    
     tabuleiro->limpa_casa(linha_final, coluna_final);
-    tabuleiro->limpa_casa_inicial(linha_inicial, coluna_inicial);
     tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
 }
 
@@ -232,19 +231,23 @@ void Movimento::checa_movimento_torre()
         //olha se tem peça na frente
         if(coluna_final > coluna_inicial)
         {
-            for(int c = coluna_inicial; coluna_inicial < coluna_final; c++)
+            for(int c = coluna_inicial; c < coluna_final; c++)
             {
-                if(tabuleiro->get_casa(linha_final, c) != nullptr)
+                if(tabuleiro->get_casa(linha_final, c) != nullptr && c != coluna_inicial){
+                    std::cout << tabuleiro->get_casa(linha_final, c)->get_representacao() <<  " " << linha_final << " " << c << std::endl;
                     throw PecaNaFrenteException();
+                }
             }
         }
 
         else
         {
-            for(int c = coluna_inicial; coluna_inicial > coluna_final; c--)
+            for(int c = coluna_inicial; c > coluna_final; c--)
             {
-                if(tabuleiro->get_casa(linha_final, c) != nullptr)
+                if(tabuleiro->get_casa(linha_final, c) != nullptr && c != coluna_inicial){
+                    std::cout << tabuleiro->get_casa(linha_final, c)->get_representacao() <<  " " << linha_final << " " << c << std::endl;
                     throw PecaNaFrenteException();
+                }
             }
         }
     }
@@ -254,19 +257,23 @@ void Movimento::checa_movimento_torre()
         //olha se tem peça na frente
         if(linha_final > linha_inicial)
         {
-            for(int l = linha_inicial; linha_inicial < linha_final; l++)
+            for(int l = linha_inicial; l < linha_final; l++)
             {
-                if(tabuleiro->get_casa(l, coluna_final) != nullptr)
+                if(tabuleiro->get_casa(l, coluna_final) != nullptr && l != linha_inicial){
+                    std::cout << tabuleiro->get_casa(l, coluna_final)->get_representacao()  <<  " " << l << " " <<  coluna_final << std::endl;
                     throw PecaNaFrenteException();
+                }
             }
         }
 
         else
         {
-            for(int l = linha_inicial; linha_inicial > linha_final; l--)
+            for(int l = linha_inicial; l > linha_final; l--)
             {
-                if(tabuleiro->get_casa(l, coluna_final) != nullptr)
+                if(tabuleiro->get_casa(l, coluna_final) != nullptr && l != linha_inicial){
+                    std::cout << tabuleiro->get_casa(l, coluna_final)->get_representacao() <<  " " << l << " " <<  coluna_final << std::endl;
                     throw PecaNaFrenteException();
+                }
             }
         }
     }
@@ -279,9 +286,9 @@ void Movimento::checa_movimento_bispo()
         //olha se tem peça na frente
         if(coluna_final > coluna_inicial)
         {
-            for(int c = coluna_inicial; coluna_inicial < coluna_final; c++)
+            for(int c = coluna_inicial; c < coluna_final; c++)
             {
-                for(int l = linha_inicial; linha_inicial > linha_final; l--)
+                for(int l = linha_inicial; l > linha_final; l--)
                 {
                     if(tabuleiro->get_casa(l, c) != nullptr)
                         throw PecaNaFrenteException();
@@ -291,9 +298,9 @@ void Movimento::checa_movimento_bispo()
 
         else
         {
-            for(int c = coluna_inicial; coluna_inicial > coluna_final; c--)
+            for(int c = coluna_inicial; c > coluna_final; c--)
             {
-                for(int l = linha_inicial; linha_inicial > linha_final; l--)
+                for(int l = linha_inicial; l > linha_final; l--)
                 {
                     if(tabuleiro->get_casa(l, c) != nullptr)
                         throw PecaNaFrenteException();
@@ -307,9 +314,9 @@ void Movimento::checa_movimento_bispo()
         //olha se tem peça na frente
         if(coluna_final > coluna_inicial)
         {
-            for(int c = coluna_inicial; coluna_inicial < coluna_final; c++)
+            for(int c = coluna_inicial; c < coluna_final; c++)
             {
-                for(int l = linha_inicial; linha_inicial < linha_final; l++)
+                for(int l = linha_inicial; l < linha_final; l++)
                 {
                     if(tabuleiro->get_casa(l, c) != nullptr)
                         throw PecaNaFrenteException();
@@ -319,9 +326,9 @@ void Movimento::checa_movimento_bispo()
 
         else
         {
-            for(int c = coluna_inicial; coluna_inicial > coluna_final; c--)
+            for(int c = coluna_inicial; c > coluna_final; c--)
             {
-                for(int l = linha_inicial; linha_inicial < linha_final; l++)
+                for(int l = linha_inicial; l < linha_final; l++)
                 {
                     if(tabuleiro->get_casa(l, c) != nullptr)
                         throw PecaNaFrenteException();

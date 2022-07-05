@@ -48,10 +48,13 @@ void Jogo::jogada()
 
         std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(linha)0-7(coluna)" << std::endl;
         std::cin >> li >> coluna_inicial >> lf >> coluna_final;
-        std::cout << "Posições escolhidas: de" << li << coluna_inicial << " para " << lf << coluna_final << std::endl;
-        
+        li = toupper(li);
+        lf = toupper(lf);
+        std::cout << "Posições escolhidas: de " << li << coluna_inicial << " para " << lf << coluna_final << std::endl;
         linha_inicial = li - 65;
         linha_final = lf - 65;
+
+        std::cout << linha_inicial << " " << linha_final << std::endl;
         
         Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
 
