@@ -279,6 +279,7 @@ void Movimento::checa_movimento_torre()
 
 void Movimento::checa_movimento_bispo()
 {
+    int l = linha_inicial;
     if((linha_inicial > linha_final) && (coluna_inicial != coluna_final))   
     {
         //olha se tem peça na frente
@@ -286,11 +287,9 @@ void Movimento::checa_movimento_bispo()
         {
             for(int c = coluna_inicial; c < coluna_final; c++)
             {
-                for(int l = linha_inicial; l > linha_final; l--)
-                {
-                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
-                        throw PecaNaFrenteException();
-                }
+                l++;
+                if(tabuleiro->get_casa(l, c) != nullptr)
+                    throw PecaNaFrenteException();
             }
         }
 
@@ -298,11 +297,9 @@ void Movimento::checa_movimento_bispo()
         {
             for(int c = coluna_inicial; c > coluna_final; c--)
             {
-                for(int l = linha_inicial; l > linha_final; l--)
-                {
-                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
-                        throw PecaNaFrenteException();
-                }
+                l++;
+                if(tabuleiro->get_casa(l, c) != nullptr)
+                    throw PecaNaFrenteException();
             }
         }
     }
@@ -314,11 +311,9 @@ void Movimento::checa_movimento_bispo()
         {
             for(int c = coluna_inicial; c < coluna_final; c++)
             {
-                for(int l = linha_inicial; l < linha_final; l++)
-                {
-                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
-                        throw PecaNaFrenteException();
-                }
+                l++;
+                if(tabuleiro->get_casa(l, c) != nullptr)
+                    throw PecaNaFrenteException();
             }
         }
 
@@ -326,11 +321,9 @@ void Movimento::checa_movimento_bispo()
         {
             for(int c = coluna_inicial; c > coluna_final; c--)
             {
-                for(int l = linha_inicial; l < linha_final; l++)
-                {
-                    if((tabuleiro->get_casa(l, c) != nullptr) && (l != linha_inicial))
-                        throw PecaNaFrenteException();
-                }
+                l++;
+                if(tabuleiro->get_casa(l, c) != nullptr)
+                    throw PecaNaFrenteException();
             }
         }
     }
