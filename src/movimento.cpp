@@ -189,38 +189,43 @@ void Movimento::checa_movimento_peao()
 
 void Movimento::checa_movimento_cavalo()
 {
+    int i = 0;
+
     if(linha_inicial > linha_final)
     {
-        if(!((linha_inicial-1 == linha_final) && (coluna_inicial-2 == coluna_final)))
-            throw MovimentoInvalidoException();
+        if((linha_inicial-1 == linha_final) && (coluna_inicial-2 == coluna_final))
+            i = 1;
 
-        else if(!((linha_inicial-1 == linha_final) && (coluna_inicial+2 == coluna_final)))
-            throw MovimentoInvalidoException();
+        else if((linha_inicial-1 == linha_final) && (coluna_inicial+2 == coluna_final))
+            i = 1;
 
-        else if(!((linha_inicial-2 == linha_final) && (coluna_inicial-1 == coluna_final)))
-            throw MovimentoInvalidoException();
+        else if((linha_inicial-2 == linha_final) && (coluna_inicial-1 == coluna_final))
+            i = 1;
 
-        else if(!((linha_inicial-2 == linha_final) && (coluna_inicial+1 == coluna_final)))
-            throw MovimentoInvalidoException();       
+        else if((linha_inicial-2 == linha_final) && (coluna_inicial+1 == coluna_final))
+            i = 1;     
     }
 
     else if(linha_inicial < linha_final)
     {
-        if(!((linha_inicial+1 == linha_final) && (coluna_inicial-2 == coluna_final)))
-            throw MovimentoInvalidoException();
+        if((linha_inicial+1 == linha_final) && (coluna_inicial-2 == coluna_final))
+            i = 1;
 
-        else if(!((linha_inicial+1 == linha_final) && (coluna_inicial+2 == coluna_final)))
-            throw MovimentoInvalidoException();
+        else if((linha_inicial+1 == linha_final) && (coluna_inicial+2 == coluna_final))
+            i = 1;
 
-        else if(!((linha_inicial+2 == linha_final) && (coluna_inicial-1 == coluna_final)))
-            throw MovimentoInvalidoException();
+        else if((linha_inicial+2 == linha_final) && (coluna_inicial-1 == coluna_final))
+            i = 1;
 
-        else if(!((linha_inicial+2 == linha_final) && (coluna_inicial+1 == coluna_final)))
-            throw MovimentoInvalidoException();
+        else if((linha_inicial+2 == linha_final) && (coluna_inicial+1 == coluna_final))
+            i = 1;
     }
 
     //movimentou na mesma linha
     else
+        throw MovimentoInvalidoException();
+
+    if(i != 1)
         throw MovimentoInvalidoException();
 }
 
