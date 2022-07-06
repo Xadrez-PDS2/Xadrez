@@ -33,6 +33,19 @@ Movimento::Movimento(
 void Movimento::executar_movimento()
 {    
     tabuleiro->limpa_casa(linha_final, coluna_final);
+    if (peca->get_representacao() == " PEA "){
+        switch (peca->get_cor())
+        {
+        case Cor::BRANCAS:
+            if (linha_final == tabuleiro->get_tamanho() - 1)
+                promove_peao();
+            break;
+        case Cor::PRETAS:
+            if (linha_final == 0)
+                promove_peao();
+            break;
+        }
+    }
     tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
 }
 
@@ -94,7 +107,7 @@ void Movimento::checa_movimento_peca()
 }
 
 /**
- *@todo Implementar a promoção e o 'en passant'
+ *@todo Implementar o 'en passant'
 */
 void Movimento::checa_movimento_peao()
 {
@@ -371,4 +384,63 @@ void Movimento::checa_movimento_rei()
     //movimentou mais de 1 casa
     else
         throw MovimentoInvalidoException();
+}
+
+void Movimento::promove_peao(bool mensagem)
+{
+    char aux;
+    int p;
+    while (true)
+    {
+        if (peca->get_representacao() == " PEA ")
+        {
+            if (mensagem == true)
+            {
+                switch (peca->get_cor())
+                {
+                    case Cor::BRANCAS:
+                        std::cout << "O peão das brancas foi promovido: digite a inicial da peca para escolher a promoção(T - B - C - D)" << std::endl;
+                        break;
+            
+                    case Cor::PRETAS:
+                        std::cout << "O peão das pretas foi promovido: digite a inicial da peca para escolher a promoção(T - B - C - D)" << std::endl;
+                        break;
+                }
+            }
+            std::cin >> aux;
+            aux = toupper(aux);
+            p = aux;
+            //Torre
+            if (p == 84)
+            {
+                delete peca;
+                tabuleiro->limpa_casa(linha_inicial, coluna_inicial);
+                peca = new Torre(linha_inicial, coluna_inicial, jogador->get_cor());
+                break;
+            }
+            //Cavalo
+            else if (p == 67)
+            {
+                delete peca;
+                peca = new Cavalo(linha_inicial, coluna_inicial, jogador->get_cor());
+                break;
+            }
+            //Bispo
+            else if (p == 66)
+            {
+                delete peca;
+                peca = new Bispo(linha_inicial, coluna_inicial, jogador->get_cor());
+                break;
+            }
+            //Dama
+            else if (p == 68)
+            {
+                delete peca;
+                peca = new Dama(linha_inicial, coluna_inicial, jogador->get_cor());
+                break;
+            }
+            else{   
+            }
+        }
+    }
 }

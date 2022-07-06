@@ -53,9 +53,6 @@ void Jogo::jogada()
         std::cout << "Posições escolhidas: de " << li << coluna_inicial << " para " << lf << coluna_final << std::endl;
         linha_inicial = li - 65;
         linha_final = lf - 65;
-
-        std::cout << linha_inicial << " " << linha_final << std::endl;
-        
         Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
 
         movimento.validar_movimento();

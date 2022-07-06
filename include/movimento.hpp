@@ -125,6 +125,11 @@ class Movimento
          * @brief Checa se a movimentação do rei é válida 
          */
         void checa_movimento_rei();
+        /**
+         * @brief Promove o peão
+         * @param mensagem Se verdadeiro, a mensagem é exibida
+         */
+        void promove_peao(bool mensagem = true);
 
     private:
         Tabuleiro *tabuleiro;
