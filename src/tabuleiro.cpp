@@ -69,12 +69,12 @@ void Tabuleiro::imprime()
             std::cout << "\033[0m";
         }
       
-        std::cout << "  " << L[i] << std::endl;
+        std::cout << "  " << i+1 << std::endl;
     }
     
     for (int i = 0; i < this->tamanho; i++)
     {
-      std::cout << "    " << i << "    ";
+      std::cout << "    " << L[i] << "    ";
     }
 
     std::cout << std::endl;
@@ -99,7 +99,8 @@ Peca* Tabuleiro::get_casa(int linha, int coluna)
     return casas[linha][coluna]; 
 }
 
- int Tabuleiro::get_tamanho(){
+int Tabuleiro::get_tamanho()
+{
     return this->tamanho;
 } 
 

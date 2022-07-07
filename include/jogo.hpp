@@ -6,8 +6,9 @@
 #include "tabuleiro.hpp"
 
 #include <iostream>
-
-using namespace std;
+#include <regex>
+#include <sstream>
+#include <algorithm>
 
 
 /**

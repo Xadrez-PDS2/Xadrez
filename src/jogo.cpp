@@ -40,29 +40,49 @@ void Jogo::jogada()
 {
     try
     {
-        char li, lf;
+        std::regex comando_valido("[aA-hH]\\s*[1-8]\\s*[aA-hH]\\s*[1-8]");
+        std::string entrada, aux;
+        char ci, cf;
         int linha_inicial;
         int coluna_inicial;
         int linha_final;
         int coluna_final;
 
-        std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(linha)0-7(coluna)" << std::endl;
-        std::cin >> li >> coluna_inicial >> lf >> coluna_final;
-        li = toupper(li);
-        lf = toupper(lf);
-        std::cout << "Posições escolhidas: de " << li << coluna_inicial << " para " << lf << coluna_final << std::endl;
-        linha_inicial = li - 65;
-        linha_final = lf - 65;
-        Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
+        std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(coluna)1-8(linha)" << std::endl;
+        while(!std::regex_match(entrada, comando_valido))
+        {
+            std::cin >> aux;
+            entrada = entrada + aux;
+        }
+        if (std::regex_match(entrada, comando_valido))
+        {
+            remove(entrada.begin(), entrada.end(), ' ');
+            ci = entrada[0];
+            linha_inicial = std::atoi(&entrada[1]);
+            cf = entrada[2];
+            linha_final = std::atoi(&entrada[3]);
+            ci = toupper(ci);
+            cf = toupper(cf);
+            coluna_inicial = ci - 65;
+            coluna_final = cf - 65;            
+            std::cout << "Posições escolhidas: de " << ci << linha_inicial << " para " << cf << linha_final << std::endl;
+            linha_inicial -= 1;
+            linha_final -= 1;
+            Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
 
-        movimento.validar_movimento();
-        movimento.executar_movimento();
+            movimento.validar_movimento();
+            movimento.executar_movimento();
 
-        if(da_vez == p1) 
-            da_vez = p2;
-        
+            if(da_vez == p1) 
+                da_vez = p2;
+            
+            else
+                da_vez = p1;
+        }
         else
-            da_vez = p1;
+        {
+            std::cout << " O comando '" << entrada << "' é invalido." << std::endl;
+        }
     }
 
     catch(ForaDoMapaException &e)
