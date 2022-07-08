@@ -49,14 +49,20 @@ void Jogo::jogada()
         int coluna_final;
 
         std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(coluna)1-8(linha)" << std::endl;
-        while(!std::regex_match(entrada, comando_valido))
+        while(!std::regex_search(entrada, comando_valido))
         {
             std::cin >> aux;
             entrada = entrada + aux;
         }
+        aux = entrada.at(0) + entrada.at(1) + entrada.at(2) + entrada.at(3);
+        while(!std::regex_match(entrada, comando_valido))
+        {
+            entrada.erase(0, 1);
+            if(entrada.empty())
+                break;
+        }
         if (std::regex_match(entrada, comando_valido))
         {
-            remove(entrada.begin(), entrada.end(), ' ');
             ci = entrada[0];
             linha_inicial = std::atoi(&entrada[1]);
             cf = entrada[2];
@@ -81,7 +87,7 @@ void Jogo::jogada()
         }
         else
         {
-            std::cout << " O comando '" << entrada << "' é invalido." << std::endl;
+            std::cout << " O comando é invalido." << std::endl;
         }
     }
 
