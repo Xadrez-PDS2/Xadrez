@@ -32,8 +32,24 @@ Movimento::Movimento(
 
 void Movimento::executar_movimento()
 {    
-    tabuleiro->limpa_casa(linha_final, coluna_final);
-    tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
+    if(peca->get_en_passant())
+    {
+        tabuleiro->limpa_casa(linha_final, coluna_final);
+        
+        if(peca->get_cor() == Cor::PRETAS)
+            tabuleiro->adiciona_peca_existente(peca, linha_final-1, coluna_final); 
+        
+        else
+            tabuleiro->adiciona_peca_existente(peca, linha_final+1, coluna_final);
+
+        peca->set_en_passant(false);
+    }
+    
+    else
+    {
+        tabuleiro->limpa_casa(linha_final, coluna_final);
+        tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
+    }
 }
 
 void Movimento::validar_movimento()
@@ -121,6 +137,9 @@ void Movimento::checa_movimento_peao()
                         //verifica se existe qualquer peca no caminho do peão
                         if (tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
                             throw PecaNaFrenteException();
+
+                        //se foi o primeiro movimento libera a possibilidade do movimento en passant
+                        peca->set_en_passant(true);
                     }
                     
                     //Se não for o primeiro movimento
@@ -133,10 +152,20 @@ void Movimento::checa_movimento_peao()
             {
                 //verifica se o peao mudou para uma coluna adjacente
                 if (coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
-                    throw MovimentoInvalidoException();
+                    throw MovimentoInvalidoException();                
+                
+                //verifica se o movimento de en passant está liberado
+                if(peca->get_en_passant())
+                {
+                    if(tabuleiro->get_casa(linha_final, coluna_final)->get_representacao() == " PEA ")
+                    {
+                        if(linha_final != linha_inicial)
+                            throw MovimentoInvalidoException();
+                    }
+                }
 
                 //verifica se o peao parou em uma posição a frente 
-                else if (linha_final != linha_inicial+1)
+                else if (linha_final != linha_inicial-1)
                     throw MovimentoInvalidoException();
             }
             break;
@@ -162,6 +191,9 @@ void Movimento::checa_movimento_peao()
                         //verifica se existe qualquer peca no caminho do peão
                         if (tabuleiro->get_casa(linha_inicial-1, coluna_inicial) != nullptr)
                             throw PecaNaFrenteException();
+                        
+                        //se foi o primeiro movimento libera a possibilidade do movimento en passant
+                        peca->set_en_passant(true);
                     }
 
                     //Se não for o primeiro movimento
@@ -177,6 +209,16 @@ void Movimento::checa_movimento_peao()
                 if (coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
                     throw MovimentoInvalidoException();
                 
+                //verifica se o movimento de en passant está liberado
+                if(peca->get_en_passant())
+                {
+                    if(tabuleiro->get_casa(linha_final, coluna_final)->get_representacao() == " PEA ")
+                    {
+                        if(linha_final != linha_inicial)
+                            throw MovimentoInvalidoException();
+                    }
+                }
+
                 //verifica se o peao parou em uma posição a frente 
                 else if (linha_final != linha_inicial-1)
                     throw MovimentoInvalidoException();

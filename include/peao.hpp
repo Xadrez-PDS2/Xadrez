@@ -32,6 +32,7 @@ class Peao : public Peca
          * @brief guarda a informação se esta é a primeira movimentação do peão
          */
         bool primeiro_movimento;
+        bool en_passant;
 };
 
 #endif

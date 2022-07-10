@@ -4,7 +4,8 @@ Peca::Peca(int linha, int coluna, Cor cor):
     linha(linha),
     coluna(coluna),
     cor(cor),
-    primeiro_movimento(true){}
+    primeiro_movimento(true),
+    en_passant(false){}
 
 Cor Peca::get_cor()
 {
@@ -19,6 +20,11 @@ bool Peca::get_primeiro_movimento()
 void Peca::set_primeiro_movimento(bool primeiro_movimento)
 {
     this->primeiro_movimento = primeiro_movimento;
+}
+
+void Peca::set_en_passant(bool en_passant)
+{
+    this->en_passant = en_passant;
 }
 
 std::pair<int, int> Peca::get_casas()
