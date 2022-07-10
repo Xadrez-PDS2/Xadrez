@@ -1,18 +1,10 @@
 
 #include "tabuleiro.hpp"
+#define TAMANHO_DO_TABULEIRO 8
 
-Tabuleiro::Tabuleiro(int tamanho):
-tamanho(tamanho)
+Tabuleiro::Tabuleiro():
+tamanho(TAMANHO_DO_TABULEIRO)
 {
-    for(int i = 0; i < this->tamanho; i++)
-    {
-        this->casas.push_back(std::vector<Peca *>());
-
-        for(int j = 0; j < this->tamanho; j++)
-        {
-            this->casas[i].push_back(nullptr);
-        }
-    }
 }
 
 void Tabuleiro::adiciona_peca(const std::string &peca, int linha, int coluna, Cor cor)

@@ -20,7 +20,7 @@ class Tabuleiro
         * @brief Construtor de um objeto tabuleiro
         * @param tamanho define o tamanho para as n colunas e n linhas do tabuleiro
         */
-        Tabuleiro(int tamanho);
+        Tabuleiro();
         
         /**
         * @brief Destrutor de um objeto tabuleiro

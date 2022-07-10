@@ -1,9 +1,10 @@
 #include "jogo.hpp"
 #include "peca.hpp"
+#include "excecoes.hpp"
 
 Jogo::Jogo()
 {
-    Tabuleiro* tabuleiro = new Tabuleiro(8);
+    Tabuleiro* tabuleiro = new Tabuleiro();
     Jogador* p1 = new Jogador(tabuleiro, Cor::BRANCAS);
     Jogador* p2 = new Jogador(tabuleiro, Cor::PRETAS);
     this->da_vez = p1;
