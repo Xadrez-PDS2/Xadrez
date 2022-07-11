@@ -75,11 +75,13 @@ void Tabuleiro::imprime()
 
 void Tabuleiro::constroi_tabuleiro()
 {
-    for (int i = 0; i < this->tamanho; i++)
+    for(int i = 0; i < this->tamanho; i++)
     {
-        for (int j = 0; j < this->tamanho; j++)
+        this->casas.push_back(std::vector<Peca *>());
+
+        for(int j = 0; j < this->tamanho; j++)
         {
-            this->casas[i][j] = nullptr;
+            this->casas[i].push_back(nullptr);
         }
     }
 }
