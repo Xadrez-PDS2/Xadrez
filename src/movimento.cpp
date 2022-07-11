@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "excecoes.hpp"
 #include "movimento.hpp"
 #include "tabuleiro.hpp"
 #include "jogador.hpp"

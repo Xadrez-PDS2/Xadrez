@@ -2,6 +2,7 @@
 #define PECA_HPP
 
 #include <string>
+#include "excecoes.hpp"
 
 
 enum Cor 
@@ -66,7 +67,7 @@ class Peca
         /**
         * @brief posicoes de coluna e de linha da peca  
         */
-        int linha, coluna;
+        unsigned int linha, coluna;
         
         /**
          * @brief Cor da peca

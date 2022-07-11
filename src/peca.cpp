@@ -1,10 +1,20 @@
 #include "peca.hpp"
+#include "excecoes.hpp"
+#include <exception>
+ int tamanho_tabuleiro=8;
 
-Peca::Peca(int linha, int coluna, Cor cor):
-    linha(linha),
-    coluna(coluna),
-    cor(cor),
-    primeiro_movimento(true){}
+Peca::Peca( int linha, int coluna, Cor cor){
+        if (linha>=tamanho_tabuleiro ||
+            coluna>= tamanho_tabuleiro ||
+            linha<0 ||
+            coluna<0) {
+            throw ForaDoMapaException();
+        }
+        this->linha=linha;
+        this->coluna=coluna;
+        this->cor=cor;
+        this->primeiro_movimento=true;
+    }
 
 Cor Peca::get_cor()
 {
