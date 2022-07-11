@@ -1,13 +1,14 @@
 #include "jogo.hpp"
 
-int main() 
+int main(int argc, char* argv[]) 
 {
     Jogo* jogo = new Jogo();
     jogo->imprime();
-
+    std::string comando;
     while (jogo->ativo()) 
     {
-        jogo->jogada();
+        comando = jogo->processa_terminal();
+        jogo->jogada(comando);
         jogo->imprime();
     }
 

@@ -46,7 +46,19 @@ class Jogo
         /**
         *@brief realiza os procedimentos do jogador da vez
         */
-        void jogada();
+        void jogada(std::string entrada);
+        /**
+         * @brief Processa os comandos do terminal
+         * @return retorna uma string com a jogada
+         */
+        const std::string processa_terminal();
+        /**
+         * @brief Processa a jogada valida
+         * 
+         * @param entrada Paramentro que contem o comando
+         * @return const std::string o comando valido
+         */
+        const std::string processa_jogada(const std::string entrada);
 
     private:
         /**
@@ -65,6 +77,10 @@ class Jogo
         */
         Tabuleiro* tabuleiro = nullptr;
         bool jogo_ativo;
+        /**
+         * @brief O comando aceitavel deve incluir os dados da posição atual da peça e sua posição final.
+         */
+        std::regex comando_valido;
 };
 
 #endif

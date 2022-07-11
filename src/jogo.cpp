@@ -6,6 +6,7 @@ Jogo::Jogo()
     Tabuleiro* tabuleiro = new Tabuleiro(8);
     Jogador* p1 = new Jogador(tabuleiro, Cor::BRANCAS);
     Jogador* p2 = new Jogador(tabuleiro, Cor::PRETAS);
+    this->comando_valido = ("[aA-hH]\\s*[1-8]\\s*[aA-hH]\\s*[1-8]");
     this->da_vez = p1;
     this->p1 = p1;
     this->p2 = p2;
@@ -35,33 +36,43 @@ bool Jogo::ativo()
 {
     return jogo_ativo;
 }
+const std::string Jogo::processa_jogada(const std::string entrada)
+{
+    std::string aux, entrada2;
+    entrada2 = entrada;
+    remove(entrada2.begin(), entrada2.end(), ' ');
+    int tamanho = entrada2.length();
+    for (int i = 0; i < tamanho-3; i++)
+    {
+    aux = entrada2.substr(i, 4);
+    if (std::regex_match(aux, this->comando_valido))
+        break;
+    }
+    return aux;
+}
+const std::string Jogo::processa_terminal()
+{
+    std::string entrada, aux;
 
-void Jogo::jogada()
+    std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(coluna)1-8(linha)" << std::endl;
+    while(!std::regex_search(entrada, this->comando_valido))
+    {
+        std::cin >> aux;
+        entrada = entrada + aux;
+    }
+    aux = this->processa_jogada(entrada);
+    return aux;
+}
+void Jogo::jogada(std::string entrada)
 {
     try
     {
-        std::regex comando_valido("[aA-hH]\\s*[1-8]\\s*[aA-hH]\\s*[1-8]");
-        std::string entrada, aux;
         char ci, cf;
         int linha_inicial;
         int coluna_inicial;
         int linha_final;
-        int coluna_final;
-
-        std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(coluna)1-8(linha)" << std::endl;
-        while(!std::regex_search(entrada, comando_valido))
-        {
-            std::cin >> aux;
-            entrada = entrada + aux;
-        }
-        aux = entrada.at(0) + entrada.at(1) + entrada.at(2) + entrada.at(3);
-        while(!std::regex_match(entrada, comando_valido))
-        {
-            entrada.erase(0, 1);
-            if(entrada.empty())
-                break;
-        }
-        if (std::regex_match(entrada, comando_valido))
+        int coluna_final;        
+        if (std::regex_match(entrada, this->comando_valido))
         {
             ci = entrada[0];
             linha_inicial = std::atoi(&entrada[1]);
@@ -70,7 +81,7 @@ void Jogo::jogada()
             ci = toupper(ci);
             cf = toupper(cf);
             coluna_inicial = ci - 65;
-            coluna_final = cf - 65;            
+            coluna_final = cf - 65;
             std::cout << "Posições escolhidas: de " << ci << linha_inicial << " para " << cf << linha_final << std::endl;
             linha_inicial -= 1;
             linha_final -= 1;
