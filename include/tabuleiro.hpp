@@ -14,6 +14,7 @@
 
 #define TAMANHO_DO_TABULEIRO 8
 
+
 class Tabuleiro 
 {
     public:
@@ -66,6 +67,7 @@ class Tabuleiro
          * @brief Retorna o tamanho do tabuleiro
          */
         int get_tamanho(); 
+        
         /**
          * @brief Constroi cada casa do tabuleiro
          */

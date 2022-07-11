@@ -8,10 +8,7 @@ Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor)
     this->constroi_pecas(tabuleiro);
 }
 
-Jogador::~Jogador()
-{
-    
-}
+Jogador::~Jogador(){}
 
 void Jogador::imprime()
 {

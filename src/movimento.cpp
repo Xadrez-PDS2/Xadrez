@@ -33,21 +33,56 @@ Movimento::Movimento(
 
 void Movimento::executar_movimento()
 {    
-    tabuleiro->limpa_casa(linha_final, coluna_final);
-    if (peca->get_representacao() == " PEA "){
-        switch (peca->get_cor())
+    if(peca->get_en_passant())
+    {
+        tabuleiro->limpa_casa(linha_final, coluna_final);
+        
+        if(peca->get_cor() == Cor::PRETAS)
+            tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
+        
+        else
+            tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final);   
+    }
+    
+    else
+    {
+        tabuleiro->limpa_casa(linha_final, coluna_final);
+        
+        if(peca->get_representacao() == " PEA ")
         {
-        case Cor::BRANCAS:
-            if (linha_final == tabuleiro->get_tamanho() - 1)
-                promove_peao();
-            break;
-        case Cor::PRETAS:
-            if (linha_final == 0)
-                promove_peao();
-            break;
+            switch(peca->get_cor())
+            {
+                case Cor::BRANCAS:
+                    if(linha_final == tabuleiro->get_tamanho() - 1)
+                        promove_peao();
+                    break;
+        
+                case Cor::PRETAS:
+                    if(linha_final == 0)
+                        promove_peao();
+                    break;
+            }
+        }
+        
+        tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
+    }
+
+    Peca* pecaAnalise;
+    for(int i=0;i<TAMANHO_MAPA;i++)
+    {
+        for(int j=0;j<TAMANHO_MAPA;j++)
+        {
+            if(tabuleiro->get_casa(i, j)!=nullptr)
+            {
+                pecaAnalise=tabuleiro->get_casa(i, j);
+                if(pecaAnalise->get_representacao() == " PEA " &&
+                    pecaAnalise->get_cor()!=jogador->get_cor())
+                {
+                    (tabuleiro->get_casa(i, j))->set_en_passant(false);
+                }
+            }   
         }
     }
-    tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
 }
 
 void Movimento::validar_movimento()
@@ -107,34 +142,38 @@ void Movimento::checa_movimento_peca()
         checa_movimento_rei();
 }
 
-/**
- *@todo Implementar o 'en passant'
-*/
 void Movimento::checa_movimento_peao()
 {
-    switch (peca->get_cor())
+    bool passant_target = false;
+    if(tabuleiro->get_casa(linha_final,coluna_final) != nullptr) 
+        passant_target = (tabuleiro->get_casa(linha_final, coluna_final))->get_en_passant();   
+        
+    switch(peca->get_cor())
     {
         case Cor::BRANCAS:
             //verifica se o peao andou mais de duas casas ou para trás
-            if (linha_final > linha_inicial+2 || linha_final < linha_inicial)
+            if(linha_final > linha_inicial+2 || linha_final < linha_inicial)
                 throw MovimentoInvalidoException();
 
             //verifica se a posição final esta vazia 
-            if (tabuleiro->get_casa(linha_final, coluna_final) == nullptr)
+            if(tabuleiro->get_casa(linha_final, coluna_final) == nullptr)
             {
                 //verifica se o peao se manteve na coluna
-                if (coluna_final != coluna_inicial)
+                if(coluna_final != coluna_inicial)
                     throw MovimentoInvalidoException();
 
                 //verifica se o peao parou em uma posição duas linhas a frente 
-                else if (linha_final == linha_inicial+2)
+                else if(linha_final == linha_inicial+2)
                 {
                     //verifica se é o primeiro movimento
-                    if (peca->get_primeiro_movimento())
+                    if(peca->get_primeiro_movimento())
                     {
                         //verifica se existe qualquer peca no caminho do peão
-                        if (tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
+                        if(tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
                             throw PecaNaFrenteException();
+
+                        //se foi o primeiro movimento libera a possibilidade do movimento en passant
+                        peca->set_en_passant(true);    
                     }
                     
                     //Se não for o primeiro movimento
@@ -146,36 +185,49 @@ void Movimento::checa_movimento_peao()
             else 
             {
                 //verifica se o peao mudou para uma coluna adjacente
-                if (coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
-                    throw MovimentoInvalidoException();
+                if(coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
+                    throw MovimentoInvalidoException();                
+                
+                //verifica se o movimento de en passant está liberado
+                if(tabuleiro->get_casa(linha_final, coluna_final)->get_representacao() == " PEA ")
+                {
+                    if(passant_target)
+                    {
+                        if(linha_final != linha_inicial || linha_final != linha_inicial)
+                            throw MovimentoInvalidoException();                            
+                    }
+                }
 
                 //verifica se o peao parou em uma posição a frente 
-                else if (linha_final != linha_inicial+1)
+                else if((linha_final != linha_inicial-1)&& !peca->get_en_passant())
                     throw MovimentoInvalidoException();
             }
             break;
 
         case Cor::PRETAS:
             //verifica se o peao andou mais de duas casas ou para trás 
-            if (linha_final < linha_inicial-2 || linha_final > linha_inicial)
+            if(linha_final < linha_inicial-2 || linha_final > linha_inicial)
                 throw MovimentoInvalidoException();
 
             //verifica se a posição final esta vazia 
-            if (tabuleiro->get_casa(linha_final, coluna_final) == nullptr)
+            if(tabuleiro->get_casa(linha_final, coluna_final) == nullptr)
             {
                 //verifica se o peao se manteve na coluna
-                if (coluna_final != coluna_inicial)
+                if(coluna_final != coluna_inicial)
                     throw MovimentoInvalidoException();
 
                 //verifica se o peao parou em uma posição duas linhas a frente
-                else if (linha_final == linha_inicial-2)
+                else if(linha_final == linha_inicial-2)
                 {
                     //verifica se é o primeiro movimento
-                    if (peca->get_primeiro_movimento())
+                    if(peca->get_primeiro_movimento())
                     {
                         //verifica se existe qualquer peca no caminho do peão
-                        if (tabuleiro->get_casa(linha_inicial-1, coluna_inicial) != nullptr)
+                        if(tabuleiro->get_casa(linha_inicial-1, coluna_inicial) != nullptr)
                             throw PecaNaFrenteException();
+
+                        //se foi o primeiro movimento libera a possibilidade do movimento en passant
+                        peca->set_en_passant(true); 
                     }
 
                     //Se não for o primeiro movimento
@@ -188,11 +240,21 @@ void Movimento::checa_movimento_peao()
             else 
             {
                 //verifica se o peao mudou para uma coluna adjacente
-                if (coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
+                if(coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
                     throw MovimentoInvalidoException();
                 
+                //verifica se o movimento de en passant está liberado
+                if(tabuleiro->get_casa(linha_final, coluna_final)->get_representacao() == " PEA ")
+                {
+                    if(passant_target)
+                    {
+                        if(linha_final != linha_inicial|| linha_final != linha_inicial)
+                            throw MovimentoInvalidoException();
+                    }
+                }
+
                 //verifica se o peao parou em uma posição a frente 
-                else if (linha_final != linha_inicial-1)
+                else if((linha_final != linha_inicial-1)&& !passant_target)
                     throw MovimentoInvalidoException();
             }
             break;
@@ -393,11 +455,11 @@ void Movimento::promove_peao(bool mensagem)
     int p;
     while (true)
     {
-        if (peca->get_representacao() == " PEA ")
+        if(peca->get_representacao() == " PEA ")
         {
-            if (mensagem == true)
+            if(mensagem == true)
             {
-                switch (peca->get_cor())
+                switch(peca->get_cor())
                 {
                     case Cor::BRANCAS:
                         std::cout << "O peão das brancas foi promovido: digite a inicial da peca para escolher a promoção(T - B - C - D)" << std::endl;
@@ -408,40 +470,46 @@ void Movimento::promove_peao(bool mensagem)
                         break;
                 }
             }
+
             std::cin >> aux;
             aux = toupper(aux);
             p = aux;
+            
             //Torre
-            if (p == 84)
+            if(p == 84)
             {
                 delete peca;
                 tabuleiro->limpa_casa(linha_inicial, coluna_inicial);
                 peca = new Torre(linha_inicial, coluna_inicial, jogador->get_cor());
                 break;
             }
+
             //Cavalo
-            else if (p == 67)
+            else if(p == 67)
             {
                 delete peca;
                 peca = new Cavalo(linha_inicial, coluna_inicial, jogador->get_cor());
                 break;
             }
+
             //Bispo
-            else if (p == 66)
+            else if(p == 66)
             {
                 delete peca;
                 peca = new Bispo(linha_inicial, coluna_inicial, jogador->get_cor());
                 break;
             }
+
             //Dama
-            else if (p == 68)
+            else if(p == 68)
             {
                 delete peca;
                 peca = new Dama(linha_inicial, coluna_inicial, jogador->get_cor());
                 break;
             }
-            else{   
-            }
+            
+            else   
+                std::cout << "Inicial inválida!" << std::endl;
         }
     }
 }

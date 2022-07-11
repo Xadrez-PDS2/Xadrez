@@ -10,22 +10,22 @@ tamanho(tamanho)
 
 void Tabuleiro::adiciona_peca(const std::string &peca, int linha, int coluna, Cor cor)
 {
-    if (peca == " PEA ")
+    if(peca == " PEA ")
         this->casas[linha][coluna] = new Peao(linha, coluna, cor);
 
-    else if (peca == " TOR ")
+    else if(peca == " TOR ")
         this->casas[linha][coluna] = new Torre(linha, coluna, cor);
 
-    else if (peca == " CAV ")
+    else if(peca == " CAV ")
         this->casas[linha][coluna] = new Cavalo(linha, coluna, cor);
 
-    else if (peca == " BIS ")
+    else if(peca == " BIS ")
         this->casas[linha][coluna] = new Bispo(linha, coluna, cor);
 
-    else if (peca == " DAM ")
+    else if(peca == " DAM ")
         this->casas[linha][coluna] = new Dama(linha, coluna, cor);
 
-    else if (peca == " REI ")
+    else if(peca == " REI ")
         this->casas[linha][coluna] = new Rei(linha, coluna, cor);
 }
 

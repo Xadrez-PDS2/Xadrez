@@ -51,6 +51,16 @@ class Peca
         void set_primeiro_movimento(bool primeiro_movimento);
         
         /**
+         * @brief seta o movimento de en passant
+         */
+        void set_en_passant(bool en_passant);
+
+        /**
+         * @brief retorna true se o movimento foi de en passant
+         */
+        bool get_en_passant();
+        
+        /**
          * @brief retorna um pair->first que representa a linha atual da peça e pair->second que representa a coluna atual da peça 
          */
         std::pair<int, int> get_casas();
@@ -80,6 +90,8 @@ class Peca
          * 
          */
         bool primeiro_movimento;
+
+        bool en_passant;
 };
 
 #endif
