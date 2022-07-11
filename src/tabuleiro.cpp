@@ -1,10 +1,11 @@
 
 #include "tabuleiro.hpp"
-#define TAMANHO_DO_TABULEIRO 8
 
-Tabuleiro::Tabuleiro():
-tamanho(TAMANHO_DO_TABULEIRO)
+
+Tabuleiro::Tabuleiro(int tamanho):
+tamanho(tamanho)
 {
+    this->constroi_tabuleiro();
 }
 
 void Tabuleiro::adiciona_peca(const std::string &peca, int linha, int coluna, Cor cor)
@@ -37,7 +38,7 @@ void Tabuleiro::adiciona_peca_existente(Peca *peca, int linha, int coluna)
 
 void Tabuleiro::limpa_casa(int linha, int coluna)
 {
-    if(casas[linha][coluna]!=nullptr)
+    if(casas[linha][coluna] != nullptr)
         delete casas[linha][coluna];
   
     casas[linha][coluna] = nullptr;
@@ -70,6 +71,17 @@ void Tabuleiro::imprime()
     }
 
     std::cout << std::endl;
+}
+
+void Tabuleiro::constroi_tabuleiro()
+{
+    for (int i = 0; i < this->tamanho; i++)
+    {
+        for (int j = 0; j < this->tamanho; j++)
+        {
+            this->casas[i][j] = nullptr;
+        }
+    }
 }
 
 Tabuleiro::~Tabuleiro() 

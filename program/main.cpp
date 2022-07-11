@@ -1,6 +1,6 @@
 #include "jogo.hpp"
 
-int main(int argc, char* argv[]) 
+int main(int argc, char* argv[])
 {
     Jogo* jogo = new Jogo();
     jogo->imprime();

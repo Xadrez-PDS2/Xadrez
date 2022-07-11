@@ -4,7 +4,8 @@
 
 Jogo::Jogo()
 {
-    Tabuleiro* tabuleiro = new Tabuleiro();
+    
+    Tabuleiro* tabuleiro = new Tabuleiro(TAMANHO_DO_TABULEIRO);
     Jogador* p1 = new Jogador(tabuleiro, Cor::BRANCAS);
     Jogador* p2 = new Jogador(tabuleiro, Cor::PRETAS);
     this->comando_valido = ("[aA-hH]\\s*[1-8]\\s*[aA-hH]\\s*[1-8]");
@@ -12,7 +13,7 @@ Jogo::Jogo()
     this->p1 = p1;
     this->p2 = p2;
     this->tabuleiro = tabuleiro;
-    jogo_ativo = true;
+    this->jogo_ativo = true;
 }
 
 Jogo::~Jogo()

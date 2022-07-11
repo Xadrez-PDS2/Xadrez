@@ -10,7 +10,6 @@
 #include <sstream>
 #include <algorithm>
 
-
 /**
 * @brief Define os funcionamentos de um jogo padrao
 */

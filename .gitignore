@@ -1,3 +1,7 @@
 .vscode
 main
 build
+bin
+*.exe
+*.gcno
+*.gcda

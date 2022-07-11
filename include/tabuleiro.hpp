@@ -12,6 +12,7 @@
 #include <vector>
 #include <iostream>
 
+#define TAMANHO_DO_TABULEIRO 8
 
 class Tabuleiro 
 {
@@ -20,7 +21,7 @@ class Tabuleiro
         * @brief Construtor de um objeto tabuleiro
         * @param tamanho define o tamanho para as n colunas e n linhas do tabuleiro
         */
-        Tabuleiro();
+        Tabuleiro(int tamanho);
         
         /**
         * @brief Destrutor de um objeto tabuleiro
@@ -28,8 +29,7 @@ class Tabuleiro
         ~Tabuleiro();
         
         /**
-        * @brief Imprime o estado atual do tabuleiro
-        * 
+        * @brief Imprime o estado atual do tabuleiro 
         */
         void imprime();
         
@@ -44,7 +44,6 @@ class Tabuleiro
         
         /**
          * @brief Adiciona uma peça existente ao tabuleiro
-         * 
          * @param peca o endereço da peça que vai ser adicionada
          * @param linha posição na linha
          * @param coluna posição na coluna
@@ -53,7 +52,6 @@ class Tabuleiro
         
         /**
         * @brief Deleta a peça se houver
-        * 
         * @param linha
         * @param coluna 
         */
@@ -68,6 +66,10 @@ class Tabuleiro
          * @brief Retorna o tamanho do tabuleiro
          */
         int get_tamanho(); 
+        /**
+         * @brief Constroi cada casa do tabuleiro
+         */
+        void constroi_tabuleiro();
 
     private:
         /**
