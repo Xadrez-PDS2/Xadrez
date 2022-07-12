@@ -68,6 +68,11 @@ class Movimento
          */
         void promove_peao(bool mensagem = true);
 
+        /**
+         * @brief Realiza o roque
+         */
+        void roque();
+
     private:
         Tabuleiro *tabuleiro;
         Jogador *jogador;

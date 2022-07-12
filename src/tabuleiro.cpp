@@ -33,6 +33,7 @@ void Tabuleiro::adiciona_peca_existente(Peca *peca, int linha, int coluna)
 {
     this->casas[peca->get_casas().first][peca->get_casas().second] = nullptr;
     peca->set_casas(linha, coluna);
+    peca->set_primeiro_movimento(false);
     this->casas[linha][coluna] = peca;
 }
 

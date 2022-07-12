@@ -141,4 +141,8 @@ void Jogo::jogada(std::string entrada)
     {
         std::cout << e.what() << std::endl;
     }
+    catch(ErroDeRoqueException &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
 }

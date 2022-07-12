@@ -53,8 +53,8 @@ class Tabuleiro
         
         /**
         * @brief Deleta a peça se houver
-        * @param linha
-        * @param coluna 
+        * @param linha posição na linha
+        * @param coluna posição na coluna
         */
         void limpa_casa( int linha, int coluna); 
 

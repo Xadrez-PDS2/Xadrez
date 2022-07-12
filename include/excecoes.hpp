@@ -74,7 +74,15 @@ class ErroDeLogicaException : public std::exception
         {
             return "Procedimento inesperado.";
         }
+};
 
+class ErroDeRoqueException : public std::exception
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não é possivel realizar o roque nesta situação";
+        }
 };
 
 
