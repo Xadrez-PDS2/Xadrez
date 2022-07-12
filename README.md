@@ -1,19 +1,24 @@
-# 👑 Xadrez
-   ![Logo](https://user-images.githubusercontent.com/100887395/178359155-19d1e5e8-614b-4d4f-a2a1-3d37c1a53fb3.png)
+# Xadrez
+
+<div align="center">
+   <img height="300em" src="https://user-images.githubusercontent.com/100887395/178359155-19d1e5e8-614b-4d4f-a2a1-3d37c1a53fb3.png"/>
+</div>
    
-   ![C++](https://img.shields.io/badge/Made%20with-C++-00599C.svg)
-   ![Tamanho do repositorio](https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez)
+![Tamanho do repositorio](https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez?style=for-the-badge)
+![Linguagem](https://img.shields.io/github/languages/top/Xadrez-PDS2/Xadrez?style=for-the-badge)
+![Ultimo commit](https://img.shields.io/github/last-commit/Xadrez-PDS2/Xadrez?style=for-the-badge)
    
 ## 📄 Descrição do projeto
-Projeto desvolvido para a disciplina Programação e Desenvolvimento de Software II, ministrada pelo professor Flávio Vinícius Diniz de Figueiredo da UFMG (Universidade Federal de Minas Gerais). O projeto consiste em um protótipo do jogo de xadrez, desenvolvido na linguagem C++, com o objetivo de aplicar os conceitos e técnicas vistos ao longo de toda a disciplina em um único sistema.
+Este projeto foi desenvolvido como requisito avaliativo para a disciplina Programação e Desenvolvimento de Software II, ministrada pelo professor Flávio Vinícius Diniz de Figueiredo que leciona na Universidade Federal de Minas Gerais - UFMG. 
+O projeto consiste em um protótipo do jogo de xadrez, desenvolvido na linguagem C++, com o objetivo de aplicar os conceitos e técnicas vistos ao longo de toda a disciplina em um único sistema. Neste protótipo, dois jogadores podem jogar uma partida de xadrez a partir de linhas de comando e visualizando as representações do tabuleiro (matriz 8x8) e das peças (nomes abreviados).
 
-Neste protótipo, dois jogadores são capazes de jogar uma partida de xadrez a partir de linhas de comando e visualizando a representação do tabuleiro (matriz 8x8) e das peças (nomes abreviados).
+## :warning: Pré-requisitos
 
 ## 📁 Acesso ao projeto
 
 ## 💻 Compilar e executar
 
-## 🙇 User stories
+## :clipboard: User stories
 
 - Eu como jogador tenho a preferência na primeira jogada se minhas peças forem da cor branca.
 
