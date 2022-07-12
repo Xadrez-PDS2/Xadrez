@@ -1,8 +1,9 @@
 # 👑 Xadrez
    ![Logo](https://user-images.githubusercontent.com/100887395/178359155-19d1e5e8-614b-4d4f-a2a1-3d37c1a53fb3.png)
    
-   ![Tamanho do repositorio](https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez?style=flat-square)
-
+   ![C++](https://img.shields.io/badge/Made%20with-C++-00599C.svg)
+   ![Tamanho do repositorio](https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez)
+   
 ## 📄 Descrição do projeto
 Projeto desvolvido para a disciplina Programação e Desenvolvimento de Software II, ministrada pelo professor Flávio Vinícius Diniz de Figueiredo da UFMG (Universidade Federal de Minas Gerais). O projeto consiste em um protótipo do jogo de xadrez, desenvolvido na linguagem C++, com o objetivo de aplicar os conceitos e técnicas vistos ao longo de toda a disciplina em um único sistema.
 
