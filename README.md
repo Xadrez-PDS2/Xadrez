@@ -1,8 +1,17 @@
-   ![Logo](https://user-images.githubusercontent.com/100887395/178359155-19d1e5e8-614b-4d4f-a2a1-3d37c1a53fb3.png)
-   ![Tamanho do repositorio](https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez?style=flat-square)
+![Logo](https://user-images.githubusercontent.com/100887395/178359155-19d1e5e8-614b-4d4f-a2a1-3d37c1a53fb3.png) ![Tamanho do repositorio](https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez?style=flat-square)
 
 
 ## Xadrez
+
+
+
+
+
+
+
+
+
+
 
 
 
