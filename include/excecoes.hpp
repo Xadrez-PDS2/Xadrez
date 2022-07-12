@@ -3,6 +3,7 @@
 
 #include <exception>
 
+
 class ErroDeJogoException : public std::exception
 {
     public:

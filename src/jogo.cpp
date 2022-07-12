@@ -38,33 +38,40 @@ bool Jogo::ativo()
 {
     return jogo_ativo;
 }
+
 const std::string Jogo::processa_jogada(const std::string entrada)
 {
     std::string aux, entrada2;
     entrada2 = entrada;
     remove(entrada2.begin(), entrada2.end(), ' ');
     int tamanho = entrada2.length();
-    for (int i = 0; i < tamanho-3; i++)
+    
+    for(int i = 0; i < tamanho-3; i++)
     {
-    aux = entrada2.substr(i, 4);
-    if (std::regex_match(aux, this->comando_valido))
-        break;
+        aux = entrada2.substr(i, 4);
+        if(std::regex_match(aux, this->comando_valido))
+            break;
     }
+
     return aux;
 }
+
 const std::string Jogo::processa_terminal()
 {
     std::string entrada, aux;
-
     std::cout << "Digite a coordenada da peça a ser movida e para onde ela deve ir: A-H(coluna)1-8(linha)" << std::endl;
+    
     while(!std::regex_search(entrada, this->comando_valido))
     {
         std::cin >> aux;
         entrada = entrada + aux;
     }
+
     aux = this->processa_jogada(entrada);
+    
     return aux;
 }
+
 void Jogo::jogada(std::string entrada)
 {
     try
@@ -74,7 +81,8 @@ void Jogo::jogada(std::string entrada)
         int coluna_inicial;
         int linha_final;
         int coluna_final;        
-        if (std::regex_match(entrada, this->comando_valido))
+        
+        if(std::regex_match(entrada, this->comando_valido))
         {
             ci = entrada[0];
             linha_inicial = std::atoi(&entrada[1]);
@@ -87,6 +95,7 @@ void Jogo::jogada(std::string entrada)
             std::cout << "Posições escolhidas: de " << ci << linha_inicial << " para " << cf << linha_final << std::endl;
             linha_inicial -= 1;
             linha_final -= 1;
+            
             Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
 
             movimento.validar_movimento();
@@ -98,10 +107,9 @@ void Jogo::jogada(std::string entrada)
             else
                 da_vez = p1;
         }
+        
         else
-        {
             std::cout << " O comando é invalido." << std::endl;
-        }
     }
 
     catch(ForaDoMapaException &e)

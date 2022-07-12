@@ -31,6 +31,16 @@ void Peca::set_primeiro_movimento(bool primeiro_movimento)
     this->primeiro_movimento = primeiro_movimento;
 }
 
+void Peca::set_en_passant(bool en_passant)
+{
+    this->en_passant = en_passant;
+}
+
+bool Peca::get_en_passant()
+{
+    return this->en_passant;
+}
+
 std::pair<int, int> Peca::get_casas()
 {
     std::pair<int, int> casas;
