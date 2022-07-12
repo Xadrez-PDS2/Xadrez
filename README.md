@@ -63,7 +63,15 @@ Para iniciar o jogo deve-se antes decidir quem irá comandar as peças brancas e
 
 Este jogo foi programado para realizar todas as jogadas do jogo de xadrez tradicional, inclusive as jogadas especiais.
 
- 
+
+## 💻 Técnicas e tecnologias utilizadas
+
+- C++
+- Visual Studio Code
+- 
+- Programação orientada a objetos
+
+
 ## 📋 User stories
 
 >- Eu como jogador tenho a preferência na primeira jogada se minhas peças forem da cor branca.
@@ -85,14 +93,6 @@ Este jogo foi programado para realizar todas as jogadas do jogo de xadrez tradic
 >- Eu como jogador empato o jogo quando ambos os jogadores repetem o mesmo movimento três vezes consecutivas.
 >- Eu como jogador ganho a partida quando ataco o rei inimigo e, durante a rodada inimiga, o oponente não possui movimentos possíveis para o rei ou que interrompam a sua eliminação (seja capturando a peça atacante ou bloqueando o "caminho" até o rei)
 >- Eu como jogo finalizo quando houver um empate ou uma vitória.
-
-
-## 💻 Técnicas e tecnologias utilizadas
-
-- C++
-- Visual Studio Code
-- 
-- Programação orientada a objetos
 
 
 ## 😁 Autores
