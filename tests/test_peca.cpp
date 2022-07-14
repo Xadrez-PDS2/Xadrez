@@ -53,3 +53,19 @@ TEST_CASE("testa set casas peao")
 
     CHECK_EQ(casas, peao.get_casas());
 }
+
+TEST_CASE("testa construtor das subclasses")
+{
+    Peao peao=Peao(0,0,PRETAS);
+    CHECK(peao.get_representacao()==" PEA ");
+    Torre torre=Torre(1,1,BRANCAS);
+    CHECK(torre.get_representacao()==" TOR ");
+    Rei rei= Rei(0,0,BRANCAS);
+    CHECK(rei.get_representacao()==" REI ");
+    Bispo bispo=Bispo(0,0,BRANCAS);
+    CHECK(bispo.get_representacao()==" BIS ");
+    Cavalo cavalo=Cavalo(0,0, BRANCAS);
+    CHECK(cavalo.get_representacao()==" CAV ");
+    Dama dama= Dama(0,0,BRANCAS);
+    CHECK(dama.get_representacao()==" DAM ");
+}

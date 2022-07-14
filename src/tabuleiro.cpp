@@ -1,5 +1,6 @@
 
 #include "tabuleiro.hpp"
+#include <cstddef>
 
 
 Tabuleiro::Tabuleiro(int tamanho):
@@ -85,7 +86,14 @@ void Tabuleiro::constroi_tabuleiro()
         }
     }
 }
+void Tabuleiro::limpa_tabuleiro(){
+    for (int i=0; i<this->tamanho; i++) {
+        for (int j=0; j<this->tamanho; j++) {
+            limpa_casa(i, j);
+        }
+    }
 
+}
 Tabuleiro::~Tabuleiro() 
 {
     for(std::vector<Peca *> linha : this->casas) 

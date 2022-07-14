@@ -73,6 +73,10 @@ class Tabuleiro
          */
         void constroi_tabuleiro();
 
+        /**
+         * @brief Limpa o tabuleiro
+         */
+        void limpa_tabuleiro();
     private:
         /**
         * @brief Matriz de coordenadas que contem os enderecos das pecas existentes

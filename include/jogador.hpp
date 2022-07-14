@@ -6,7 +6,7 @@
 
 #include <string>
 #include <map>
-
+using namespace std;
 
 class Jogador 
 {
@@ -49,6 +49,11 @@ class Jogador
          * @brief Zera os valores de todas pecas
          */
         void zera_pecas();
+        
+        /**
+         * @brief Retorna um mapa com as peças do jogador
+         */
+        map<string, int> get_pecas();
 
     private:
         /**

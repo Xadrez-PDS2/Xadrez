@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 
 #include "excecoes.hpp"
@@ -143,24 +144,47 @@ void Movimento::checa_movimento_peca()
 }
 
 void Movimento::checa_movimento_peao()
-{
+{   
     bool passant_target = false;
-    if(tabuleiro->get_casa(linha_final,coluna_final) != nullptr) 
-        passant_target = (tabuleiro->get_casa(linha_final, coluna_final))->get_en_passant();   
-        
-    switch(peca->get_cor())
+   
+    //verifica se esta deslocando mais de uma coluna
+    if(abs(coluna_final-coluna_inicial)>1)
     {
+        
+        throw MovimentoInvalidoException();
+    }
+        
+
+    switch(peca->get_cor())
+    {   
+
+    
         case Cor::BRANCAS:
+        
+            //setta o passant target
+            if(tabuleiro->get_casa(linha_final,coluna_final) == nullptr &&
+           tabuleiro->get_casa(linha_final-1,coluna_final)!=nullptr){
+
+            if(tabuleiro->get_casa(linha_final-1,coluna_final)->get_cor()!=peca->get_cor()){
+                passant_target=tabuleiro->get_casa(linha_final-1,coluna_final)->get_en_passant();
+            }
+        } 
             //verifica se o peao andou mais de duas casas ou para trás
             if(linha_final > linha_inicial+2 || linha_final < linha_inicial)
+            {
                 throw MovimentoInvalidoException();
+            }
+                
 
             //verifica se a posição final esta vazia 
             if(tabuleiro->get_casa(linha_final, coluna_final) == nullptr)
-            {
+            {   
                 //verifica se o peao se manteve na coluna
-                if(coluna_final != coluna_inicial)
+                if(coluna_final != coluna_inicial&&!passant_target)
+                {
                     throw MovimentoInvalidoException();
+                }
+                    
 
                 //verifica se o peao parou em uma posição duas linhas a frente 
                 else if(linha_final == linha_inicial+2)
@@ -170,7 +194,10 @@ void Movimento::checa_movimento_peao()
                     {
                         //verifica se existe qualquer peca no caminho do peão
                         if(tabuleiro->get_casa(linha_inicial+1, coluna_inicial) != nullptr)
+                        {
                             throw PecaNaFrenteException();
+                        }
+                            
 
                         //se foi o primeiro movimento libera a possibilidade do movimento en passant
                         peca->set_en_passant(true);    
@@ -178,33 +205,37 @@ void Movimento::checa_movimento_peao()
                     
                     //Se não for o primeiro movimento
                     else
+                    {
                         throw MovimentoInvalidoException();
+                    }
+                        
                 }
             }
             //caso haja alguma peça na posição final
-            else 
-            {
-                //verifica se o peao mudou para uma coluna adjacente
-                if(coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
-                    throw MovimentoInvalidoException();                
-                
-                //verifica se o movimento de en passant está liberado
-                if(tabuleiro->get_casa(linha_final, coluna_final)->get_representacao() == " PEA ")
+            else if(tabuleiro->get_casa(linha_final, coluna_final) != nullptr)
+            {   
+                //Verifica se esta se movendo somente na diagonal
+                if(linha_inicial==linha_final)
                 {
-                    if(passant_target)
-                    {
-                        if(linha_final != linha_inicial || linha_final != linha_inicial)
-                            throw MovimentoInvalidoException();                            
-                    }
-                }
-
-                //verifica se o peao parou em uma posição a frente 
-                else if((linha_final != linha_inicial-1)&& !peca->get_en_passant())
                     throw MovimentoInvalidoException();
+                }
+                //Verifica se esta atacando na frente
+                if(coluna_final==coluna_inicial && linha_final==linha_inicial+1)
+                {
+                    throw MovimentoInvalidoException();
+                }       
             }
             break;
 
         case Cor::PRETAS:
+            //setta o passant target
+            if(tabuleiro->get_casa(linha_final,coluna_final) == nullptr &&
+           tabuleiro->get_casa(linha_final+1,coluna_final)!=nullptr){
+
+            if(tabuleiro->get_casa(linha_final+1,coluna_final)->get_cor()!=peca->get_cor()){
+                passant_target=tabuleiro->get_casa(linha_final+1,coluna_final)->get_en_passant();
+            }
+            }
             //verifica se o peao andou mais de duas casas ou para trás 
             if(linha_final < linha_inicial-2 || linha_final > linha_inicial)
                 throw MovimentoInvalidoException();
@@ -213,7 +244,7 @@ void Movimento::checa_movimento_peao()
             if(tabuleiro->get_casa(linha_final, coluna_final) == nullptr)
             {
                 //verifica se o peao se manteve na coluna
-                if(coluna_final != coluna_inicial)
+                if(coluna_final != coluna_inicial && !passant_target)
                     throw MovimentoInvalidoException();
 
                 //verifica se o peao parou em uma posição duas linhas a frente
@@ -238,24 +269,14 @@ void Movimento::checa_movimento_peao()
 
             //caso haja alguma peça na posição final
             else 
-            {
-                //verifica se o peao mudou para uma coluna adjacente
-                if(coluna_final != coluna_inicial-1 && coluna_final != coluna_inicial+1)
+            {   
+                //Verifica se esta se movendo somente na diagonal
+                if(linha_inicial==linha_final){
                     throw MovimentoInvalidoException();
-                
-                //verifica se o movimento de en passant está liberado
-                if(tabuleiro->get_casa(linha_final, coluna_final)->get_representacao() == " PEA ")
-                {
-                    if(passant_target)
-                    {
-                        if(linha_final != linha_inicial|| linha_final != linha_inicial)
-                            throw MovimentoInvalidoException();
-                    }
                 }
-
-                //verifica se o peao parou em uma posição a frente 
-                else if((linha_final != linha_inicial-1)&& !passant_target)
-                    throw MovimentoInvalidoException();
+                //Verifica se esta atacando na frente
+                if(coluna_final==coluna_inicial && linha_final==linha_inicial-1)
+                    throw MovimentoInvalidoException();         
             }
             break;
     }

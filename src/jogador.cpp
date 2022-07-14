@@ -102,7 +102,9 @@ void Jogador::atualiza_pecas(Tabuleiro* tabuleiro)
         }
     }
 }
-
+map<string, int> Jogador::get_pecas(){
+    return  this->pecas;
+}
 void Jogador::zera_pecas()
 {
     this->pecas["Peao   "] = 0;
