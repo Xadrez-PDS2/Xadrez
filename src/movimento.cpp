@@ -64,8 +64,12 @@ void Movimento::executar_movimento()
                     break;
             }
         }
-        
-        tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
+
+        if (peca->get_representacao() == " REI " && (((coluna_final - coluna_inicial) == 2) || (coluna_inicial - coluna_final == 2)))
+            this->roque();
+        else
+            tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
+    
     }
 
     Peca* pecaAnalise;
@@ -86,6 +90,31 @@ void Movimento::executar_movimento()
     }
 }
 
+void Movimento::roque()
+{
+    bool roque_esq;
+    if (coluna_final == 2)
+        roque_esq = true;
+    else if (coluna_final == 6)
+        roque_esq = false;
+    else
+        throw ErroDeRoqueException();
+    
+    if (roque_esq)
+    {
+        tabuleiro->limpa_casa(linha_final, 2);
+        tabuleiro->limpa_casa(linha_final, 3);
+        tabuleiro->adiciona_peca_existente(peca, linha_final, 2);
+        tabuleiro->adiciona_peca_existente(tabuleiro->get_casa(linha_final, 0), linha_final, 3);
+    }
+    else
+    {
+        tabuleiro->limpa_casa(linha_final, 5);
+        tabuleiro->limpa_casa(linha_final, 6);
+        tabuleiro->adiciona_peca_existente(peca, linha_final, 6);
+        tabuleiro->adiciona_peca_existente(tabuleiro->get_casa(linha_final, 7), linha_final, 5);
+    }
+}
 void Movimento::validar_movimento()
 {
     //Confere se o movimento está dentro do tabuleiro
@@ -464,9 +493,46 @@ void Movimento::checa_movimento_rei()
         if((coluna_inicial+1 == coluna_final) || (coluna_inicial-1 == coluna_final))
             checa_movimento_bispo();
     }
+    //movimentou mais de 1 casa, mas é o primeiro movimento do rei e da torre aliada
+    else if (peca->get_primeiro_movimento() && (linha_inicial == linha_final))
+    {
+        bool esq;
+        int posicao_torre_esq = 0, posicao_torre_dir = 7;
+        if (coluna_final == 2)
+            esq = true;
+        else if (coluna_final == 6)
+            esq = false;
+        else
+            throw ErroDeRoqueException();
+        if (esq)
+        {
+            Peca *torre_aliada = tabuleiro->get_casa(linha_final, posicao_torre_esq);
+            if (!(torre_aliada->get_representacao() == " TOR ") && !(torre_aliada->get_primeiro_movimento()))
+                throw ErroDeRoqueException();
+            for (int id = coluna_inicial-1; id > posicao_torre_esq; id--)
+            {
+                Peca *aux = tabuleiro->get_casa(linha_final, id);
+                if (aux != nullptr)
+                    throw ErroDeRoqueException();
+            }
+        }
+        else
+        {
+            Peca *torre_aliada = tabuleiro->get_casa(linha_final, posicao_torre_dir);
+            if (!(torre_aliada->get_representacao() == " TOR ") && !(torre_aliada->get_primeiro_movimento()))
+                throw ErroDeRoqueException();
+            for (int id = coluna_inicial+1; id < posicao_torre_dir; id++)
+            {
+                Peca *aux = tabuleiro->get_casa(linha_final, id);
+                if (aux != nullptr)
+                    throw ErroDeRoqueException();
+            }
+        }
 
+    }
+    
     //movimentou mais de 1 casa
-    else
+    else 
         throw MovimentoInvalidoException();
 }
 

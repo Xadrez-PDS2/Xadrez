@@ -54,7 +54,7 @@ class PecaAliadaException : public ErroDeJogoException
     public:
         virtual const char* what() const noexcept
         {
-            return "O jogador não pode tomar as suas próprias pecas";
+            return "O jogador não pode tomar as suas próprias pecas.";
         }
 };
 
@@ -72,9 +72,47 @@ class ErroDeLogicaException : public std::exception
     public:
         virtual const char* what() const noexcept
         {
-            return "Procedimento inesperado";
+            return "Procedimento inesperado.";
         }
+};
 
+class ErroDeRoqueException : public std::exception
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não é possivel realizar o roque nesta situação";
+        }
+};
+
+
+
+
+class ErroPgnException : public std::exception
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Erro ao manipular os arquivos!";
+        }
+};
+
+class ErroAoAbrirException : public ErroPgnException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não foi possivel realizar a abertura do arquivo";
+        }
+};
+
+class ErroAoFecharException : public ErroPgnException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não foi possivel realizar o fechamento do arquivo";
+        }
 };
 
 #endif
