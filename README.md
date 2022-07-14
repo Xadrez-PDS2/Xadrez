@@ -50,7 +50,7 @@ cd Xadrez
 make
 ```
 
-5. Execute o comando ./main para executar o jogo.
+5. Execute o comando ./bin./main para executar o jogo.
 
 ```bash
 ./bin./main
