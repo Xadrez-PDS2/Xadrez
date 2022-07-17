@@ -1,0 +1,135 @@
+\hypertarget{class_jogo}{}\doxysection{Referência da Classe Jogo}
+\label{class_jogo}\index{Jogo@{Jogo}}
+
+
+Define os funcionamentos de um jogo padrao.  
+
+
+
+
+{\ttfamily \#include $<$jogo.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogo_ada6b127710abe5e25240b09b1a13b502}{Jogo}} ()
+\begin{DoxyCompactList}\small\item\em Construtor do jogo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jogo_aefcb010d60d5cd578c97af37f2980cbe}{$\sim$\+Jogo}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor do jogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogo_a47a725e4024a11d87730620c634417f8}{imprime}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do jogo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jogo_af25d71cb88c98e9b5be5f45de878d457}{ativo}} ()
+\begin{DoxyCompactList}\small\item\em retorna verdadeiro se o jogo estiver atibo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogo_a739099de852ba772665b59d46c7d7710}{encerrar}} ()
+\begin{DoxyCompactList}\small\item\em encerra o jogo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogo_ac175178aebbeee64b62a98d6e6b626f8}{jogada}} (std\+::string entrada)
+\begin{DoxyCompactList}\small\item\em realiza os procedimentos do jogador da vez \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_jogo_a935d948813ca4bcb96bdf2e898ed9177}{processa\+\_\+terminal}} ()
+\begin{DoxyCompactList}\small\item\em Processa os comandos do terminal. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_jogo_a1c7b16c3a995bd0ea302a74d562ccc01}{processa\+\_\+jogada}} (const std\+::string entrada)
+\begin{DoxyCompactList}\small\item\em Processa a jogada valida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Define os funcionamentos de um jogo padrao. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_jogo_ada6b127710abe5e25240b09b1a13b502}\label{class_jogo_ada6b127710abe5e25240b09b1a13b502}} 
+\index{Jogo@{Jogo}!Jogo@{Jogo}}
+\index{Jogo@{Jogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{Jogo()}{Jogo()}}
+{\footnotesize\ttfamily Jogo\+::\+Jogo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor do jogo. 
+
+\mbox{\Hypertarget{class_jogo_aefcb010d60d5cd578c97af37f2980cbe}\label{class_jogo_aefcb010d60d5cd578c97af37f2980cbe}} 
+\index{Jogo@{Jogo}!````~Jogo@{$\sim$Jogo}}
+\index{````~Jogo@{$\sim$Jogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Jogo()}{~Jogo()}}
+{\footnotesize\ttfamily Jogo\+::$\sim$\+Jogo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor do jogo. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_jogo_af25d71cb88c98e9b5be5f45de878d457}\label{class_jogo_af25d71cb88c98e9b5be5f45de878d457}} 
+\index{Jogo@{Jogo}!ativo@{ativo}}
+\index{ativo@{ativo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{ativo()}{ativo()}}
+{\footnotesize\ttfamily bool Jogo\+::ativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna verdadeiro se o jogo estiver atibo 
+
+\mbox{\Hypertarget{class_jogo_a739099de852ba772665b59d46c7d7710}\label{class_jogo_a739099de852ba772665b59d46c7d7710}} 
+\index{Jogo@{Jogo}!encerrar@{encerrar}}
+\index{encerrar@{encerrar}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{encerrar()}{encerrar()}}
+{\footnotesize\ttfamily void Jogo\+::encerrar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+encerra o jogo 
+
+\mbox{\Hypertarget{class_jogo_a47a725e4024a11d87730620c634417f8}\label{class_jogo_a47a725e4024a11d87730620c634417f8}} 
+\index{Jogo@{Jogo}!imprime@{imprime}}
+\index{imprime@{imprime}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{imprime()}{imprime()}}
+{\footnotesize\ttfamily void Jogo\+::imprime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o estado atual do jogo. 
+
+\mbox{\Hypertarget{class_jogo_ac175178aebbeee64b62a98d6e6b626f8}\label{class_jogo_ac175178aebbeee64b62a98d6e6b626f8}} 
+\index{Jogo@{Jogo}!jogada@{jogada}}
+\index{jogada@{jogada}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{jogada()}{jogada()}}
+{\footnotesize\ttfamily void Jogo\+::jogada (\begin{DoxyParamCaption}\item[{std\+::string}]{entrada }\end{DoxyParamCaption})}
+
+
+
+realiza os procedimentos do jogador da vez 
+
+\mbox{\Hypertarget{class_jogo_a1c7b16c3a995bd0ea302a74d562ccc01}\label{class_jogo_a1c7b16c3a995bd0ea302a74d562ccc01}} 
+\index{Jogo@{Jogo}!processa\_jogada@{processa\_jogada}}
+\index{processa\_jogada@{processa\_jogada}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{processa\_jogada()}{processa\_jogada()}}
+{\footnotesize\ttfamily const std\+::string Jogo\+::processa\+\_\+jogada (\begin{DoxyParamCaption}\item[{const std\+::string}]{entrada }\end{DoxyParamCaption})}
+
+
+
+Processa a jogada valida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em entrada} & Paramentro que contem o comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+const std\+::string o comando valido 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jogo_a935d948813ca4bcb96bdf2e898ed9177}\label{class_jogo_a935d948813ca4bcb96bdf2e898ed9177}} 
+\index{Jogo@{Jogo}!processa\_terminal@{processa\_terminal}}
+\index{processa\_terminal@{processa\_terminal}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{processa\_terminal()}{processa\_terminal()}}
+{\footnotesize\ttfamily const std\+::string Jogo\+::processa\+\_\+terminal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processa os comandos do terminal. 
+
+\begin{DoxyReturn}{Retorna}
+retorna uma string com a jogada 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{jogo_8hpp}{jogo.\+hpp}}\end{DoxyCompactItemize}

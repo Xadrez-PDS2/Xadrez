@@ -1,0 +1,176 @@
+\hypertarget{class_peca}{}\doxysection{Referência da Classe Peca}
+\label{class_peca}\index{Peca@{Peca}}
+
+
+Classe que cuida de todas as funcionalidades gerais de uma peca.  
+
+
+
+
+{\ttfamily \#include $<$peca.\+hpp$>$}
+
+
+
+Superclasse de \mbox{\hyperlink{class_bispo}{Bispo}}, \mbox{\hyperlink{class_cavalo}{Cavalo}}, \mbox{\hyperlink{class_dama}{Dama}}, \mbox{\hyperlink{class_peao}{Peao}}, \mbox{\hyperlink{class_rei}{Rei}} e \mbox{\hyperlink{class_torre}{Torre}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_peca_af4e1ce897b21c004265d71cff4392973}{Peca}} (int linha, int coluna, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor)
+\begin{DoxyCompactList}\small\item\em construtor padrão de uma peca \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_peca_aec793ed4ca41748ae42bc78984a87d2b}{$\sim$\+Peca}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da peça. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_peca_a80bf066e08163ced0866ae59b807fa35}{get\+\_\+representacao}} ()=0
+\item 
+\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} \mbox{\hyperlink{class_peca_a9fa12dab6d7ffb19bc0bac2d3abe26bd}{get\+\_\+cor}} ()
+\begin{DoxyCompactList}\small\item\em retorna Cor da peça \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_peca_ad2a95467dbf5ef4164571d00ea74a8f7}{get\+\_\+primeiro\+\_\+movimento}} ()
+\begin{DoxyCompactList}\small\item\em retorna true se a peça ainda não se movimentou \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_peca_aa51efc7b89f3c3b1fd5611ac83bb9cb0}{set\+\_\+primeiro\+\_\+movimento}} (bool primeiro\+\_\+movimento)
+\begin{DoxyCompactList}\small\item\em seta o primeiro\+\_\+movimento \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_peca_aa1132c2d3058e0500aeace022ee8c866}{set\+\_\+en\+\_\+passant}} (bool en\+\_\+passant)
+\begin{DoxyCompactList}\small\item\em seta o movimento de en passant \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_peca_a25b3f376af6f0616df4bbd1c7872f447}{get\+\_\+en\+\_\+passant}} ()
+\begin{DoxyCompactList}\small\item\em retorna true se o movimento foi de en passant \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_peca_a56482f93fc9692a0773efea71f8dd3ed}{get\+\_\+casas}} ()
+\begin{DoxyCompactList}\small\item\em retorna um pair-\/\texorpdfstring{$>$}{>}first que representa a linha atual da peça e pair-\/\texorpdfstring{$>$}{>}second que representa a coluna atual da peça \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_peca_ad8668501cfcd169203be59970ae6a296}{set\+\_\+casas}} (int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Seta as posições da peça. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que cuida de todas as funcionalidades gerais de uma peca. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_peca_af4e1ce897b21c004265d71cff4392973}\label{class_peca_af4e1ce897b21c004265d71cff4392973}} 
+\index{Peca@{Peca}!Peca@{Peca}}
+\index{Peca@{Peca}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{Peca()}{Peca()}}
+{\footnotesize\ttfamily Peca\+::\+Peca (\begin{DoxyParamCaption}\item[{int}]{linha,  }\item[{int}]{coluna,  }\item[{\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}}]{cor }\end{DoxyParamCaption})}
+
+
+
+construtor padrão de uma peca 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Posicao inicial da linha que a peca ocupa no tabuleiro \\
+\hline
+{\em coluna} & Posicao inicial da coluna que a peca ocupa no tabuleiro \\
+\hline
+{\em cor} & Cor da peca \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_peca_aec793ed4ca41748ae42bc78984a87d2b}\label{class_peca_aec793ed4ca41748ae42bc78984a87d2b}} 
+\index{Peca@{Peca}!````~Peca@{$\sim$Peca}}
+\index{````~Peca@{$\sim$Peca}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{$\sim$Peca()}{~Peca()}}
+{\footnotesize\ttfamily virtual Peca\+::$\sim$\+Peca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destrutor da peça. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_peca_a56482f93fc9692a0773efea71f8dd3ed}\label{class_peca_a56482f93fc9692a0773efea71f8dd3ed}} 
+\index{Peca@{Peca}!get\_casas@{get\_casas}}
+\index{get\_casas@{get\_casas}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{get\_casas()}{get\_casas()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Peca\+::get\+\_\+casas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna um pair-\/\texorpdfstring{$>$}{>}first que representa a linha atual da peça e pair-\/\texorpdfstring{$>$}{>}second que representa a coluna atual da peça 
+
+\mbox{\Hypertarget{class_peca_a9fa12dab6d7ffb19bc0bac2d3abe26bd}\label{class_peca_a9fa12dab6d7ffb19bc0bac2d3abe26bd}} 
+\index{Peca@{Peca}!get\_cor@{get\_cor}}
+\index{get\_cor@{get\_cor}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{get\_cor()}{get\_cor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} Peca\+::get\+\_\+cor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna Cor da peça 
+
+\mbox{\Hypertarget{class_peca_a25b3f376af6f0616df4bbd1c7872f447}\label{class_peca_a25b3f376af6f0616df4bbd1c7872f447}} 
+\index{Peca@{Peca}!get\_en\_passant@{get\_en\_passant}}
+\index{get\_en\_passant@{get\_en\_passant}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{get\_en\_passant()}{get\_en\_passant()}}
+{\footnotesize\ttfamily bool Peca\+::get\+\_\+en\+\_\+passant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna true se o movimento foi de en passant 
+
+\mbox{\Hypertarget{class_peca_ad2a95467dbf5ef4164571d00ea74a8f7}\label{class_peca_ad2a95467dbf5ef4164571d00ea74a8f7}} 
+\index{Peca@{Peca}!get\_primeiro\_movimento@{get\_primeiro\_movimento}}
+\index{get\_primeiro\_movimento@{get\_primeiro\_movimento}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{get\_primeiro\_movimento()}{get\_primeiro\_movimento()}}
+{\footnotesize\ttfamily bool Peca\+::get\+\_\+primeiro\+\_\+movimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna true se a peça ainda não se movimentou 
+
+\mbox{\Hypertarget{class_peca_a80bf066e08163ced0866ae59b807fa35}\label{class_peca_a80bf066e08163ced0866ae59b807fa35}} 
+\index{Peca@{Peca}!get\_representacao@{get\_representacao}}
+\index{get\_representacao@{get\_representacao}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{get\_representacao()}{get\_representacao()}}
+{\footnotesize\ttfamily virtual std\+::string Peca\+::get\+\_\+representacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Retorna}
+retorna a reprentacao da peca em forma de string A representacao da peca deve possuir 5 caracteres incluindo um espaco antes e depois 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{class_bispo_a4f11ad0fc60b9b230b0cec960bb32f61}{Bispo}}, \mbox{\hyperlink{class_cavalo_a9bfb23e0ddb68f4c54cb44bd1bb0be0c}{Cavalo}}, \mbox{\hyperlink{class_dama_af7c47a3d215fe6215c66a90b1578dcee}{Dama}}, \mbox{\hyperlink{class_peao_acb35440092c787745a50bb030de2aed9}{Peao}}, \mbox{\hyperlink{class_rei_a88c1b0e5af87f2da5b5bbbed5f29329b}{Rei}} e \mbox{\hyperlink{class_torre_a11a0150ef85b9b52ef82dd545b414431}{Torre}}.
+
+\mbox{\Hypertarget{class_peca_ad8668501cfcd169203be59970ae6a296}\label{class_peca_ad8668501cfcd169203be59970ae6a296}} 
+\index{Peca@{Peca}!set\_casas@{set\_casas}}
+\index{set\_casas@{set\_casas}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{set\_casas()}{set\_casas()}}
+{\footnotesize\ttfamily void Peca\+::set\+\_\+casas (\begin{DoxyParamCaption}\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Seta as posições da peça. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & atual \\
+\hline
+{\em coluna} & atual \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_peca_aa1132c2d3058e0500aeace022ee8c866}\label{class_peca_aa1132c2d3058e0500aeace022ee8c866}} 
+\index{Peca@{Peca}!set\_en\_passant@{set\_en\_passant}}
+\index{set\_en\_passant@{set\_en\_passant}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{set\_en\_passant()}{set\_en\_passant()}}
+{\footnotesize\ttfamily void Peca\+::set\+\_\+en\+\_\+passant (\begin{DoxyParamCaption}\item[{bool}]{en\+\_\+passant }\end{DoxyParamCaption})}
+
+
+
+seta o movimento de en passant 
+
+\mbox{\Hypertarget{class_peca_aa51efc7b89f3c3b1fd5611ac83bb9cb0}\label{class_peca_aa51efc7b89f3c3b1fd5611ac83bb9cb0}} 
+\index{Peca@{Peca}!set\_primeiro\_movimento@{set\_primeiro\_movimento}}
+\index{set\_primeiro\_movimento@{set\_primeiro\_movimento}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{set\_primeiro\_movimento()}{set\_primeiro\_movimento()}}
+{\footnotesize\ttfamily void Peca\+::set\+\_\+primeiro\+\_\+movimento (\begin{DoxyParamCaption}\item[{bool}]{primeiro\+\_\+movimento }\end{DoxyParamCaption})}
+
+
+
+seta o primeiro\+\_\+movimento 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{peca_8hpp}{peca.\+hpp}}\end{DoxyCompactItemize}

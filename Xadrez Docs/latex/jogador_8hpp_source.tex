@@ -1,0 +1,42 @@
+\hypertarget{jogador_8hpp_source}{}\doxysection{jogador.\+hpp}
+\label{jogador_8hpp_source}\index{include/jogador.hpp@{include/jogador.hpp}}
+\mbox{\hyperlink{jogador_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef JOGADOR\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define JOGADOR\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{peca_8hpp}{peca.hpp}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_jogador}{Jogador}} }
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         \mbox{\hyperlink{class_jogador_a370991fa332c10622722de66368abdff}{Jogador}}(\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}* tabuleiro, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor);}
+\DoxyCodeLine{20         }
+\DoxyCodeLine{24         \mbox{\hyperlink{class_jogador_a3e62c32199fc9cfbcf22cf83f9008be6}{\string~Jogador}}();}
+\DoxyCodeLine{25         }
+\DoxyCodeLine{30         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogador_a75954bc981bea332acdba38713e3e984}{imprime}}();}
+\DoxyCodeLine{31         }
+\DoxyCodeLine{36         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogador_affab871cb944dd0db4bce98b8595f595}{constroi\_pecas}}(\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}* tabuleiro);}
+\DoxyCodeLine{37         }
+\DoxyCodeLine{41         \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} \mbox{\hyperlink{class_jogador_a2becddcfa053c6dac65e3c77befbdfb0}{get\_cor}}();}
+\DoxyCodeLine{42         }
+\DoxyCodeLine{46         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogador_aafea3b47ef78b58ff766804b7c764d50}{atualiza\_pecas}}(\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}* tabuleiro);}
+\DoxyCodeLine{47        }
+\DoxyCodeLine{51         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogador_adfb95ecf4223d5e5a4c902bd78be8170}{zera\_pecas}}();}
+\DoxyCodeLine{52         }
+\DoxyCodeLine{56         map<string, int> \mbox{\hyperlink{class_jogador_a65b36ee8e8d230665e1274f60d205386}{get\_pecas}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keyword}{private}:}
+\DoxyCodeLine{62         std::map <std::string, int> pecas;}
+\DoxyCodeLine{63         }
+\DoxyCodeLine{68         \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor;}
+\DoxyCodeLine{69 \};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

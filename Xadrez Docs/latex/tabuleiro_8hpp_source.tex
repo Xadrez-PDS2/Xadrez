@@ -1,0 +1,54 @@
+\hypertarget{tabuleiro_8hpp_source}{}\doxysection{tabuleiro.\+hpp}
+\label{tabuleiro_8hpp_source}\index{include/tabuleiro.hpp@{include/tabuleiro.hpp}}
+\mbox{\hyperlink{tabuleiro_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TABULEIRO\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TABULEIRO\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{peca_8hpp}{peca.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{peao_8hpp}{peao.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{bispo_8hpp}{bispo.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cavalo_8hpp}{cavalo.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{torre_8hpp}{torre.hpp}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{dama_8hpp}{dama.hpp}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rei_8hpp}{rei.hpp}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define TAMANHO\_DO\_TABULEIRO 8}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} }
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{public}:}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_tabuleiro_a941163d527490fa1811dae7563c9ddff}{Tabuleiro}}(\textcolor{keywordtype}{int} tamanho);}
+\DoxyCodeLine{26         }
+\DoxyCodeLine{30         \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\string~Tabuleiro}}();}
+\DoxyCodeLine{31         }
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tabuleiro_a124dfa883d82d3562550dea6d173ad81}{imprime}}();}
+\DoxyCodeLine{36         }
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tabuleiro_a282656758ebfba140d525010a2782cf7}{adiciona\_peca}}(\textcolor{keyword}{const} std::string \&peca, \textcolor{keywordtype}{int} linha, \textcolor{keywordtype}{int} coluna, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor);}
+\DoxyCodeLine{45         }
+\DoxyCodeLine{52         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tabuleiro_a4e0fd7fc1d042abee45a0b60b602aabd}{adiciona\_peca\_existente}}(\mbox{\hyperlink{class_peca}{Peca}} *peca, \textcolor{keywordtype}{int} linha, \textcolor{keywordtype}{int} coluna);}
+\DoxyCodeLine{53         }
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tabuleiro_a46b7fd4a6fc3b25e4e3a288f65dacc2f}{limpa\_casa}}( \textcolor{keywordtype}{int} linha, \textcolor{keywordtype}{int} coluna); }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64         \mbox{\hyperlink{class_peca}{Peca}}* \mbox{\hyperlink{class_tabuleiro_a82aec4d5a9bdafec4f671c87462fb1f7}{get\_casa}}(\textcolor{keywordtype}{int} linha, \textcolor{keywordtype}{int} coluna);}
+\DoxyCodeLine{65         }
+\DoxyCodeLine{69         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tabuleiro_a675f838786512235478c750355bdb971}{get\_tamanho}}(); }
+\DoxyCodeLine{70         }
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tabuleiro_a64498f11e77cd67d9d006a7679efa25f}{constroi\_tabuleiro}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tabuleiro_a2ce68bef8efcd3014415c15300697956}{limpa\_tabuleiro}}();}
+\DoxyCodeLine{80     \textcolor{keyword}{private}:}
+\DoxyCodeLine{84         std::vector <std::vector <Peca *>> casas;}
+\DoxyCodeLine{85         }
+\DoxyCodeLine{90         \textcolor{keyword}{const} \textcolor{keywordtype}{int} tamanho;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         std::vector<std::string> L \{\textcolor{stringliteral}{"{}A"{}}, \textcolor{stringliteral}{"{}B"{}}, \textcolor{stringliteral}{"{}C"{}}, \textcolor{stringliteral}{"{}D"{}}, \textcolor{stringliteral}{"{}E"{}}, \textcolor{stringliteral}{"{}F"{}}, \textcolor{stringliteral}{"{}G"{}}, \textcolor{stringliteral}{"{}H"{}}\};}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

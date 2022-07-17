@@ -1,0 +1,139 @@
+\hypertarget{class_pgn}{}\doxysection{Referência da Classe Pgn}
+\label{class_pgn}\index{Pgn@{Pgn}}
+
+
+{\ttfamily \#include $<$pgn.\+hpp$>$}
+
+
+
+Superclasse de \mbox{\hyperlink{class_escritor_de_pgn}{Escritor\+De\+Pgn}} e \mbox{\hyperlink{class_leitor_de_pgn}{Leitor\+De\+Pgn}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pgn_a034994f9bf45522fee6b3c16f6725811}{Pgn}} (const std\+::string \&\mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\+\_\+do\+\_\+arquivo}})
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto \mbox{\hyperlink{class_pgn}{Pgn}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_pgn_a800d9477143d00d37466c9d61a2b0217}{$\sim$\+Pgn}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor de objetos \mbox{\hyperlink{class_pgn}{Pgn}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pgn_af4554be346f953de5b129d44a0d00ed9}{abre\+\_\+arquivo}} ()=0
+\begin{DoxyCompactList}\small\item\em Abre o arquivo. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pgn_a2612d0cc0bcf005e6f2f510398520f61}{fecha\+\_\+arquivo}} ()=0
+\begin{DoxyCompactList}\small\item\em fecha arquivo \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\+\_\+do\+\_\+arquivo}}
+\item 
+std\+::regex \mbox{\hyperlink{class_pgn_a18400e54314f170890ae23580eea016b}{jogo\+\_\+valido}}
+\item 
+std\+::regex \mbox{\hyperlink{class_pgn_a0a4a30c91e5335c43fc35ef65c9f559f}{comandos\+\_\+da\+\_\+rodada}}
+\item 
+std\+::regex \mbox{\hyperlink{class_pgn_ab17f87f202564b38b0ac822696926c64}{casa\+\_\+final}}
+\item 
+std\+::regex \mbox{\hyperlink{class_pgn_a76c64549e424cc3b5114a8a70e9a1045}{rodada}}
+\item 
+std\+::string \mbox{\hyperlink{class_pgn_a4e1a46182244203caa54d603a3d29af6}{conteudo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_pgn_a034994f9bf45522fee6b3c16f6725811}\label{class_pgn_a034994f9bf45522fee6b3c16f6725811}} 
+\index{Pgn@{Pgn}!Pgn@{Pgn}}
+\index{Pgn@{Pgn}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{Pgn()}{Pgn()}}
+{\footnotesize\ttfamily Pgn\+::\+Pgn (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+do\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Construtor de um objeto \mbox{\hyperlink{class_pgn}{Pgn}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+\_\+do\+\_\+arquivo} & Recebe o nome do arquivo em que realizará a gravação ou leitura dos dados da partida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pgn_a800d9477143d00d37466c9d61a2b0217}\label{class_pgn_a800d9477143d00d37466c9d61a2b0217}} 
+\index{Pgn@{Pgn}!````~Pgn@{$\sim$Pgn}}
+\index{````~Pgn@{$\sim$Pgn}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pgn()}{~Pgn()}}
+{\footnotesize\ttfamily virtual Pgn\+::$\sim$\+Pgn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor de objetos \mbox{\hyperlink{class_pgn}{Pgn}}. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_pgn_af4554be346f953de5b129d44a0d00ed9}\label{class_pgn_af4554be346f953de5b129d44a0d00ed9}} 
+\index{Pgn@{Pgn}!abre\_arquivo@{abre\_arquivo}}
+\index{abre\_arquivo@{abre\_arquivo}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{abre\_arquivo()}{abre\_arquivo()}}
+{\footnotesize\ttfamily virtual void Pgn\+::abre\+\_\+arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abre o arquivo. 
+
+
+
+Implementado por \mbox{\hyperlink{class_leitor_de_pgn_a715d37aa8ffb63e671715f6de7c8119f}{Leitor\+De\+Pgn}} e \mbox{\hyperlink{class_escritor_de_pgn_a294633e431abca4b8b5c829aebab79a9}{Escritor\+De\+Pgn}}.
+
+\mbox{\Hypertarget{class_pgn_a2612d0cc0bcf005e6f2f510398520f61}\label{class_pgn_a2612d0cc0bcf005e6f2f510398520f61}} 
+\index{Pgn@{Pgn}!fecha\_arquivo@{fecha\_arquivo}}
+\index{fecha\_arquivo@{fecha\_arquivo}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{fecha\_arquivo()}{fecha\_arquivo()}}
+{\footnotesize\ttfamily virtual void Pgn\+::fecha\+\_\+arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+fecha arquivo 
+
+
+
+Implementado por \mbox{\hyperlink{class_leitor_de_pgn_a24cf18993a4fdfa4e18ef69d69ffbc2a}{Leitor\+De\+Pgn}} e \mbox{\hyperlink{class_escritor_de_pgn_a7aec713fe1b4ef90167aba15cc148f02}{Escritor\+De\+Pgn}}.
+
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_pgn_ab17f87f202564b38b0ac822696926c64}\label{class_pgn_ab17f87f202564b38b0ac822696926c64}} 
+\index{Pgn@{Pgn}!casa\_final@{casa\_final}}
+\index{casa\_final@{casa\_final}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{casa\_final}{casa\_final}}
+{\footnotesize\ttfamily std\+::regex Pgn\+::casa\+\_\+final\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_pgn_a0a4a30c91e5335c43fc35ef65c9f559f}\label{class_pgn_a0a4a30c91e5335c43fc35ef65c9f559f}} 
+\index{Pgn@{Pgn}!comandos\_da\_rodada@{comandos\_da\_rodada}}
+\index{comandos\_da\_rodada@{comandos\_da\_rodada}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{comandos\_da\_rodada}{comandos\_da\_rodada}}
+{\footnotesize\ttfamily std\+::regex Pgn\+::comandos\+\_\+da\+\_\+rodada\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_pgn_a4e1a46182244203caa54d603a3d29af6}\label{class_pgn_a4e1a46182244203caa54d603a3d29af6}} 
+\index{Pgn@{Pgn}!conteudo@{conteudo}}
+\index{conteudo@{conteudo}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{conteudo}{conteudo}}
+{\footnotesize\ttfamily std\+::string Pgn\+::conteudo\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_pgn_a18400e54314f170890ae23580eea016b}\label{class_pgn_a18400e54314f170890ae23580eea016b}} 
+\index{Pgn@{Pgn}!jogo\_valido@{jogo\_valido}}
+\index{jogo\_valido@{jogo\_valido}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{jogo\_valido}{jogo\_valido}}
+{\footnotesize\ttfamily std\+::regex Pgn\+::jogo\+\_\+valido\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}\label{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}} 
+\index{Pgn@{Pgn}!nome\_do\_arquivo@{nome\_do\_arquivo}}
+\index{nome\_do\_arquivo@{nome\_do\_arquivo}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{nome\_do\_arquivo}{nome\_do\_arquivo}}
+{\footnotesize\ttfamily std\+::string Pgn\+::nome\+\_\+do\+\_\+arquivo\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_pgn_a76c64549e424cc3b5114a8a70e9a1045}\label{class_pgn_a76c64549e424cc3b5114a8a70e9a1045}} 
+\index{Pgn@{Pgn}!rodada@{rodada}}
+\index{rodada@{rodada}!Pgn@{Pgn}}
+\doxysubsubsection{\texorpdfstring{rodada}{rodada}}
+{\footnotesize\ttfamily std\+::regex Pgn\+::rodada\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pgn_8hpp}{pgn.\+hpp}}\end{DoxyCompactItemize}

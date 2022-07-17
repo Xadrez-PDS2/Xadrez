@@ -1,0 +1,124 @@
+\hypertarget{excecoes_8hpp_source}{}\doxysection{excecoes.\+hpp}
+\label{excecoes_8hpp_source}\index{include/excecoes.hpp@{include/excecoes.hpp}}
+\mbox{\hyperlink{excecoes_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef EXCECOES\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define EXCECOES\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keyword}{public}:}
+\DoxyCodeLine{10         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}{what}}() const noexcept}
+\DoxyCodeLine{11         \{}
+\DoxyCodeLine{12             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Movimentação Inválida!"{}};}
+\DoxyCodeLine{13         \}}
+\DoxyCodeLine{14 \};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_fora_do_mapa_exception}{ForaDoMapaException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_fora_do_mapa_exception_a2eb218c8faa582cce2539a9fdd9f4ed8}{what}}() const noexcept}
+\DoxyCodeLine{20         \{}
+\DoxyCodeLine{21             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}A peça não pode ficar fora do tabuleiro."{}};}
+\DoxyCodeLine{22         \}}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_sem_peca_para_movimentar_exception}{SemPecaParaMovimentarException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keyword}{public}:}
+\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_sem_peca_para_movimentar_exception_a7c306aec53a4ea4fdfad79a203c9edb1}{what}}() const noexcept}
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não há peça na casa selecionada para realizar a movimentação."{}};}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_nao_e_sua_vez_exception}{NaoESuaVezException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_nao_e_sua_vez_exception_ac354f93cef222a3dc9ba5538856717bf}{what}}() const noexcept}
+\DoxyCodeLine{38         \{}
+\DoxyCodeLine{39             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não é sua vez de realizar a movimentação."{}};}
+\DoxyCodeLine{40         \}}
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{class_peca_na_frente_exception}{PecaNaFrenteException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}}}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     \textcolor{keyword}{public}:}
+\DoxyCodeLine{46         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_peca_na_frente_exception_a9efc37adb1d59774e49d049c5815f457}{what}}() const noexcept}
+\DoxyCodeLine{47         \{}
+\DoxyCodeLine{48             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}A peça não pode ser movimentada para a casa selecionada porque tem uma peça no caminho."{}};}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{class }\mbox{\hyperlink{class_peca_aliada_exception}{PecaAliadaException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}}}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54     \textcolor{keyword}{public}:}
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_peca_aliada_exception_a3dbe2cf982792c96fd3571d9bae45cc6}{what}}() const noexcept}
+\DoxyCodeLine{56         \{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}O jogador não pode tomar as suas próprias pecas."{}};}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{class }\mbox{\hyperlink{class_movimento_invalido_exception}{MovimentoInvalidoException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_de_jogo_exception}{ErroDeJogoException}}}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     \textcolor{keyword}{public}:}
+\DoxyCodeLine{64         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_movimento_invalido_exception_ab09280968ee6ff8cc66dba58f81e6889}{what}}() const noexcept}
+\DoxyCodeLine{65         \{}
+\DoxyCodeLine{66             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}A peça não pode realizar este movimento."{}};}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68 \};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{class }\mbox{\hyperlink{class_erro_de_logica_exception}{ErroDeLogicaException}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     \textcolor{keyword}{public}:}
+\DoxyCodeLine{73         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_erro_de_logica_exception_ac375847c2fe34e2a1826061d855f0482}{what}}() const noexcept}
+\DoxyCodeLine{74         \{}
+\DoxyCodeLine{75             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Procedimento inesperado."{}};}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77 \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{class }\mbox{\hyperlink{class_erro_de_roque_exception}{ErroDeRoqueException}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \textcolor{keyword}{public}:}
+\DoxyCodeLine{82         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_erro_de_roque_exception_ac070f2943ef393773d1e5f9542e5972c}{what}}() const noexcept}
+\DoxyCodeLine{83         \{}
+\DoxyCodeLine{84             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não é possivel realizar o roque nesta situação"{}};}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{keyword}{class }\mbox{\hyperlink{class_erro_pgn_exception}{ErroPgnException}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{92 \{}
+\DoxyCodeLine{93     \textcolor{keyword}{public}:}
+\DoxyCodeLine{94         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_erro_pgn_exception_a850472ad90bc755b0ce188e4a7965b8c}{what}}() const noexcept}
+\DoxyCodeLine{95         \{}
+\DoxyCodeLine{96             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Erro ao manipular os arquivos!"{}};}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98 \};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{keyword}{class }\mbox{\hyperlink{class_erro_ao_abrir_exception}{ErroAoAbrirException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_pgn_exception}{ErroPgnException}}}
+\DoxyCodeLine{101 \{}
+\DoxyCodeLine{102     \textcolor{keyword}{public}:}
+\DoxyCodeLine{103         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_erro_ao_abrir_exception_ad876d417dc70e887523943720b191515}{what}}() const noexcept}
+\DoxyCodeLine{104         \{}
+\DoxyCodeLine{105             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não foi possivel realizar a abertura do arquivo"{}};}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107 \};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{keyword}{class }\mbox{\hyperlink{class_erro_ao_fechar_exception}{ErroAoFecharException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_erro_pgn_exception}{ErroPgnException}}}
+\DoxyCodeLine{110 \{}
+\DoxyCodeLine{111     \textcolor{keyword}{public}:}
+\DoxyCodeLine{112         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_erro_ao_fechar_exception_a106426251c7b741c287545b7e63e7a71}{what}}() const noexcept}
+\DoxyCodeLine{113         \{}
+\DoxyCodeLine{114             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não foi possivel realizar o fechamento do arquivo"{}};}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

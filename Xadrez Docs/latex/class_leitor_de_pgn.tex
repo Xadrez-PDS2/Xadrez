@@ -1,0 +1,98 @@
+\hypertarget{class_leitor_de_pgn}{}\doxysection{Referência da Classe Leitor\+De\+Pgn}
+\label{class_leitor_de_pgn}\index{LeitorDePgn@{LeitorDePgn}}
+
+
+{\ttfamily \#include $<$pgn.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_pgn}{Pgn}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_leitor_de_pgn_a599a149c330570c097b2aebe3c75b5e4}{Leitor\+De\+Pgn}} (const std\+::string \&\mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\+\_\+do\+\_\+arquivo}})
+\begin{DoxyCompactList}\small\item\em Construtor do objeto Leitor De \mbox{\hyperlink{class_pgn}{Pgn}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_leitor_de_pgn_acb6b0c78d1f6413248b23f09b41af856}{$\sim$\+Leitor\+De\+Pgn}} () override
+\begin{DoxyCompactList}\small\item\em Destrutor do objeto Leitor De \mbox{\hyperlink{class_pgn}{Pgn}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_leitor_de_pgn_a715d37aa8ffb63e671715f6de7c8119f}{abre\+\_\+arquivo}} () override
+\begin{DoxyCompactList}\small\item\em Abre o arquivo para leitura. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_leitor_de_pgn_a24cf18993a4fdfa4e18ef69d69ffbc2a}{fecha\+\_\+arquivo}} () override
+\begin{DoxyCompactList}\small\item\em fechamento do arquivo utilizado para leitura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_leitor_de_pgn_a92bf991ddd05f92da773dfb1d29ac6d7}{imprime\+\_\+comandos}} ()
+\begin{DoxyCompactList}\small\item\em Função teste para verificar o que esta sendo lido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_leitor_de_pgn_a599a149c330570c097b2aebe3c75b5e4}\label{class_leitor_de_pgn_a599a149c330570c097b2aebe3c75b5e4}} 
+\index{LeitorDePgn@{LeitorDePgn}!LeitorDePgn@{LeitorDePgn}}
+\index{LeitorDePgn@{LeitorDePgn}!LeitorDePgn@{LeitorDePgn}}
+\doxysubsubsection{\texorpdfstring{LeitorDePgn()}{LeitorDePgn()}}
+{\footnotesize\ttfamily Leitor\+De\+Pgn\+::\+Leitor\+De\+Pgn (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+do\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Construtor do objeto Leitor De \mbox{\hyperlink{class_pgn}{Pgn}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+\_\+do\+\_\+arquivo} & Recebe o nome do arquivo em que realizará leitura dos dados da partida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_leitor_de_pgn_acb6b0c78d1f6413248b23f09b41af856}\label{class_leitor_de_pgn_acb6b0c78d1f6413248b23f09b41af856}} 
+\index{LeitorDePgn@{LeitorDePgn}!````~LeitorDePgn@{$\sim$LeitorDePgn}}
+\index{````~LeitorDePgn@{$\sim$LeitorDePgn}!LeitorDePgn@{LeitorDePgn}}
+\doxysubsubsection{\texorpdfstring{$\sim$LeitorDePgn()}{~LeitorDePgn()}}
+{\footnotesize\ttfamily virtual Leitor\+De\+Pgn\+::$\sim$\+Leitor\+De\+Pgn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destrutor do objeto Leitor De \mbox{\hyperlink{class_pgn}{Pgn}}. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_leitor_de_pgn_a715d37aa8ffb63e671715f6de7c8119f}\label{class_leitor_de_pgn_a715d37aa8ffb63e671715f6de7c8119f}} 
+\index{LeitorDePgn@{LeitorDePgn}!abre\_arquivo@{abre\_arquivo}}
+\index{abre\_arquivo@{abre\_arquivo}!LeitorDePgn@{LeitorDePgn}}
+\doxysubsubsection{\texorpdfstring{abre\_arquivo()}{abre\_arquivo()}}
+{\footnotesize\ttfamily virtual void Leitor\+De\+Pgn\+::abre\+\_\+arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Abre o arquivo para leitura. 
+
+
+
+Implementa \mbox{\hyperlink{class_pgn_af4554be346f953de5b129d44a0d00ed9}{Pgn}}.
+
+\mbox{\Hypertarget{class_leitor_de_pgn_a24cf18993a4fdfa4e18ef69d69ffbc2a}\label{class_leitor_de_pgn_a24cf18993a4fdfa4e18ef69d69ffbc2a}} 
+\index{LeitorDePgn@{LeitorDePgn}!fecha\_arquivo@{fecha\_arquivo}}
+\index{fecha\_arquivo@{fecha\_arquivo}!LeitorDePgn@{LeitorDePgn}}
+\doxysubsubsection{\texorpdfstring{fecha\_arquivo()}{fecha\_arquivo()}}
+{\footnotesize\ttfamily virtual void Leitor\+De\+Pgn\+::fecha\+\_\+arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fechamento do arquivo utilizado para leitura 
+
+
+
+Implementa \mbox{\hyperlink{class_pgn_a2612d0cc0bcf005e6f2f510398520f61}{Pgn}}.
+
+\mbox{\Hypertarget{class_leitor_de_pgn_a92bf991ddd05f92da773dfb1d29ac6d7}\label{class_leitor_de_pgn_a92bf991ddd05f92da773dfb1d29ac6d7}} 
+\index{LeitorDePgn@{LeitorDePgn}!imprime\_comandos@{imprime\_comandos}}
+\index{imprime\_comandos@{imprime\_comandos}!LeitorDePgn@{LeitorDePgn}}
+\doxysubsubsection{\texorpdfstring{imprime\_comandos()}{imprime\_comandos()}}
+{\footnotesize\ttfamily void Leitor\+De\+Pgn\+::imprime\+\_\+comandos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função teste para verificar o que esta sendo lido. 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pgn_8hpp}{pgn.\+hpp}}\end{DoxyCompactItemize}

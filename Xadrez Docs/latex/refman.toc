@@ -1,0 +1,216 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{\numberline {1}Índice Hierárquico}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Hierarquia de Classes}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Índice dos Componentes}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lista de Classes}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Índice dos Arquivos}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lista de Arquivos}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Classes}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Referência da Classe Bispo}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descrição detalhada}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Construtores e Destrutores}{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Bispo()}{7}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $Bispo()}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsection}{\numberline {4.1.3}Funções membros}{8}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}get\_representacao()}{8}{subsubsection.4.1.3.1}%
+\contentsline {section}{\numberline {4.2}Referência da Classe Cavalo}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Descrição detalhada}{9}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Construtores e Destrutores}{9}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Cavalo()}{9}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}$\sim $Cavalo()}{9}{subsubsection.4.2.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Funções membros}{9}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}get\_representacao()}{9}{subsubsection.4.2.3.1}%
+\contentsline {section}{\numberline {4.3}Referência da Classe Dama}{10}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Descrição detalhada}{10}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Construtores e Destrutores}{10}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Dama()}{10}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $Dama()}{10}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Funções membros}{11}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}get\_representacao()}{11}{subsubsection.4.3.3.1}%
+\contentsline {section}{\numberline {4.4}Referência da Classe Erro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ao\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Abrir\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{11}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Funções membros}{11}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}what()}{11}{subsubsection.4.4.1.1}%
+\contentsline {section}{\numberline {4.5}Referência da Classe Erro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ao\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fechar\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{12}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Funções membros}{12}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}what()}{12}{subsubsection.4.5.1.1}%
+\contentsline {section}{\numberline {4.6}Referência da Classe Erro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Jogo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{12}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Funções membros}{12}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}what()}{13}{subsubsection.4.6.1.1}%
+\contentsline {section}{\numberline {4.7}Referência da Classe Erro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logica\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{13}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Funções membros}{13}{subsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.1.1}what()}{13}{subsubsection.4.7.1.1}%
+\contentsline {section}{\numberline {4.8}Referência da Classe Erro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Roque\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{13}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Funções membros}{14}{subsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.1.1}what()}{14}{subsubsection.4.8.1.1}%
+\contentsline {section}{\numberline {4.9}Referência da Classe Erro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pgn\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{14}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Funções membros}{14}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}what()}{14}{subsubsection.4.9.1.1}%
+\contentsline {section}{\numberline {4.10}Referência da Classe Escritor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pgn}{15}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Construtores e Destrutores}{15}{subsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.1.1}EscritorDePgn()}{15}{subsubsection.4.10.1.1}%
+\contentsline {subsubsection}{\numberline {4.10.1.2}$\sim $EscritorDePgn()}{15}{subsubsection.4.10.1.2}%
+\contentsline {subsection}{\numberline {4.10.2}Funções membros}{15}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}abre\_arquivo()}{16}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}fecha\_arquivo()}{16}{subsubsection.4.10.2.2}%
+\contentsline {section}{\numberline {4.11}Referência da Classe Fora\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Do\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mapa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{16}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Funções membros}{16}{subsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.1}what()}{16}{subsubsection.4.11.1.1}%
+\contentsline {section}{\numberline {4.12}Referência da Classe Jogador}{17}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Construtores e Destrutores}{17}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}Jogador()}{17}{subsubsection.4.12.1.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.2}$\sim $Jogador()}{17}{subsubsection.4.12.1.2}%
+\contentsline {subsection}{\numberline {4.12.2}Funções membros}{18}{subsection.4.12.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}atualiza\_pecas()}{18}{subsubsection.4.12.2.1}%
+\contentsline {subsubsection}{\numberline {4.12.2.2}constroi\_pecas()}{18}{subsubsection.4.12.2.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.3}get\_cor()}{18}{subsubsection.4.12.2.3}%
+\contentsline {subsubsection}{\numberline {4.12.2.4}get\_pecas()}{18}{subsubsection.4.12.2.4}%
+\contentsline {subsubsection}{\numberline {4.12.2.5}imprime()}{18}{subsubsection.4.12.2.5}%
+\contentsline {subsubsection}{\numberline {4.12.2.6}zera\_pecas()}{19}{subsubsection.4.12.2.6}%
+\contentsline {section}{\numberline {4.13}Referência da Classe Jogo}{19}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Descrição detalhada}{19}{subsection.4.13.1}%
+\contentsline {subsection}{\numberline {4.13.2}Construtores e Destrutores}{19}{subsection.4.13.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}Jogo()}{20}{subsubsection.4.13.2.1}%
+\contentsline {subsubsection}{\numberline {4.13.2.2}$\sim $Jogo()}{20}{subsubsection.4.13.2.2}%
+\contentsline {subsection}{\numberline {4.13.3}Funções membros}{20}{subsection.4.13.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.1}ativo()}{20}{subsubsection.4.13.3.1}%
+\contentsline {subsubsection}{\numberline {4.13.3.2}encerrar()}{20}{subsubsection.4.13.3.2}%
+\contentsline {subsubsection}{\numberline {4.13.3.3}imprime()}{20}{subsubsection.4.13.3.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.4}jogada()}{20}{subsubsection.4.13.3.4}%
+\contentsline {subsubsection}{\numberline {4.13.3.5}processa\_jogada()}{20}{subsubsection.4.13.3.5}%
+\contentsline {subsubsection}{\numberline {4.13.3.6}processa\_terminal()}{21}{subsubsection.4.13.3.6}%
+\contentsline {section}{\numberline {4.14}Referência da Classe Leitor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pgn}{21}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Construtores e Destrutores}{21}{subsection.4.14.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.1}LeitorDePgn()}{21}{subsubsection.4.14.1.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.2}$\sim $LeitorDePgn()}{22}{subsubsection.4.14.1.2}%
+\contentsline {subsection}{\numberline {4.14.2}Funções membros}{22}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}abre\_arquivo()}{22}{subsubsection.4.14.2.1}%
+\contentsline {subsubsection}{\numberline {4.14.2.2}fecha\_arquivo()}{22}{subsubsection.4.14.2.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.3}imprime\_comandos()}{22}{subsubsection.4.14.2.3}%
+\contentsline {section}{\numberline {4.15}Referência da Classe Movimento}{23}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Construtores e Destrutores}{23}{subsection.4.15.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.1}Movimento()}{23}{subsubsection.4.15.1.1}%
+\contentsline {subsection}{\numberline {4.15.2}Funções membros}{24}{subsection.4.15.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.1}checa\_movimento\_bispo()}{24}{subsubsection.4.15.2.1}%
+\contentsline {subsubsection}{\numberline {4.15.2.2}checa\_movimento\_cavalo()}{24}{subsubsection.4.15.2.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.3}checa\_movimento\_dama()}{24}{subsubsection.4.15.2.3}%
+\contentsline {subsubsection}{\numberline {4.15.2.4}checa\_movimento\_peao()}{24}{subsubsection.4.15.2.4}%
+\contentsline {subsubsection}{\numberline {4.15.2.5}checa\_movimento\_peca()}{24}{subsubsection.4.15.2.5}%
+\contentsline {subsubsection}{\numberline {4.15.2.6}checa\_movimento\_rei()}{25}{subsubsection.4.15.2.6}%
+\contentsline {subsubsection}{\numberline {4.15.2.7}checa\_movimento\_torre()}{25}{subsubsection.4.15.2.7}%
+\contentsline {subsubsection}{\numberline {4.15.2.8}executar\_movimento()}{25}{subsubsection.4.15.2.8}%
+\contentsline {subsubsection}{\numberline {4.15.2.9}promove\_peao()}{25}{subsubsection.4.15.2.9}%
+\contentsline {subsubsection}{\numberline {4.15.2.10}roque()}{25}{subsubsection.4.15.2.10}%
+\contentsline {subsubsection}{\numberline {4.15.2.11}validar\_movimento()}{26}{subsubsection.4.15.2.11}%
+\contentsline {section}{\numberline {4.16}Referência da Classe Movimento\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Invalido\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{26}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Funções membros}{26}{subsection.4.16.1}%
+\contentsline {subsubsection}{\numberline {4.16.1.1}what()}{26}{subsubsection.4.16.1.1}%
+\contentsline {section}{\numberline {4.17}Referência da Classe Nao\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ESua\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vez\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{26}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Funções membros}{27}{subsection.4.17.1}%
+\contentsline {subsubsection}{\numberline {4.17.1.1}what()}{27}{subsubsection.4.17.1.1}%
+\contentsline {section}{\numberline {4.18}Referência da Classe Peao}{27}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Descrição detalhada}{27}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}Construtores e Destrutores}{27}{subsection.4.18.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.1}Peao()}{27}{subsubsection.4.18.2.1}%
+\contentsline {subsubsection}{\numberline {4.18.2.2}$\sim $Peao()}{28}{subsubsection.4.18.2.2}%
+\contentsline {subsection}{\numberline {4.18.3}Funções membros}{28}{subsection.4.18.3}%
+\contentsline {subsubsection}{\numberline {4.18.3.1}get\_representacao()}{28}{subsubsection.4.18.3.1}%
+\contentsline {subsection}{\numberline {4.18.4}Atributos}{28}{subsection.4.18.4}%
+\contentsline {subsubsection}{\numberline {4.18.4.1}en\_passant}{28}{subsubsection.4.18.4.1}%
+\contentsline {subsubsection}{\numberline {4.18.4.2}primeiro\_movimento}{28}{subsubsection.4.18.4.2}%
+\contentsline {section}{\numberline {4.19}Referência da Classe Peca}{29}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Descrição detalhada}{29}{subsection.4.19.1}%
+\contentsline {subsection}{\numberline {4.19.2}Construtores e Destrutores}{29}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}Peca()}{29}{subsubsection.4.19.2.1}%
+\contentsline {subsubsection}{\numberline {4.19.2.2}$\sim $Peca()}{30}{subsubsection.4.19.2.2}%
+\contentsline {subsection}{\numberline {4.19.3}Funções membros}{30}{subsection.4.19.3}%
+\contentsline {subsubsection}{\numberline {4.19.3.1}get\_casas()}{30}{subsubsection.4.19.3.1}%
+\contentsline {subsubsection}{\numberline {4.19.3.2}get\_cor()}{30}{subsubsection.4.19.3.2}%
+\contentsline {subsubsection}{\numberline {4.19.3.3}get\_en\_passant()}{30}{subsubsection.4.19.3.3}%
+\contentsline {subsubsection}{\numberline {4.19.3.4}get\_primeiro\_movimento()}{31}{subsubsection.4.19.3.4}%
+\contentsline {subsubsection}{\numberline {4.19.3.5}get\_representacao()}{31}{subsubsection.4.19.3.5}%
+\contentsline {subsubsection}{\numberline {4.19.3.6}set\_casas()}{31}{subsubsection.4.19.3.6}%
+\contentsline {subsubsection}{\numberline {4.19.3.7}set\_en\_passant()}{31}{subsubsection.4.19.3.7}%
+\contentsline {subsubsection}{\numberline {4.19.3.8}set\_primeiro\_movimento()}{32}{subsubsection.4.19.3.8}%
+\contentsline {section}{\numberline {4.20}Referência da Classe Peca\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Aliada\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{32}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Funções membros}{32}{subsection.4.20.1}%
+\contentsline {subsubsection}{\numberline {4.20.1.1}what()}{32}{subsubsection.4.20.1.1}%
+\contentsline {section}{\numberline {4.21}Referência da Classe Peca\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Na\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frente\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{32}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Funções membros}{33}{subsection.4.21.1}%
+\contentsline {subsubsection}{\numberline {4.21.1.1}what()}{33}{subsubsection.4.21.1.1}%
+\contentsline {section}{\numberline {4.22}Referência da Classe Pgn}{33}{section.4.22}%
+\contentsline {subsection}{\numberline {4.22.1}Construtores e Destrutores}{33}{subsection.4.22.1}%
+\contentsline {subsubsection}{\numberline {4.22.1.1}Pgn()}{33}{subsubsection.4.22.1.1}%
+\contentsline {subsubsection}{\numberline {4.22.1.2}$\sim $Pgn()}{34}{subsubsection.4.22.1.2}%
+\contentsline {subsection}{\numberline {4.22.2}Funções membros}{34}{subsection.4.22.2}%
+\contentsline {subsubsection}{\numberline {4.22.2.1}abre\_arquivo()}{34}{subsubsection.4.22.2.1}%
+\contentsline {subsubsection}{\numberline {4.22.2.2}fecha\_arquivo()}{34}{subsubsection.4.22.2.2}%
+\contentsline {subsection}{\numberline {4.22.3}Atributos}{34}{subsection.4.22.3}%
+\contentsline {subsubsection}{\numberline {4.22.3.1}casa\_final}{34}{subsubsection.4.22.3.1}%
+\contentsline {subsubsection}{\numberline {4.22.3.2}comandos\_da\_rodada}{35}{subsubsection.4.22.3.2}%
+\contentsline {subsubsection}{\numberline {4.22.3.3}conteudo}{35}{subsubsection.4.22.3.3}%
+\contentsline {subsubsection}{\numberline {4.22.3.4}jogo\_valido}{35}{subsubsection.4.22.3.4}%
+\contentsline {subsubsection}{\numberline {4.22.3.5}nome\_do\_arquivo}{35}{subsubsection.4.22.3.5}%
+\contentsline {subsubsection}{\numberline {4.22.3.6}rodada}{35}{subsubsection.4.22.3.6}%
+\contentsline {section}{\numberline {4.23}Referência da Classe Rei}{35}{section.4.23}%
+\contentsline {subsection}{\numberline {4.23.1}Descrição detalhada}{36}{subsection.4.23.1}%
+\contentsline {subsection}{\numberline {4.23.2}Construtores e Destrutores}{36}{subsection.4.23.2}%
+\contentsline {subsubsection}{\numberline {4.23.2.1}Rei()}{36}{subsubsection.4.23.2.1}%
+\contentsline {subsubsection}{\numberline {4.23.2.2}$\sim $Rei()}{36}{subsubsection.4.23.2.2}%
+\contentsline {subsection}{\numberline {4.23.3}Funções membros}{36}{subsection.4.23.3}%
+\contentsline {subsubsection}{\numberline {4.23.3.1}get\_representacao()}{36}{subsubsection.4.23.3.1}%
+\contentsline {section}{\numberline {4.24}Referência da Classe Sem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Peca\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Para\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movimentar\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{37}{section.4.24}%
+\contentsline {subsection}{\numberline {4.24.1}Funções membros}{37}{subsection.4.24.1}%
+\contentsline {subsubsection}{\numberline {4.24.1.1}what()}{37}{subsubsection.4.24.1.1}%
+\contentsline {section}{\numberline {4.25}Referência da Classe Tabuleiro}{37}{section.4.25}%
+\contentsline {subsection}{\numberline {4.25.1}Construtores e Destrutores}{38}{subsection.4.25.1}%
+\contentsline {subsubsection}{\numberline {4.25.1.1}Tabuleiro()}{38}{subsubsection.4.25.1.1}%
+\contentsline {subsubsection}{\numberline {4.25.1.2}$\sim $Tabuleiro()}{38}{subsubsection.4.25.1.2}%
+\contentsline {subsection}{\numberline {4.25.2}Funções membros}{38}{subsection.4.25.2}%
+\contentsline {subsubsection}{\numberline {4.25.2.1}adiciona\_peca()}{38}{subsubsection.4.25.2.1}%
+\contentsline {subsubsection}{\numberline {4.25.2.2}adiciona\_peca\_existente()}{39}{subsubsection.4.25.2.2}%
+\contentsline {subsubsection}{\numberline {4.25.2.3}constroi\_tabuleiro()}{39}{subsubsection.4.25.2.3}%
+\contentsline {subsubsection}{\numberline {4.25.2.4}get\_casa()}{39}{subsubsection.4.25.2.4}%
+\contentsline {subsubsection}{\numberline {4.25.2.5}get\_tamanho()}{39}{subsubsection.4.25.2.5}%
+\contentsline {subsubsection}{\numberline {4.25.2.6}imprime()}{39}{subsubsection.4.25.2.6}%
+\contentsline {subsubsection}{\numberline {4.25.2.7}limpa\_casa()}{39}{subsubsection.4.25.2.7}%
+\contentsline {subsubsection}{\numberline {4.25.2.8}limpa\_tabuleiro()}{40}{subsubsection.4.25.2.8}%
+\contentsline {section}{\numberline {4.26}Referência da Classe Torre}{40}{section.4.26}%
+\contentsline {subsection}{\numberline {4.26.1}Descrição detalhada}{40}{subsection.4.26.1}%
+\contentsline {subsection}{\numberline {4.26.2}Construtores e Destrutores}{40}{subsection.4.26.2}%
+\contentsline {subsubsection}{\numberline {4.26.2.1}Torre()}{40}{subsubsection.4.26.2.1}%
+\contentsline {subsubsection}{\numberline {4.26.2.2}$\sim $Torre()}{41}{subsubsection.4.26.2.2}%
+\contentsline {subsection}{\numberline {4.26.3}Funções membros}{41}{subsection.4.26.3}%
+\contentsline {subsubsection}{\numberline {4.26.3.1}get\_representacao()}{41}{subsubsection.4.26.3.1}%
+\contentsline {chapter}{\numberline {5}Arquivos}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Referência do Arquivo include/bispo.hpp}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}bispo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{43}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Referência do Arquivo include/cavalo.hpp}{43}{section.5.3}%
+\contentsline {section}{\numberline {5.4}cavalo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{44}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Referência do Arquivo include/dama.hpp}{44}{section.5.5}%
+\contentsline {section}{\numberline {5.6}dama.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{44}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Referência do Arquivo include/excecoes.hpp}{45}{section.5.7}%
+\contentsline {section}{\numberline {5.8}excecoes.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{45}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Referência do Arquivo include/jogador.hpp}{46}{section.5.9}%
+\contentsline {section}{\numberline {5.10}jogador.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{47}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Referência do Arquivo include/jogo.hpp}{47}{section.5.11}%
+\contentsline {section}{\numberline {5.12}jogo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Referência do Arquivo include/movimento.hpp}{48}{section.5.13}%
+\contentsline {section}{\numberline {5.14}movimento.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.5.14}%
+\contentsline {section}{\numberline {5.15}Referência do Arquivo include/peao.hpp}{49}{section.5.15}%
+\contentsline {section}{\numberline {5.16}peao.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{49}{section.5.16}%
+\contentsline {section}{\numberline {5.17}Referência do Arquivo include/peca.hpp}{50}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Enumerações}{50}{subsection.5.17.1}%
+\contentsline {subsubsection}{\numberline {5.17.1.1}Cor}{50}{subsubsection.5.17.1.1}%
+\contentsline {section}{\numberline {5.18}peca.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{50}{section.5.18}%
+\contentsline {section}{\numberline {5.19}Referência do Arquivo include/pgn.hpp}{51}{section.5.19}%
+\contentsline {section}{\numberline {5.20}pgn.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{51}{section.5.20}%
+\contentsline {section}{\numberline {5.21}Referência do Arquivo include/rei.hpp}{52}{section.5.21}%
+\contentsline {section}{\numberline {5.22}rei.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{52}{section.5.22}%
+\contentsline {section}{\numberline {5.23}Referência do Arquivo include/tabuleiro.hpp}{53}{section.5.23}%
+\contentsline {subsection}{\numberline {5.23.1}Definições e macros}{53}{subsection.5.23.1}%
+\contentsline {subsubsection}{\numberline {5.23.1.1}TAMANHO\_DO\_TABULEIRO}{53}{subsubsection.5.23.1.1}%
+\contentsline {section}{\numberline {5.24}tabuleiro.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{54}{section.5.24}%
+\contentsline {section}{\numberline {5.25}Referência do Arquivo include/torre.hpp}{54}{section.5.25}%
+\contentsline {section}{\numberline {5.26}torre.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{54}{section.5.26}%
+\contentsline {chapter}{\'Indice Remissivo}{57}{section*.46}%

@@ -1,0 +1,44 @@
+\hypertarget{class_erro_de_jogo_exception}{}\doxysection{Referência da Classe Erro\+De\+Jogo\+Exception}
+\label{class_erro_de_jogo_exception}\index{ErroDeJogoException@{ErroDeJogoException}}
+
+
+{\ttfamily \#include $<$excecoes.\+hpp$>$}
+
+
+
+Subclasse de std\+::exception.
+
+
+
+Superclasse de \mbox{\hyperlink{class_fora_do_mapa_exception}{Fora\+Do\+Mapa\+Exception}}, \mbox{\hyperlink{class_movimento_invalido_exception}{Movimento\+Invalido\+Exception}}, \mbox{\hyperlink{class_nao_e_sua_vez_exception}{Nao\+ESua\+Vez\+Exception}}, \mbox{\hyperlink{class_peca_aliada_exception}{Peca\+Aliada\+Exception}}, \mbox{\hyperlink{class_peca_na_frente_exception}{Peca\+Na\+Frente\+Exception}} e \mbox{\hyperlink{class_sem_peca_para_movimentar_exception}{Sem\+Peca\+Para\+Movimentar\+Exception}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}{what}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}\label{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}} 
+\index{ErroDeJogoException@{ErroDeJogoException}!what@{what}}
+\index{what@{what}!ErroDeJogoException@{ErroDeJogoException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char $\ast$ Erro\+De\+Jogo\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplementado por \mbox{\hyperlink{class_fora_do_mapa_exception_a2eb218c8faa582cce2539a9fdd9f4ed8}{Fora\+Do\+Mapa\+Exception}}, \mbox{\hyperlink{class_sem_peca_para_movimentar_exception_a7c306aec53a4ea4fdfad79a203c9edb1}{Sem\+Peca\+Para\+Movimentar\+Exception}}, \mbox{\hyperlink{class_nao_e_sua_vez_exception_ac354f93cef222a3dc9ba5538856717bf}{Nao\+ESua\+Vez\+Exception}}, \mbox{\hyperlink{class_peca_na_frente_exception_a9efc37adb1d59774e49d049c5815f457}{Peca\+Na\+Frente\+Exception}}, \mbox{\hyperlink{class_peca_aliada_exception_a3dbe2cf982792c96fd3571d9bae45cc6}{Peca\+Aliada\+Exception}} e \mbox{\hyperlink{class_movimento_invalido_exception_ab09280968ee6ff8cc66dba58f81e6889}{Movimento\+Invalido\+Exception}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11         \{}
+\DoxyCodeLine{12             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Movimentação Inválida!"{}};}
+\DoxyCodeLine{13         \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{excecoes_8hpp}{excecoes.\+hpp}}\end{DoxyCompactItemize}

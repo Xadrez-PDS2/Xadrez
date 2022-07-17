@@ -1,0 +1,40 @@
+\hypertarget{class_movimento_invalido_exception}{}\doxysection{Referência da Classe Movimento\+Invalido\+Exception}
+\label{class_movimento_invalido_exception}\index{MovimentoInvalidoException@{MovimentoInvalidoException}}
+
+
+{\ttfamily \#include $<$excecoes.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_erro_de_jogo_exception}{Erro\+De\+Jogo\+Exception}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_movimento_invalido_exception_ab09280968ee6ff8cc66dba58f81e6889}{what}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_movimento_invalido_exception_ab09280968ee6ff8cc66dba58f81e6889}\label{class_movimento_invalido_exception_ab09280968ee6ff8cc66dba58f81e6889}} 
+\index{MovimentoInvalidoException@{MovimentoInvalidoException}!what@{what}}
+\index{what@{what}!MovimentoInvalidoException@{MovimentoInvalidoException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char $\ast$ Movimento\+Invalido\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}{Erro\+De\+Jogo\+Exception}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65         \{}
+\DoxyCodeLine{66             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}A peça não pode realizar este movimento."{}};}
+\DoxyCodeLine{67         \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{excecoes_8hpp}{excecoes.\+hpp}}\end{DoxyCompactItemize}

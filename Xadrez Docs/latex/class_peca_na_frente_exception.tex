@@ -1,0 +1,40 @@
+\hypertarget{class_peca_na_frente_exception}{}\doxysection{Referência da Classe Peca\+Na\+Frente\+Exception}
+\label{class_peca_na_frente_exception}\index{PecaNaFrenteException@{PecaNaFrenteException}}
+
+
+{\ttfamily \#include $<$excecoes.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_erro_de_jogo_exception}{Erro\+De\+Jogo\+Exception}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_peca_na_frente_exception_a9efc37adb1d59774e49d049c5815f457}{what}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_peca_na_frente_exception_a9efc37adb1d59774e49d049c5815f457}\label{class_peca_na_frente_exception_a9efc37adb1d59774e49d049c5815f457}} 
+\index{PecaNaFrenteException@{PecaNaFrenteException}!what@{what}}
+\index{what@{what}!PecaNaFrenteException@{PecaNaFrenteException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char $\ast$ Peca\+Na\+Frente\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}{Erro\+De\+Jogo\+Exception}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47         \{}
+\DoxyCodeLine{48             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}A peça não pode ser movimentada para a casa selecionada porque tem uma peça no caminho."{}};}
+\DoxyCodeLine{49         \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{excecoes_8hpp}{excecoes.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{class_sem_peca_para_movimentar_exception}{}\doxysection{Referência da Classe Sem\+Peca\+Para\+Movimentar\+Exception}
+\label{class_sem_peca_para_movimentar_exception}\index{SemPecaParaMovimentarException@{SemPecaParaMovimentarException}}
+
+
+{\ttfamily \#include $<$excecoes.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_erro_de_jogo_exception}{Erro\+De\+Jogo\+Exception}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_sem_peca_para_movimentar_exception_a7c306aec53a4ea4fdfad79a203c9edb1}{what}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_sem_peca_para_movimentar_exception_a7c306aec53a4ea4fdfad79a203c9edb1}\label{class_sem_peca_para_movimentar_exception_a7c306aec53a4ea4fdfad79a203c9edb1}} 
+\index{SemPecaParaMovimentarException@{SemPecaParaMovimentarException}!what@{what}}
+\index{what@{what}!SemPecaParaMovimentarException@{SemPecaParaMovimentarException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char $\ast$ Sem\+Peca\+Para\+Movimentar\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}{Erro\+De\+Jogo\+Exception}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não há peça na casa selecionada para realizar a movimentação."{}};}
+\DoxyCodeLine{31         \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{excecoes_8hpp}{excecoes.\+hpp}}\end{DoxyCompactItemize}

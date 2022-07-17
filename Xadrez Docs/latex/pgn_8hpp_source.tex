@@ -1,0 +1,63 @@
+\hypertarget{pgn_8hpp_source}{}\doxysection{pgn.\+hpp}
+\label{pgn_8hpp_source}\index{include/pgn.hpp@{include/pgn.hpp}}
+\mbox{\hyperlink{pgn_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PGN\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PGN\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{excecoes_8hpp}{excecoes.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <regex>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_pgn}{Pgn}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         \mbox{\hyperlink{class_pgn_a034994f9bf45522fee6b3c16f6725811}{Pgn}}(\textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\_do\_arquivo}});}
+\DoxyCodeLine{23         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_pgn_a800d9477143d00d37466c9d61a2b0217}{\string~Pgn}}();}
+\DoxyCodeLine{27         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pgn_af4554be346f953de5b129d44a0d00ed9}{abre\_arquivo}}() = 0;}
+\DoxyCodeLine{31         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pgn_a2612d0cc0bcf005e6f2f510398520f61}{fecha\_arquivo}}() = 0;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{34         std::string \mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\_do\_arquivo}};}
+\DoxyCodeLine{35         std::regex \mbox{\hyperlink{class_pgn_a18400e54314f170890ae23580eea016b}{jogo\_valido}};}
+\DoxyCodeLine{36         std::regex \mbox{\hyperlink{class_pgn_a0a4a30c91e5335c43fc35ef65c9f559f}{comandos\_da\_rodada}};}
+\DoxyCodeLine{37         std::regex \mbox{\hyperlink{class_pgn_ab17f87f202564b38b0ac822696926c64}{casa\_final}};}
+\DoxyCodeLine{38         std::regex \mbox{\hyperlink{class_pgn_a76c64549e424cc3b5114a8a70e9a1045}{rodada}};}
+\DoxyCodeLine{39         std::string \mbox{\hyperlink{class_pgn_a4e1a46182244203caa54d603a3d29af6}{conteudo}};}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{class }\mbox{\hyperlink{class_leitor_de_pgn}{LeitorDePgn}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_pgn}{Pgn}}}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44     \textcolor{keyword}{public}:}
+\DoxyCodeLine{49         \mbox{\hyperlink{class_leitor_de_pgn_a599a149c330570c097b2aebe3c75b5e4}{LeitorDePgn}}(\textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\_do\_arquivo}});}
+\DoxyCodeLine{53         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_leitor_de_pgn_acb6b0c78d1f6413248b23f09b41af856}{\string~LeitorDePgn}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{57         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_leitor_de_pgn_a715d37aa8ffb63e671715f6de7c8119f}{abre\_arquivo}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{61         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_leitor_de_pgn_a24cf18993a4fdfa4e18ef69d69ffbc2a}{fecha\_arquivo}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_leitor_de_pgn_a92bf991ddd05f92da773dfb1d29ac6d7}{imprime\_comandos}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keyword}{private}:}
+\DoxyCodeLine{68         std::ifstream arquivo;}
+\DoxyCodeLine{69     }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{class }\mbox{\hyperlink{class_escritor_de_pgn}{EscritorDePgn}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_pgn}{Pgn}}}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \textcolor{keyword}{public}:}
+\DoxyCodeLine{80         \mbox{\hyperlink{class_escritor_de_pgn_ad6dae7302cb75c2bd61423c9f2a1baff}{EscritorDePgn}}(\textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\_do\_arquivo}});}
+\DoxyCodeLine{84         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_escritor_de_pgn_a58a18848c1c703c788ae0d3e27d5d453}{\string~EscritorDePgn}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{88         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_escritor_de_pgn_a294633e431abca4b8b5c829aebab79a9}{abre\_arquivo}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{92         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_escritor_de_pgn_a7aec713fe1b4ef90167aba15cc148f02}{fecha\_arquivo}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keyword}{private}:}
+\DoxyCodeLine{95     std::ofstream arquivo;}
+\DoxyCodeLine{96 \};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

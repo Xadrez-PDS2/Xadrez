@@ -1,0 +1,40 @@
+\hypertarget{class_nao_e_sua_vez_exception}{}\doxysection{Referência da Classe Nao\+ESua\+Vez\+Exception}
+\label{class_nao_e_sua_vez_exception}\index{NaoESuaVezException@{NaoESuaVezException}}
+
+
+{\ttfamily \#include $<$excecoes.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_erro_de_jogo_exception}{Erro\+De\+Jogo\+Exception}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_nao_e_sua_vez_exception_ac354f93cef222a3dc9ba5538856717bf}{what}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_nao_e_sua_vez_exception_ac354f93cef222a3dc9ba5538856717bf}\label{class_nao_e_sua_vez_exception_ac354f93cef222a3dc9ba5538856717bf}} 
+\index{NaoESuaVezException@{NaoESuaVezException}!what@{what}}
+\index{what@{what}!NaoESuaVezException@{NaoESuaVezException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char $\ast$ Nao\+ESua\+Vez\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_erro_de_jogo_exception_a7a240bd3822d5d078efa66b98b2c9b63}{Erro\+De\+Jogo\+Exception}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38         \{}
+\DoxyCodeLine{39             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Não é sua vez de realizar a movimentação."{}};}
+\DoxyCodeLine{40         \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{excecoes_8hpp}{excecoes.\+hpp}}\end{DoxyCompactItemize}

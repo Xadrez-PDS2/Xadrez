@@ -1,0 +1,58 @@
+\hypertarget{movimento_8hpp_source}{}\doxysection{movimento.\+hpp}
+\label{movimento_8hpp_source}\index{include/movimento.hpp@{include/movimento.hpp}}
+\mbox{\hyperlink{movimento_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVIMENTO\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVIMENTO\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{jogador_8hpp}{jogador.hpp}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_movimento}{Movimento}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keyword}{public}:}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_movimento_aacddb751457562a7ae7f1cd3988df4cc}{Movimento}}(}
+\DoxyCodeLine{17             \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} *tabuleiro,}
+\DoxyCodeLine{18             \mbox{\hyperlink{class_jogador}{Jogador}} *jogador,}
+\DoxyCodeLine{19             \textcolor{keywordtype}{int} linha\_inicial,}
+\DoxyCodeLine{20             \textcolor{keywordtype}{int} coluna\_inicial,}
+\DoxyCodeLine{21             \textcolor{keywordtype}{int} linha\_final,}
+\DoxyCodeLine{22             \textcolor{keywordtype}{int} coluna\_final);}
+\DoxyCodeLine{23         }
+\DoxyCodeLine{27         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_aa11f37748418971773ce6a9e9422aa44}{executar\_movimento}}();}
+\DoxyCodeLine{28         }
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_a0d81529aa19403ce1efa4d97ec5b3dd6}{validar\_movimento}}();}
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_a0467a28a3a3f8061d8a778d3e71930b3}{checa\_movimento\_peca}}();}
+\DoxyCodeLine{34         }
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_ae92db074bb7a01c430ff30a6997cf5d9}{checa\_movimento\_peao}}();}
+\DoxyCodeLine{39         }
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_af6d4fde7f9417062601a34570b02dc62}{checa\_movimento\_cavalo}}();}
+\DoxyCodeLine{44         }
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_a0ead6a22a384216aef8541200dd1125a}{checa\_movimento\_torre}}();}
+\DoxyCodeLine{49         }
+\DoxyCodeLine{53         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_a86316ec19093ed31f15059133931602b}{checa\_movimento\_bispo}}();}
+\DoxyCodeLine{54         }
+\DoxyCodeLine{58         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_a6e88bac53375aad631e85dccbd54efe2}{checa\_movimento\_dama}}();}
+\DoxyCodeLine{59         }
+\DoxyCodeLine{63         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_aa5c9eeaf531e0445d5a31bb1b4738a02}{checa\_movimento\_rei}}();}
+\DoxyCodeLine{64         }
+\DoxyCodeLine{69         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_ac67ea68bf06669a82160ea28f6edf3d2}{promove\_peao}}(\textcolor{keywordtype}{bool} mensagem = \textcolor{keyword}{true});}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_movimento_a2bfbc9f33b0bd8502d8152e41c96b7d0}{roque}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keyword}{private}:}
+\DoxyCodeLine{77         \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} *tabuleiro;}
+\DoxyCodeLine{78         \mbox{\hyperlink{class_jogador}{Jogador}} *jogador;}
+\DoxyCodeLine{79         \mbox{\hyperlink{class_peca}{Peca}} *peca;}
+\DoxyCodeLine{80         \textcolor{keywordtype}{int} linha\_inicial;}
+\DoxyCodeLine{81         \textcolor{keywordtype}{int} coluna\_inicial;}
+\DoxyCodeLine{82         \textcolor{keywordtype}{int} linha\_final;}
+\DoxyCodeLine{83         \textcolor{keywordtype}{int} coluna\_final;}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

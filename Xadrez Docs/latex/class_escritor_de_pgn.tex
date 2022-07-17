@@ -1,0 +1,86 @@
+\hypertarget{class_escritor_de_pgn}{}\doxysection{Referência da Classe Escritor\+De\+Pgn}
+\label{class_escritor_de_pgn}\index{EscritorDePgn@{EscritorDePgn}}
+
+
+{\ttfamily \#include $<$pgn.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_pgn}{Pgn}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_escritor_de_pgn_ad6dae7302cb75c2bd61423c9f2a1baff}{Escritor\+De\+Pgn}} (const std\+::string \&\mbox{\hyperlink{class_pgn_a6b0850bd51fb35e0d3f460d168d2fcb8}{nome\+\_\+do\+\_\+arquivo}})
+\begin{DoxyCompactList}\small\item\em Construtor do objeto Esritor de \mbox{\hyperlink{class_pgn}{Pgn}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_escritor_de_pgn_a58a18848c1c703c788ae0d3e27d5d453}{$\sim$\+Escritor\+De\+Pgn}} () override
+\begin{DoxyCompactList}\small\item\em Destrutor do objeto Escritor de \mbox{\hyperlink{class_pgn}{Pgn}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_escritor_de_pgn_a294633e431abca4b8b5c829aebab79a9}{abre\+\_\+arquivo}} () override
+\begin{DoxyCompactList}\small\item\em Abre o arquivo para escrita. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_escritor_de_pgn_a7aec713fe1b4ef90167aba15cc148f02}{fecha\+\_\+arquivo}} () override
+\begin{DoxyCompactList}\small\item\em fechamento do arquivo utilizado para escrita \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_escritor_de_pgn_ad6dae7302cb75c2bd61423c9f2a1baff}\label{class_escritor_de_pgn_ad6dae7302cb75c2bd61423c9f2a1baff}} 
+\index{EscritorDePgn@{EscritorDePgn}!EscritorDePgn@{EscritorDePgn}}
+\index{EscritorDePgn@{EscritorDePgn}!EscritorDePgn@{EscritorDePgn}}
+\doxysubsubsection{\texorpdfstring{EscritorDePgn()}{EscritorDePgn()}}
+{\footnotesize\ttfamily Escritor\+De\+Pgn\+::\+Escritor\+De\+Pgn (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+do\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Construtor do objeto Esritor de \mbox{\hyperlink{class_pgn}{Pgn}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+\_\+do\+\_\+arquivo} & Recebe o nome do arquivo em que realizará a gravação dos dados da partida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_escritor_de_pgn_a58a18848c1c703c788ae0d3e27d5d453}\label{class_escritor_de_pgn_a58a18848c1c703c788ae0d3e27d5d453}} 
+\index{EscritorDePgn@{EscritorDePgn}!````~EscritorDePgn@{$\sim$EscritorDePgn}}
+\index{````~EscritorDePgn@{$\sim$EscritorDePgn}!EscritorDePgn@{EscritorDePgn}}
+\doxysubsubsection{\texorpdfstring{$\sim$EscritorDePgn()}{~EscritorDePgn()}}
+{\footnotesize\ttfamily virtual Escritor\+De\+Pgn\+::$\sim$\+Escritor\+De\+Pgn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destrutor do objeto Escritor de \mbox{\hyperlink{class_pgn}{Pgn}}. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_escritor_de_pgn_a294633e431abca4b8b5c829aebab79a9}\label{class_escritor_de_pgn_a294633e431abca4b8b5c829aebab79a9}} 
+\index{EscritorDePgn@{EscritorDePgn}!abre\_arquivo@{abre\_arquivo}}
+\index{abre\_arquivo@{abre\_arquivo}!EscritorDePgn@{EscritorDePgn}}
+\doxysubsubsection{\texorpdfstring{abre\_arquivo()}{abre\_arquivo()}}
+{\footnotesize\ttfamily virtual void Escritor\+De\+Pgn\+::abre\+\_\+arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Abre o arquivo para escrita. 
+
+
+
+Implementa \mbox{\hyperlink{class_pgn_af4554be346f953de5b129d44a0d00ed9}{Pgn}}.
+
+\mbox{\Hypertarget{class_escritor_de_pgn_a7aec713fe1b4ef90167aba15cc148f02}\label{class_escritor_de_pgn_a7aec713fe1b4ef90167aba15cc148f02}} 
+\index{EscritorDePgn@{EscritorDePgn}!fecha\_arquivo@{fecha\_arquivo}}
+\index{fecha\_arquivo@{fecha\_arquivo}!EscritorDePgn@{EscritorDePgn}}
+\doxysubsubsection{\texorpdfstring{fecha\_arquivo()}{fecha\_arquivo()}}
+{\footnotesize\ttfamily virtual void Escritor\+De\+Pgn\+::fecha\+\_\+arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fechamento do arquivo utilizado para escrita 
+
+
+
+Implementa \mbox{\hyperlink{class_pgn_a2612d0cc0bcf005e6f2f510398520f61}{Pgn}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pgn_8hpp}{pgn.\+hpp}}\end{DoxyCompactItemize}

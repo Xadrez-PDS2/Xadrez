@@ -1,0 +1,106 @@
+\hypertarget{class_peao}{}\doxysection{Referência da Classe Peao}
+\label{class_peao}\index{Peao@{Peao}}
+
+
+classe que define o comportamento do peao  
+
+
+
+
+{\ttfamily \#include $<$peao.\+hpp$>$}
+
+
+
+Subclasse de \mbox{\hyperlink{class_peca}{Peca}}.
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_peao_a7f0ff7dd5db9f3e4209bbf48b67452f5}{Peao}} (int linha, int coluna, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto peao. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_peao_aec1a8b990609da2cf5cd1f1d9339c6fc}{$\sim$\+Peao}} () override
+\begin{DoxyCompactList}\small\item\em Destrutor de um objeto peao. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_peao_acb35440092c787745a50bb030de2aed9}{get\+\_\+representacao}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_peao_aec130b69c7fd034febe32bdde79d7fe8}{primeiro\+\_\+movimento}}
+\begin{DoxyCompactList}\small\item\em guarda a informação se esta é a primeira movimentação do peão \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_peao_ab2f6ecd156f2042b6f3fbad05f306da5}{en\+\_\+passant}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+classe que define o comportamento do peao 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_peao_a7f0ff7dd5db9f3e4209bbf48b67452f5}\label{class_peao_a7f0ff7dd5db9f3e4209bbf48b67452f5}} 
+\index{Peao@{Peao}!Peao@{Peao}}
+\index{Peao@{Peao}!Peao@{Peao}}
+\doxysubsubsection{\texorpdfstring{Peao()}{Peao()}}
+{\footnotesize\ttfamily Peao\+::\+Peao (\begin{DoxyParamCaption}\item[{int}]{linha,  }\item[{int}]{coluna,  }\item[{\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}}]{cor }\end{DoxyParamCaption})}
+
+
+
+Construtor de um objeto peao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Posicao inicial na linha que o peao ocupa no tabuleiro \\
+\hline
+{\em coluna} & Posicao inicial na coluna que o peao ocupa no tabuleiro \\
+\hline
+{\em cor} & Cor da peca \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_peao_aec1a8b990609da2cf5cd1f1d9339c6fc}\label{class_peao_aec1a8b990609da2cf5cd1f1d9339c6fc}} 
+\index{Peao@{Peao}!````~Peao@{$\sim$Peao}}
+\index{````~Peao@{$\sim$Peao}!Peao@{Peao}}
+\doxysubsubsection{\texorpdfstring{$\sim$Peao()}{~Peao()}}
+{\footnotesize\ttfamily virtual Peao\+::$\sim$\+Peao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destrutor de um objeto peao. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_peao_acb35440092c787745a50bb030de2aed9}\label{class_peao_acb35440092c787745a50bb030de2aed9}} 
+\index{Peao@{Peao}!get\_representacao@{get\_representacao}}
+\index{get\_representacao@{get\_representacao}!Peao@{Peao}}
+\doxysubsubsection{\texorpdfstring{get\_representacao()}{get\_representacao()}}
+{\footnotesize\ttfamily virtual std\+::string Peao\+::get\+\_\+representacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Retorna}
+retorna a representacao do peao em forma de string 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{class_peca_a80bf066e08163ced0866ae59b807fa35}{Peca}}.
+
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_peao_ab2f6ecd156f2042b6f3fbad05f306da5}\label{class_peao_ab2f6ecd156f2042b6f3fbad05f306da5}} 
+\index{Peao@{Peao}!en\_passant@{en\_passant}}
+\index{en\_passant@{en\_passant}!Peao@{Peao}}
+\doxysubsubsection{\texorpdfstring{en\_passant}{en\_passant}}
+{\footnotesize\ttfamily bool Peao\+::en\+\_\+passant}
+
+\mbox{\Hypertarget{class_peao_aec130b69c7fd034febe32bdde79d7fe8}\label{class_peao_aec130b69c7fd034febe32bdde79d7fe8}} 
+\index{Peao@{Peao}!primeiro\_movimento@{primeiro\_movimento}}
+\index{primeiro\_movimento@{primeiro\_movimento}!Peao@{Peao}}
+\doxysubsubsection{\texorpdfstring{primeiro\_movimento}{primeiro\_movimento}}
+{\footnotesize\ttfamily bool Peao\+::primeiro\+\_\+movimento}
+
+
+
+guarda a informação se esta é a primeira movimentação do peão 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{peao_8hpp}{peao.\+hpp}}\end{DoxyCompactItemize}

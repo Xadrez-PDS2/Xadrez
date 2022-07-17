@@ -1,0 +1,51 @@
+\hypertarget{jogo_8hpp_source}{}\doxysection{jogo.\+hpp}
+\label{jogo_8hpp_source}\index{include/jogo.hpp@{include/jogo.hpp}}
+\mbox{\hyperlink{jogo_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef JOGO\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define JOGO\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{jogador_8hpp}{jogador.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{movimento_8hpp}{movimento.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <regex>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_jogo}{Jogo}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_jogo_ada6b127710abe5e25240b09b1a13b502}{Jogo}}();}
+\DoxyCodeLine{23         }
+\DoxyCodeLine{27         \mbox{\hyperlink{class_jogo_aefcb010d60d5cd578c97af37f2980cbe}{\string~Jogo}}();}
+\DoxyCodeLine{28         }
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogo_a47a725e4024a11d87730620c634417f8}{imprime}}();}
+\DoxyCodeLine{34         }
+\DoxyCodeLine{38         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_jogo_af25d71cb88c98e9b5be5f45de878d457}{ativo}}();}
+\DoxyCodeLine{39         }
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogo_a739099de852ba772665b59d46c7d7710}{encerrar}}();}
+\DoxyCodeLine{44         }
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jogo_ac175178aebbeee64b62a98d6e6b626f8}{jogada}}(std::string entrada);}
+\DoxyCodeLine{49         }
+\DoxyCodeLine{54         \textcolor{keyword}{const} std::string \mbox{\hyperlink{class_jogo_a935d948813ca4bcb96bdf2e898ed9177}{processa\_terminal}}();}
+\DoxyCodeLine{55         }
+\DoxyCodeLine{61         \textcolor{keyword}{const} std::string \mbox{\hyperlink{class_jogo_a1c7b16c3a995bd0ea302a74d562ccc01}{processa\_jogada}}(\textcolor{keyword}{const} std::string entrada);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keyword}{private}:}
+\DoxyCodeLine{67         \mbox{\hyperlink{class_jogador}{Jogador}}* p1 = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{68         \mbox{\hyperlink{class_jogador}{Jogador}}* p2 = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{69         }
+\DoxyCodeLine{73         \mbox{\hyperlink{class_jogador}{Jogador}}* da\_vez;}
+\DoxyCodeLine{74         }
+\DoxyCodeLine{78         \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}* tabuleiro = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{79         }
+\DoxyCodeLine{80         \textcolor{keywordtype}{bool} jogo\_ativo;}
+\DoxyCodeLine{81         }
+\DoxyCodeLine{85         std::regex comando\_valido;}
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

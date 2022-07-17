@@ -1,0 +1,53 @@
+\hypertarget{peca_8hpp_source}{}\doxysection{peca.\+hpp}
+\label{peca_8hpp_source}\index{include/peca.hpp@{include/peca.hpp}}
+\mbox{\hyperlink{peca_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PECA\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PECA\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{excecoes_8hpp}{excecoes.hpp}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{enum} \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} }
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635ab465e555debcc151f9abcb3580c933c7}{BRANCAS}}, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635aad3e54beda48f980ae4b1e4d03cfad07}{PRETAS}}}
+\DoxyCodeLine{11 \};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_peca}{Peca}} }
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_peca_af4e1ce897b21c004265d71cff4392973}{Peca}}(\textcolor{keywordtype}{int} linha, \textcolor{keywordtype}{int} coluna, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor);}
+\DoxyCodeLine{26         }
+\DoxyCodeLine{30         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_peca_aec793ed4ca41748ae42bc78984a87d2b}{\string~Peca}}() \{\};}
+\DoxyCodeLine{31         }
+\DoxyCodeLine{36         \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_peca_a80bf066e08163ced0866ae59b807fa35}{get\_representacao}}() = 0;        }
+\DoxyCodeLine{37         }
+\DoxyCodeLine{41         \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} \mbox{\hyperlink{class_peca_a9fa12dab6d7ffb19bc0bac2d3abe26bd}{get\_cor}}();}
+\DoxyCodeLine{42         }
+\DoxyCodeLine{46         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_peca_ad2a95467dbf5ef4164571d00ea74a8f7}{get\_primeiro\_movimento}}();}
+\DoxyCodeLine{47         }
+\DoxyCodeLine{51         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_peca_aa51efc7b89f3c3b1fd5611ac83bb9cb0}{set\_primeiro\_movimento}}(\textcolor{keywordtype}{bool} primeiro\_movimento);}
+\DoxyCodeLine{52         }
+\DoxyCodeLine{56         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_peca_aa1132c2d3058e0500aeace022ee8c866}{set\_en\_passant}}(\textcolor{keywordtype}{bool} en\_passant);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_peca_a25b3f376af6f0616df4bbd1c7872f447}{get\_en\_passant}}();}
+\DoxyCodeLine{62         }
+\DoxyCodeLine{66         std::pair<int, int> \mbox{\hyperlink{class_peca_a56482f93fc9692a0773efea71f8dd3ed}{get\_casas}}();}
+\DoxyCodeLine{67         }
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_peca_ad8668501cfcd169203be59970ae6a296}{set\_casas}}(\textcolor{keywordtype}{int} linha, \textcolor{keywordtype}{int} coluna);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keyword}{private}:}
+\DoxyCodeLine{80         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} linha, coluna;}
+\DoxyCodeLine{81         }
+\DoxyCodeLine{86         \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor;}
+\DoxyCodeLine{87         }
+\DoxyCodeLine{92         \textcolor{keywordtype}{bool} primeiro\_movimento;}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94         \textcolor{keywordtype}{bool} en\_passant;}
+\DoxyCodeLine{95 \};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

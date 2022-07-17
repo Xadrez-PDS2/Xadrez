@@ -1,0 +1,128 @@
+\hypertarget{class_jogador}{}\doxysection{Referência da Classe Jogador}
+\label{class_jogador}\index{Jogador@{Jogador}}
+
+
+{\ttfamily \#include $<$jogador.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogador_a370991fa332c10622722de66368abdff}{Jogador}} (\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $\ast$tabuleiro, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto jogador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jogador_a3e62c32199fc9cfbcf22cf83f9008be6}{$\sim$\+Jogador}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor de um objeto jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_a75954bc981bea332acdba38713e3e984}{imprime}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o status do \mbox{\hyperlink{class_jogador}{Jogador}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_affab871cb944dd0db4bce98b8595f595}{constroi\+\_\+pecas}} (\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $\ast$tabuleiro)
+\begin{DoxyCompactList}\small\item\em Constroi as pecas do jogador no tabuleiro de acordo com a cor fornecida. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} \mbox{\hyperlink{class_jogador_a2becddcfa053c6dac65e3c77befbdfb0}{get\+\_\+cor}} ()
+\begin{DoxyCompactList}\small\item\em retorna cor do jogador \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_aafea3b47ef78b58ff766804b7c764d50}{atualiza\+\_\+pecas}} (\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $\ast$tabuleiro)
+\begin{DoxyCompactList}\small\item\em Atualiza a quantidades de peças do jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_adfb95ecf4223d5e5a4c902bd78be8170}{zera\+\_\+pecas}} ()
+\begin{DoxyCompactList}\small\item\em Zera os valores de todas pecas. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_jogador_a65b36ee8e8d230665e1274f60d205386}{get\+\_\+pecas}} ()
+\begin{DoxyCompactList}\small\item\em Retorna um mapa com as peças do jogador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_jogador_a370991fa332c10622722de66368abdff}\label{class_jogador_a370991fa332c10622722de66368abdff}} 
+\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\index{Jogador@{Jogador}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{Jogador()}{Jogador()}}
+{\footnotesize\ttfamily Jogador\+::\+Jogador (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $\ast$}]{tabuleiro,  }\item[{\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}}]{cor }\end{DoxyParamCaption})}
+
+
+
+Construtor de um objeto jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tabuleiro} & Endereço do tabuleiro em que serão colocadas as pecas do jogador \\
+\hline
+{\em cor} & Define se o jogador jogará com as brancas ou com as pecas pretas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jogador_a3e62c32199fc9cfbcf22cf83f9008be6}\label{class_jogador_a3e62c32199fc9cfbcf22cf83f9008be6}} 
+\index{Jogador@{Jogador}!````~Jogador@{$\sim$Jogador}}
+\index{````~Jogador@{$\sim$Jogador}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{$\sim$Jogador()}{~Jogador()}}
+{\footnotesize\ttfamily Jogador\+::$\sim$\+Jogador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor de um objeto jogador. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_jogador_aafea3b47ef78b58ff766804b7c764d50}\label{class_jogador_aafea3b47ef78b58ff766804b7c764d50}} 
+\index{Jogador@{Jogador}!atualiza\_pecas@{atualiza\_pecas}}
+\index{atualiza\_pecas@{atualiza\_pecas}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{atualiza\_pecas()}{atualiza\_pecas()}}
+{\footnotesize\ttfamily void Jogador\+::atualiza\+\_\+pecas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $\ast$}]{tabuleiro }\end{DoxyParamCaption})}
+
+
+
+Atualiza a quantidades de peças do jogador. 
+
+\mbox{\Hypertarget{class_jogador_affab871cb944dd0db4bce98b8595f595}\label{class_jogador_affab871cb944dd0db4bce98b8595f595}} 
+\index{Jogador@{Jogador}!constroi\_pecas@{constroi\_pecas}}
+\index{constroi\_pecas@{constroi\_pecas}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{constroi\_pecas()}{constroi\_pecas()}}
+{\footnotesize\ttfamily void Jogador\+::constroi\+\_\+pecas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $\ast$}]{tabuleiro }\end{DoxyParamCaption})}
+
+
+
+Constroi as pecas do jogador no tabuleiro de acordo com a cor fornecida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tabuleiro} & endereco do tabuleiro utilizado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jogador_a2becddcfa053c6dac65e3c77befbdfb0}\label{class_jogador_a2becddcfa053c6dac65e3c77befbdfb0}} 
+\index{Jogador@{Jogador}!get\_cor@{get\_cor}}
+\index{get\_cor@{get\_cor}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{get\_cor()}{get\_cor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} Jogador\+::get\+\_\+cor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna cor do jogador 
+
+\mbox{\Hypertarget{class_jogador_a65b36ee8e8d230665e1274f60d205386}\label{class_jogador_a65b36ee8e8d230665e1274f60d205386}} 
+\index{Jogador@{Jogador}!get\_pecas@{get\_pecas}}
+\index{get\_pecas@{get\_pecas}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{get\_pecas()}{get\_pecas()}}
+{\footnotesize\ttfamily map$<$ string, int $>$ Jogador\+::get\+\_\+pecas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna um mapa com as peças do jogador. 
+
+\mbox{\Hypertarget{class_jogador_a75954bc981bea332acdba38713e3e984}\label{class_jogador_a75954bc981bea332acdba38713e3e984}} 
+\index{Jogador@{Jogador}!imprime@{imprime}}
+\index{imprime@{imprime}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{imprime()}{imprime()}}
+{\footnotesize\ttfamily void Jogador\+::imprime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o status do \mbox{\hyperlink{class_jogador}{Jogador}}. 
+
+\mbox{\Hypertarget{class_jogador_adfb95ecf4223d5e5a4c902bd78be8170}\label{class_jogador_adfb95ecf4223d5e5a4c902bd78be8170}} 
+\index{Jogador@{Jogador}!zera\_pecas@{zera\_pecas}}
+\index{zera\_pecas@{zera\_pecas}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{zera\_pecas()}{zera\_pecas()}}
+{\footnotesize\ttfamily void Jogador\+::zera\+\_\+pecas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zera os valores de todas pecas. 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{jogador_8hpp}{jogador.\+hpp}}\end{DoxyCompactItemize}

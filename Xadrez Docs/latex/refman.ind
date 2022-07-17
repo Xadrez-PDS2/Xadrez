@@ -1,0 +1,359 @@
+\begin{theindex}
+
+  \item {$\sim$Bispo}
+    \subitem {Bispo}, \hyperpage{8}
+  \item {$\sim$Cavalo}
+    \subitem {Cavalo}, \hyperpage{9}
+  \item {$\sim$Dama}
+    \subitem {Dama}, \hyperpage{10}
+  \item {$\sim$EscritorDePgn}
+    \subitem {EscritorDePgn}, \hyperpage{15}
+  \item {$\sim$Jogador}
+    \subitem {Jogador}, \hyperpage{17}
+  \item {$\sim$Jogo}
+    \subitem {Jogo}, \hyperpage{20}
+  \item {$\sim$LeitorDePgn}
+    \subitem {LeitorDePgn}, \hyperpage{22}
+  \item {$\sim$Peao}
+    \subitem {Peao}, \hyperpage{28}
+  \item {$\sim$Peca}
+    \subitem {Peca}, \hyperpage{30}
+  \item {$\sim$Pgn}
+    \subitem {Pgn}, \hyperpage{34}
+  \item {$\sim$Rei}
+    \subitem {Rei}, \hyperpage{36}
+  \item {$\sim$Tabuleiro}
+    \subitem {Tabuleiro}, \hyperpage{38}
+  \item {$\sim$Torre}
+    \subitem {Torre}, \hyperpage{41}
+
+  \indexspace
+
+  \item {abre\_arquivo}
+    \subitem {EscritorDePgn}, \hyperpage{15}
+    \subitem {LeitorDePgn}, \hyperpage{22}
+    \subitem {Pgn}, \hyperpage{34}
+  \item {adiciona\_peca}
+    \subitem {Tabuleiro}, \hyperpage{38}
+  \item {adiciona\_peca\_existente}
+    \subitem {Tabuleiro}, \hyperpage{38}
+  \item {ativo}
+    \subitem {Jogo}, \hyperpage{20}
+  \item {atualiza\_pecas}
+    \subitem {Jogador}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Bispo}, \hyperpage{7}
+    \subitem {$\sim$Bispo}, \hyperpage{8}
+    \subitem {Bispo}, \hyperpage{7}
+    \subitem {get\_representacao}, \hyperpage{8}
+  \item {BRANCAS}
+    \subitem {peca.hpp}, \hyperpage{50}
+
+  \indexspace
+
+  \item {casa\_final}
+    \subitem {Pgn}, \hyperpage{34}
+  \item {Cavalo}, \hyperpage{8}
+    \subitem {$\sim$Cavalo}, \hyperpage{9}
+    \subitem {Cavalo}, \hyperpage{9}
+    \subitem {get\_representacao}, \hyperpage{9}
+  \item {checa\_movimento\_bispo}
+    \subitem {Movimento}, \hyperpage{24}
+  \item {checa\_movimento\_cavalo}
+    \subitem {Movimento}, \hyperpage{24}
+  \item {checa\_movimento\_dama}
+    \subitem {Movimento}, \hyperpage{24}
+  \item {checa\_movimento\_peao}
+    \subitem {Movimento}, \hyperpage{24}
+  \item {checa\_movimento\_peca}
+    \subitem {Movimento}, \hyperpage{24}
+  \item {checa\_movimento\_rei}
+    \subitem {Movimento}, \hyperpage{24}
+  \item {checa\_movimento\_torre}
+    \subitem {Movimento}, \hyperpage{25}
+  \item {comandos\_da\_rodada}
+    \subitem {Pgn}, \hyperpage{34}
+  \item {constroi\_pecas}
+    \subitem {Jogador}, \hyperpage{18}
+  \item {constroi\_tabuleiro}
+    \subitem {Tabuleiro}, \hyperpage{39}
+  \item {conteudo}
+    \subitem {Pgn}, \hyperpage{35}
+  \item {Cor}
+    \subitem {peca.hpp}, \hyperpage{50}
+
+  \indexspace
+
+  \item {Dama}, \hyperpage{10}
+    \subitem {$\sim$Dama}, \hyperpage{10}
+    \subitem {Dama}, \hyperpage{10}
+    \subitem {get\_representacao}, \hyperpage{11}
+
+  \indexspace
+
+  \item {en\_passant}
+    \subitem {Peao}, \hyperpage{28}
+  \item {encerrar}
+    \subitem {Jogo}, \hyperpage{20}
+  \item {ErroAoAbrirException}, \hyperpage{11}
+    \subitem {what}, \hyperpage{11}
+  \item {ErroAoFecharException}, \hyperpage{12}
+    \subitem {what}, \hyperpage{12}
+  \item {ErroDeJogoException}, \hyperpage{12}
+    \subitem {what}, \hyperpage{12}
+  \item {ErroDeLogicaException}, \hyperpage{13}
+    \subitem {what}, \hyperpage{13}
+  \item {ErroDeRoqueException}, \hyperpage{13}
+    \subitem {what}, \hyperpage{14}
+  \item {ErroPgnException}, \hyperpage{14}
+    \subitem {what}, \hyperpage{14}
+  \item {EscritorDePgn}, \hyperpage{15}
+    \subitem {$\sim$EscritorDePgn}, \hyperpage{15}
+    \subitem {abre\_arquivo}, \hyperpage{15}
+    \subitem {EscritorDePgn}, \hyperpage{15}
+    \subitem {fecha\_arquivo}, \hyperpage{16}
+  \item {executar\_movimento}
+    \subitem {Movimento}, \hyperpage{25}
+
+  \indexspace
+
+  \item {fecha\_arquivo}
+    \subitem {EscritorDePgn}, \hyperpage{16}
+    \subitem {LeitorDePgn}, \hyperpage{22}
+    \subitem {Pgn}, \hyperpage{34}
+  \item {ForaDoMapaException}, \hyperpage{16}
+    \subitem {what}, \hyperpage{16}
+
+  \indexspace
+
+  \item {get\_casa}
+    \subitem {Tabuleiro}, \hyperpage{39}
+  \item {get\_casas}
+    \subitem {Peca}, \hyperpage{30}
+  \item {get\_cor}
+    \subitem {Jogador}, \hyperpage{18}
+    \subitem {Peca}, \hyperpage{30}
+  \item {get\_en\_passant}
+    \subitem {Peca}, \hyperpage{30}
+  \item {get\_pecas}
+    \subitem {Jogador}, \hyperpage{18}
+  \item {get\_primeiro\_movimento}
+    \subitem {Peca}, \hyperpage{30}
+  \item {get\_representacao}
+    \subitem {Bispo}, \hyperpage{8}
+    \subitem {Cavalo}, \hyperpage{9}
+    \subitem {Dama}, \hyperpage{11}
+    \subitem {Peao}, \hyperpage{28}
+    \subitem {Peca}, \hyperpage{31}
+    \subitem {Rei}, \hyperpage{36}
+    \subitem {Torre}, \hyperpage{41}
+  \item {get\_tamanho}
+    \subitem {Tabuleiro}, \hyperpage{39}
+
+  \indexspace
+
+  \item {imprime}
+    \subitem {Jogador}, \hyperpage{18}
+    \subitem {Jogo}, \hyperpage{20}
+    \subitem {Tabuleiro}, \hyperpage{39}
+  \item {imprime\_comandos}
+    \subitem {LeitorDePgn}, \hyperpage{22}
+  \item {include/bispo.hpp}, \hyperpage{43}
+  \item {include/cavalo.hpp}, \hyperpage{43, 44}
+  \item {include/dama.hpp}, \hyperpage{44}
+  \item {include/excecoes.hpp}, \hyperpage{45}
+  \item {include/jogador.hpp}, \hyperpage{46, 47}
+  \item {include/jogo.hpp}, \hyperpage{47, 48}
+  \item {include/movimento.hpp}, \hyperpage{48}
+  \item {include/peao.hpp}, \hyperpage{49}
+  \item {include/peca.hpp}, \hyperpage{50}
+  \item {include/pgn.hpp}, \hyperpage{51}
+  \item {include/rei.hpp}, \hyperpage{52}
+  \item {include/tabuleiro.hpp}, \hyperpage{53, 54}
+  \item {include/torre.hpp}, \hyperpage{54}
+
+  \indexspace
+
+  \item {jogada}
+    \subitem {Jogo}, \hyperpage{20}
+  \item {Jogador}, \hyperpage{17}
+    \subitem {$\sim$Jogador}, \hyperpage{17}
+    \subitem {atualiza\_pecas}, \hyperpage{18}
+    \subitem {constroi\_pecas}, \hyperpage{18}
+    \subitem {get\_cor}, \hyperpage{18}
+    \subitem {get\_pecas}, \hyperpage{18}
+    \subitem {imprime}, \hyperpage{18}
+    \subitem {Jogador}, \hyperpage{17}
+    \subitem {zera\_pecas}, \hyperpage{18}
+  \item {Jogo}, \hyperpage{19}
+    \subitem {$\sim$Jogo}, \hyperpage{20}
+    \subitem {ativo}, \hyperpage{20}
+    \subitem {encerrar}, \hyperpage{20}
+    \subitem {imprime}, \hyperpage{20}
+    \subitem {jogada}, \hyperpage{20}
+    \subitem {Jogo}, \hyperpage{19}
+    \subitem {processa\_jogada}, \hyperpage{20}
+    \subitem {processa\_terminal}, \hyperpage{21}
+  \item {jogo\_valido}
+    \subitem {Pgn}, \hyperpage{35}
+
+  \indexspace
+
+  \item {LeitorDePgn}, \hyperpage{21}
+    \subitem {$\sim$LeitorDePgn}, \hyperpage{22}
+    \subitem {abre\_arquivo}, \hyperpage{22}
+    \subitem {fecha\_arquivo}, \hyperpage{22}
+    \subitem {imprime\_comandos}, \hyperpage{22}
+    \subitem {LeitorDePgn}, \hyperpage{21}
+  \item {limpa\_casa}
+    \subitem {Tabuleiro}, \hyperpage{39}
+  \item {limpa\_tabuleiro}
+    \subitem {Tabuleiro}, \hyperpage{40}
+
+  \indexspace
+
+  \item {Movimento}, \hyperpage{23}
+    \subitem {checa\_movimento\_bispo}, \hyperpage{24}
+    \subitem {checa\_movimento\_cavalo}, \hyperpage{24}
+    \subitem {checa\_movimento\_dama}, \hyperpage{24}
+    \subitem {checa\_movimento\_peao}, \hyperpage{24}
+    \subitem {checa\_movimento\_peca}, \hyperpage{24}
+    \subitem {checa\_movimento\_rei}, \hyperpage{24}
+    \subitem {checa\_movimento\_torre}, \hyperpage{25}
+    \subitem {executar\_movimento}, \hyperpage{25}
+    \subitem {Movimento}, \hyperpage{23}
+    \subitem {promove\_peao}, \hyperpage{25}
+    \subitem {roque}, \hyperpage{25}
+    \subitem {validar\_movimento}, \hyperpage{25}
+  \item {MovimentoInvalidoException}, \hyperpage{26}
+    \subitem {what}, \hyperpage{26}
+
+  \indexspace
+
+  \item {NaoESuaVezException}, \hyperpage{26}
+    \subitem {what}, \hyperpage{27}
+  \item {nome\_do\_arquivo}
+    \subitem {Pgn}, \hyperpage{35}
+
+  \indexspace
+
+  \item {Peao}, \hyperpage{27}
+    \subitem {$\sim$Peao}, \hyperpage{28}
+    \subitem {en\_passant}, \hyperpage{28}
+    \subitem {get\_representacao}, \hyperpage{28}
+    \subitem {Peao}, \hyperpage{27}
+    \subitem {primeiro\_movimento}, \hyperpage{28}
+  \item {Peca}, \hyperpage{29}
+    \subitem {$\sim$Peca}, \hyperpage{30}
+    \subitem {get\_casas}, \hyperpage{30}
+    \subitem {get\_cor}, \hyperpage{30}
+    \subitem {get\_en\_passant}, \hyperpage{30}
+    \subitem {get\_primeiro\_movimento}, \hyperpage{30}
+    \subitem {get\_representacao}, \hyperpage{31}
+    \subitem {Peca}, \hyperpage{29}
+    \subitem {set\_casas}, \hyperpage{31}
+    \subitem {set\_en\_passant}, \hyperpage{31}
+    \subitem {set\_primeiro\_movimento}, \hyperpage{31}
+  \item {peca.hpp}
+    \subitem {BRANCAS}, \hyperpage{50}
+    \subitem {Cor}, \hyperpage{50}
+    \subitem {PRETAS}, \hyperpage{50}
+  \item {PecaAliadaException}, \hyperpage{32}
+    \subitem {what}, \hyperpage{32}
+  \item {PecaNaFrenteException}, \hyperpage{32}
+    \subitem {what}, \hyperpage{33}
+  \item {Pgn}, \hyperpage{33}
+    \subitem {$\sim$Pgn}, \hyperpage{34}
+    \subitem {abre\_arquivo}, \hyperpage{34}
+    \subitem {casa\_final}, \hyperpage{34}
+    \subitem {comandos\_da\_rodada}, \hyperpage{34}
+    \subitem {conteudo}, \hyperpage{35}
+    \subitem {fecha\_arquivo}, \hyperpage{34}
+    \subitem {jogo\_valido}, \hyperpage{35}
+    \subitem {nome\_do\_arquivo}, \hyperpage{35}
+    \subitem {Pgn}, \hyperpage{33}
+    \subitem {rodada}, \hyperpage{35}
+  \item {PRETAS}
+    \subitem {peca.hpp}, \hyperpage{50}
+  \item {primeiro\_movimento}
+    \subitem {Peao}, \hyperpage{28}
+  \item {processa\_jogada}
+    \subitem {Jogo}, \hyperpage{20}
+  \item {processa\_terminal}
+    \subitem {Jogo}, \hyperpage{21}
+  \item {promove\_peao}
+    \subitem {Movimento}, \hyperpage{25}
+
+  \indexspace
+
+  \item {Rei}, \hyperpage{35}
+    \subitem {$\sim$Rei}, \hyperpage{36}
+    \subitem {get\_representacao}, \hyperpage{36}
+    \subitem {Rei}, \hyperpage{36}
+  \item {rodada}
+    \subitem {Pgn}, \hyperpage{35}
+  \item {roque}
+    \subitem {Movimento}, \hyperpage{25}
+
+  \indexspace
+
+  \item {SemPecaParaMovimentarException}, \hyperpage{37}
+    \subitem {what}, \hyperpage{37}
+  \item {set\_casas}
+    \subitem {Peca}, \hyperpage{31}
+  \item {set\_en\_passant}
+    \subitem {Peca}, \hyperpage{31}
+  \item {set\_primeiro\_movimento}
+    \subitem {Peca}, \hyperpage{31}
+
+  \indexspace
+
+  \item {Tabuleiro}, \hyperpage{37}
+    \subitem {$\sim$Tabuleiro}, \hyperpage{38}
+    \subitem {adiciona\_peca}, \hyperpage{38}
+    \subitem {adiciona\_peca\_existente}, \hyperpage{38}
+    \subitem {constroi\_tabuleiro}, \hyperpage{39}
+    \subitem {get\_casa}, \hyperpage{39}
+    \subitem {get\_tamanho}, \hyperpage{39}
+    \subitem {imprime}, \hyperpage{39}
+    \subitem {limpa\_casa}, \hyperpage{39}
+    \subitem {limpa\_tabuleiro}, \hyperpage{40}
+    \subitem {Tabuleiro}, \hyperpage{38}
+  \item {tabuleiro.hpp}
+    \subitem {TAMANHO\_DO\_TABULEIRO}, \hyperpage{53}
+  \item {TAMANHO\_DO\_TABULEIRO}
+    \subitem {tabuleiro.hpp}, \hyperpage{53}
+  \item {Torre}, \hyperpage{40}
+    \subitem {$\sim$Torre}, \hyperpage{41}
+    \subitem {get\_representacao}, \hyperpage{41}
+    \subitem {Torre}, \hyperpage{40}
+
+  \indexspace
+
+  \item {validar\_movimento}
+    \subitem {Movimento}, \hyperpage{25}
+
+  \indexspace
+
+  \item {what}
+    \subitem {ErroAoAbrirException}, \hyperpage{11}
+    \subitem {ErroAoFecharException}, \hyperpage{12}
+    \subitem {ErroDeJogoException}, \hyperpage{12}
+    \subitem {ErroDeLogicaException}, \hyperpage{13}
+    \subitem {ErroDeRoqueException}, \hyperpage{14}
+    \subitem {ErroPgnException}, \hyperpage{14}
+    \subitem {ForaDoMapaException}, \hyperpage{16}
+    \subitem {MovimentoInvalidoException}, \hyperpage{26}
+    \subitem {NaoESuaVezException}, \hyperpage{27}
+    \subitem {PecaAliadaException}, \hyperpage{32}
+    \subitem {PecaNaFrenteException}, \hyperpage{33}
+    \subitem {SemPecaParaMovimentarException}, \hyperpage{37}
+
+  \indexspace
+
+  \item {zera\_pecas}
+    \subitem {Jogador}, \hyperpage{18}
+
+\end{theindex}

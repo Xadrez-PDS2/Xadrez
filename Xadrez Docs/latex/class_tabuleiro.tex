@@ -1,0 +1,172 @@
+\hypertarget{class_tabuleiro}{}\doxysection{Referência da Classe Tabuleiro}
+\label{class_tabuleiro}\index{Tabuleiro@{Tabuleiro}}
+
+
+{\ttfamily \#include $<$tabuleiro.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tabuleiro_a941163d527490fa1811dae7563c9ddff}{Tabuleiro}} (int tamanho)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto tabuleiro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{$\sim$\+Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor de um objeto tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a124dfa883d82d3562550dea6d173ad81}{imprime}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o estado atual do tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a282656758ebfba140d525010a2782cf7}{adiciona\+\_\+peca}} (const std\+::string \&peca, int linha, int coluna, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor)
+\begin{DoxyCompactList}\small\item\em Adiciona a peca naquela posicao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a4e0fd7fc1d042abee45a0b60b602aabd}{adiciona\+\_\+peca\+\_\+existente}} (\mbox{\hyperlink{class_peca}{Peca}} $\ast$peca, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Adiciona uma peça existente ao tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a46b7fd4a6fc3b25e4e3a288f65dacc2f}{limpa\+\_\+casa}} (int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Deleta a peça se houver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_peca}{Peca}} $\ast$ \mbox{\hyperlink{class_tabuleiro_a82aec4d5a9bdafec4f671c87462fb1f7}{get\+\_\+casa}} (int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Retorna o ponteiro da casa do tabuleiro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tabuleiro_a675f838786512235478c750355bdb971}{get\+\_\+tamanho}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o tamanho do tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a64498f11e77cd67d9d006a7679efa25f}{constroi\+\_\+tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Constroi cada casa do tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a2ce68bef8efcd3014415c15300697956}{limpa\+\_\+tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Limpa o tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_tabuleiro_a941163d527490fa1811dae7563c9ddff}\label{class_tabuleiro_a941163d527490fa1811dae7563c9ddff}} 
+\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{Tabuleiro()}{Tabuleiro()}}
+{\footnotesize\ttfamily Tabuleiro\+::\+Tabuleiro (\begin{DoxyParamCaption}\item[{int}]{tamanho }\end{DoxyParamCaption})}
+
+
+
+Construtor de um objeto tabuleiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tamanho} & define o tamanho para as n colunas e n linhas do tabuleiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}\label{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}} 
+\index{Tabuleiro@{Tabuleiro}!````~Tabuleiro@{$\sim$Tabuleiro}}
+\index{````~Tabuleiro@{$\sim$Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tabuleiro()}{~Tabuleiro()}}
+{\footnotesize\ttfamily Tabuleiro\+::$\sim$\+Tabuleiro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor de um objeto tabuleiro. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_tabuleiro_a282656758ebfba140d525010a2782cf7}\label{class_tabuleiro_a282656758ebfba140d525010a2782cf7}} 
+\index{Tabuleiro@{Tabuleiro}!adiciona\_peca@{adiciona\_peca}}
+\index{adiciona\_peca@{adiciona\_peca}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{adiciona\_peca()}{adiciona\_peca()}}
+{\footnotesize\ttfamily void Tabuleiro\+::adiciona\+\_\+peca (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{peca,  }\item[{int}]{linha,  }\item[{int}]{coluna,  }\item[{\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}}]{cor }\end{DoxyParamCaption})}
+
+
+
+Adiciona a peca naquela posicao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em peca} & string do nome da peca \\
+\hline
+{\em linha} & posição na linha \\
+\hline
+{\em coluna} & posição na coluna \\
+\hline
+{\em cor} & cor da peca \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tabuleiro_a4e0fd7fc1d042abee45a0b60b602aabd}\label{class_tabuleiro_a4e0fd7fc1d042abee45a0b60b602aabd}} 
+\index{Tabuleiro@{Tabuleiro}!adiciona\_peca\_existente@{adiciona\_peca\_existente}}
+\index{adiciona\_peca\_existente@{adiciona\_peca\_existente}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{adiciona\_peca\_existente()}{adiciona\_peca\_existente()}}
+{\footnotesize\ttfamily void Tabuleiro\+::adiciona\+\_\+peca\+\_\+existente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_peca}{Peca}} $\ast$}]{peca,  }\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma peça existente ao tabuleiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em peca} & o endereço da peça que vai ser adicionada \\
+\hline
+{\em linha} & posição na linha \\
+\hline
+{\em coluna} & posição na coluna \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tabuleiro_a64498f11e77cd67d9d006a7679efa25f}\label{class_tabuleiro_a64498f11e77cd67d9d006a7679efa25f}} 
+\index{Tabuleiro@{Tabuleiro}!constroi\_tabuleiro@{constroi\_tabuleiro}}
+\index{constroi\_tabuleiro@{constroi\_tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{constroi\_tabuleiro()}{constroi\_tabuleiro()}}
+{\footnotesize\ttfamily void Tabuleiro\+::constroi\+\_\+tabuleiro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constroi cada casa do tabuleiro. 
+
+\mbox{\Hypertarget{class_tabuleiro_a82aec4d5a9bdafec4f671c87462fb1f7}\label{class_tabuleiro_a82aec4d5a9bdafec4f671c87462fb1f7}} 
+\index{Tabuleiro@{Tabuleiro}!get\_casa@{get\_casa}}
+\index{get\_casa@{get\_casa}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{get\_casa()}{get\_casa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_peca}{Peca}} $\ast$ Tabuleiro\+::get\+\_\+casa (\begin{DoxyParamCaption}\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Retorna o ponteiro da casa do tabuleiro. 
+
+\mbox{\Hypertarget{class_tabuleiro_a675f838786512235478c750355bdb971}\label{class_tabuleiro_a675f838786512235478c750355bdb971}} 
+\index{Tabuleiro@{Tabuleiro}!get\_tamanho@{get\_tamanho}}
+\index{get\_tamanho@{get\_tamanho}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{get\_tamanho()}{get\_tamanho()}}
+{\footnotesize\ttfamily int Tabuleiro\+::get\+\_\+tamanho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o tamanho do tabuleiro. 
+
+\mbox{\Hypertarget{class_tabuleiro_a124dfa883d82d3562550dea6d173ad81}\label{class_tabuleiro_a124dfa883d82d3562550dea6d173ad81}} 
+\index{Tabuleiro@{Tabuleiro}!imprime@{imprime}}
+\index{imprime@{imprime}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{imprime()}{imprime()}}
+{\footnotesize\ttfamily void Tabuleiro\+::imprime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o estado atual do tabuleiro. 
+
+\mbox{\Hypertarget{class_tabuleiro_a46b7fd4a6fc3b25e4e3a288f65dacc2f}\label{class_tabuleiro_a46b7fd4a6fc3b25e4e3a288f65dacc2f}} 
+\index{Tabuleiro@{Tabuleiro}!limpa\_casa@{limpa\_casa}}
+\index{limpa\_casa@{limpa\_casa}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{limpa\_casa()}{limpa\_casa()}}
+{\footnotesize\ttfamily void Tabuleiro\+::limpa\+\_\+casa (\begin{DoxyParamCaption}\item[{int}]{linha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Deleta a peça se houver. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & posição na linha \\
+\hline
+{\em coluna} & posição na coluna \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tabuleiro_a2ce68bef8efcd3014415c15300697956}\label{class_tabuleiro_a2ce68bef8efcd3014415c15300697956}} 
+\index{Tabuleiro@{Tabuleiro}!limpa\_tabuleiro@{limpa\_tabuleiro}}
+\index{limpa\_tabuleiro@{limpa\_tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{limpa\_tabuleiro()}{limpa\_tabuleiro()}}
+{\footnotesize\ttfamily void Tabuleiro\+::limpa\+\_\+tabuleiro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa o tabuleiro. 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.\+hpp}}\end{DoxyCompactItemize}
