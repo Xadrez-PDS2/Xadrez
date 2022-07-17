@@ -29,7 +29,8 @@ Movimento::Movimento(
         this->coluna_inicial = coluna_inicial;
         this->coluna_final = coluna_final;
         this->peca = (tabuleiro->get_casa(linha_inicial, coluna_inicial));
-        this->jogador = jogador;   
+        this->jogador = jogador;  
+         
 }
 
 void Movimento::executar_movimento()
@@ -44,7 +45,6 @@ void Movimento::executar_movimento()
         else
             tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final);   
     }
-    
     else
     {
         tabuleiro->limpa_casa(linha_final, coluna_final);
@@ -64,14 +64,12 @@ void Movimento::executar_movimento()
                     break;
             }
         }
-
         if (peca->get_representacao() == " REI " && (((coluna_final - coluna_inicial) == 2) || (coluna_inicial - coluna_final == 2)))
             this->roque();
         else
             tabuleiro->adiciona_peca_existente(peca, linha_final, coluna_final); 
     
     }
-
     Peca* pecaAnalise;
     for(int i=0;i<TAMANHO_MAPA;i++)
     {
@@ -140,7 +138,6 @@ void Movimento::validar_movimento()
     //Confere se a peca a ser tomada é da mesma cor que o jogador atual
     if((tabuleiro->get_casa(linha_final, coluna_final) != nullptr) && (jogador->get_cor() == tabuleiro->get_casa(linha_final, coluna_final)->get_cor()))
         throw PecaAliadaException();
-    
     //Confere se movimentação desejada é passível de ser realizada pela peça
     checa_movimento_peca();
 }
@@ -400,6 +397,8 @@ void Movimento::checa_movimento_torre()
             }
         }
     }
+    else if ((linha_final != linha_inicial) && (coluna_inicial != coluna_final))
+        throw MovimentoInvalidoException();
 }
 
 void Movimento::checa_movimento_bispo()
@@ -464,6 +463,8 @@ void Movimento::checa_movimento_bispo()
                 throw MovimentoInvalidoException();
         }
     }
+    else if ((linha_inicial == linha_final) || (coluna_inicial == coluna_final))
+        throw MovimentoInvalidoException();
 }
 
 void Movimento::checa_movimento_dama()

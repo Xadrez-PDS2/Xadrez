@@ -1,17 +1,18 @@
 #include "jogo.hpp"
-#include "peca.hpp"
-#include "excecoes.hpp"
+
+
 
 Jogo::Jogo()
 {
-    
     Tabuleiro* tabuleiro = new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    Finalizacao* finalizacao = new Finalizacao(tabuleiro);
     Jogador* p1 = new Jogador(tabuleiro, Cor::BRANCAS);
     Jogador* p2 = new Jogador(tabuleiro, Cor::PRETAS);
     this->comando_valido = ("[aA-hH]\\s*[1-8]\\s*[aA-hH]\\s*[1-8]");
     this->da_vez = p1;
     this->p1 = p1;
     this->p2 = p2;
+    this->finalizacao = finalizacao;
     this->tabuleiro = tabuleiro;
     this->jogo_ativo = true;
 }
@@ -21,7 +22,7 @@ Jogo::~Jogo()
     delete tabuleiro;
     delete p1;
     delete p2;
-    delete da_vez;
+    delete finalizacao;
 }
 
 void Jogo::imprime()
@@ -38,7 +39,10 @@ bool Jogo::ativo()
 {
     return jogo_ativo;
 }
-
+void Jogo::set_ativo(bool ativo)
+{
+    this->jogo_ativo = ativo;
+}
 const std::string Jogo::processa_jogada(const std::string entrada)
 {
     std::string aux, entrada2;
@@ -96,16 +100,18 @@ void Jogo::jogada(std::string entrada)
             linha_inicial -= 1;
             linha_final -= 1;
             
-            Movimento movimento = Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
-
-            movimento.validar_movimento();
-            movimento.executar_movimento();
+            Movimento* movimento = new Movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
+            movimento->validar_movimento();
+            finalizacao->monitora_movimento(tabuleiro, da_vez, linha_inicial, coluna_inicial, linha_final, coluna_final);
+            movimento->executar_movimento();
 
             if(da_vez == p1) 
                 da_vez = p2;
             
             else
                 da_vez = p1;
+            delete movimento;
+            finalizacao->jogo_finalizado();
         }
         
         else
@@ -142,6 +148,10 @@ void Jogo::jogada(std::string entrada)
         std::cout << e.what() << std::endl;
     }
     catch(ErroDeRoqueException &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    catch(ErroDeXequeException &e)
     {
         std::cout << e.what() << std::endl;
     }

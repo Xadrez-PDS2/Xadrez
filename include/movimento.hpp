@@ -72,8 +72,9 @@ class Movimento
          * @brief Realiza o roque
          */
         void roque();
+        
 
-    private:
+    protected:
         Tabuleiro *tabuleiro;
         Jogador *jogador;
         Peca *peca;
@@ -81,6 +82,7 @@ class Movimento
         int coluna_inicial;
         int linha_final;
         int coluna_final;
+
 };
 
 #endif

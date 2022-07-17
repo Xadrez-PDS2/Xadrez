@@ -15,8 +15,9 @@ class Jogador
         * @brief Construtor de um objeto jogador
         * @param tabuleiro Endereço do tabuleiro em que serão colocadas as pecas do jogador
         * @param cor Define se o jogador jogará com as brancas ou com as pecas pretas
+        * @param ad_pecas Se true adciona as pecas do jogador ao tabuleiro
         */
-        Jogador(Tabuleiro* tabuleiro, Cor cor);
+        Jogador(Tabuleiro* tabuleiro, Cor cor, bool ad_pecas=true);
         
         /**
         * @brief Destrutor de um objeto jogador
@@ -53,7 +54,7 @@ class Jogador
         /**
          * @brief Retorna um mapa com as peças do jogador
          */
-        map<string, int> get_pecas();
+        std::map<std::string, int> get_pecas();
 
     private:
         /**

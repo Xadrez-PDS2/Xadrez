@@ -84,6 +84,51 @@ class ErroDeRoqueException : public std::exception
             return "Não é possivel realizar o roque nesta situação";
         }
 };
+class ErroDeXequeException : public ErroDeJogoException
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Não é possivel realizar o movimento, pois colocaria seu rei em xeque";
+        }
+};
+
+
+class FimDeJogo : public std::exception
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "Encerramento do jogo.";
+        }
+};
+
+class VitoriaBrancas : public FimDeJogo
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "1 - 0 \nVitoria das Brancas!";
+        }
+};
+class VitoriaPretas : public FimDeJogo
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "0 - 1 \nVitoria das Pretas!";
+        }
+};
+class Empate : public FimDeJogo
+{
+    public:
+        virtual const char* what() const noexcept
+        {
+            return "1/2 - 1/2 \nEmpate";
+        }
+};
+
+
 
 
 

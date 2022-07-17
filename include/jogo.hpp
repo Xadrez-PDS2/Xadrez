@@ -4,6 +4,8 @@
 #include "jogador.hpp"
 #include "movimento.hpp"
 #include "tabuleiro.hpp"
+#include "excecoes.hpp"
+#include "finalizacao.hpp"
 
 #include <iostream>
 #include <regex>
@@ -59,6 +61,7 @@ class Jogo
          * @return const std::string o comando valido
          */
         const std::string processa_jogada(const std::string entrada);
+        void set_ativo(bool ativo);
 
     private:
         /**
@@ -76,6 +79,11 @@ class Jogo
         * @brief O tabuleiro
         */
         Tabuleiro* tabuleiro = nullptr;
+        /**
+         * @brief Monitora a finalização do jogo
+         * 
+         */
+        Finalizacao* finalizacao = nullptr;
         
         bool jogo_ativo;
         

@@ -2,10 +2,11 @@
 #include "peca.hpp"
 
 
-Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor)
+Jogador::Jogador(Tabuleiro* tabuleiro, Cor cor, bool ad_pecas)
 {   
     this->cor = cor;
-    this->constroi_pecas(tabuleiro);
+    if (ad_pecas)
+        this->constroi_pecas(tabuleiro);
 }
 
 Jogador::~Jogador(){}
