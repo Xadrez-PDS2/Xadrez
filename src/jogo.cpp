@@ -75,7 +75,9 @@ const std::string Jogo::processa_terminal()
     
     return aux;
 }
-
+void Jogo::encerrar(){
+    jogo_ativo=false;
+}
 void Jogo::jogada(std::string entrada)
 {
     try

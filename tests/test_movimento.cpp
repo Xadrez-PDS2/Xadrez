@@ -9,6 +9,7 @@
 #include "torre.hpp"
 #include "dama.hpp"
 #include "rei.hpp"
+#include <exception>
 
 TEST_CASE("testa checagem do movimento peao casos negativos"){
     Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
@@ -62,7 +63,7 @@ TEST_CASE("testa checagem do movimento peao casos positivos"){
     Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
     Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
     tabuleiro->limpa_tabuleiro();
-    tabuleiro->imprime();
+    
 
     tabuleiro->adiciona_peca(" PEA ", 5, 5, BRANCAS);
     tabuleiro->adiciona_peca(" PEA ", 5,6, PRETAS);
@@ -83,5 +84,258 @@ TEST_CASE("testa checagem do movimento peao casos positivos"){
     CHECK_NOTHROW(movimento3.validar_movimento());
     CHECK_NOTHROW(movimento5.validar_movimento());
     
+    delete tabuleiro;
+    delete jogador1;
+    delete jogador2;
+}
+TEST_CASE("testa checagem do movimento torre casos negativos"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+
+    tabuleiro->adiciona_peca(" TOR ", 1, 1, BRANCAS);
+    tabuleiro->adiciona_peca(" TOR ", 5, 1, PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,1,1,6,1);
+    Movimento mov2(tabuleiro,jogador2,5,1,0,1);
+    Movimento mov3(tabuleiro,jogador1,1,1,2,2);
+    Movimento mov4(tabuleiro,jogador2,5,1,6,6);
+    CHECK_THROWS_AS(mov1.validar_movimento(), std::exception);
+    CHECK_THROWS_AS(mov2.validar_movimento(), std::exception);
+    CHECK_THROWS_AS(mov3.validar_movimento(), std::exception);
+    CHECK_THROWS_AS(mov4.validar_movimento(), std::exception);
+    delete tabuleiro;
+    delete jogador1;
+    delete jogador2;
+}
+TEST_CASE("testa checagem do movimento torre casos positivos"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+
+    tabuleiro->adiciona_peca(" TOR ", 1, 1, BRANCAS);
+    tabuleiro->adiciona_peca(" TOR ", 5,1, PRETAS);
+    //ataque
     
+    Movimento mov1(tabuleiro,jogador1, 1,1,5 ,1);
+    Movimento mov2(tabuleiro,jogador2, 5,1,1,1);
+    //movimenta longe
+    Movimento mov3(tabuleiro, jogador1, 1,1,1,6);
+    Movimento mov4(tabuleiro, jogador2, 5,1,5,6);
+    Movimento mov5(tabuleiro, jogador2, 5,1,2,1);
+    Movimento mov6(tabuleiro, jogador1, 1,1,4,1);
+    Movimento mov7(tabuleiro, jogador2, 5,1,7,1);
+    Movimento mov8(tabuleiro, jogador1, 1,1,0,1);
+    Movimento mov9(tabuleiro, jogador2, 5,1,5,0);
+    Movimento mov10(tabuleiro, jogador1, 1,1,1,0);
+    CHECK_NOTHROW(mov1.validar_movimento());
+    CHECK_NOTHROW(mov2.validar_movimento());
+    CHECK_NOTHROW(mov3.validar_movimento());
+    CHECK_NOTHROW(mov4.validar_movimento());
+    CHECK_NOTHROW(mov5.validar_movimento());
+    CHECK_NOTHROW(mov6.validar_movimento());
+    CHECK_NOTHROW(mov7.validar_movimento());
+    CHECK_NOTHROW(mov8.validar_movimento());
+    CHECK_NOTHROW(mov9.validar_movimento());
+    CHECK_NOTHROW(mov10.validar_movimento());
+
+    delete tabuleiro;
+    delete jogador1;
+    delete jogador2;
+}
+
+TEST_CASE("testa checagem do movimento dama casos negativos"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" DAM ", 1, 1, BRANCAS);
+    tabuleiro->adiciona_peca(" DAM ", 5, 5, PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,1,1,3,2);
+    Movimento mov2(tabuleiro,jogador1,1,1,5,4);
+    Movimento mov3(tabuleiro,jogador2,5,5,3,4);
+    Movimento mov4(tabuleiro,jogador2,5,5,6,7);
+
+    CHECK_THROWS_AS(mov1.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov2.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov3.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov4.validar_movimento(),std::exception);
+
+}
+
+TEST_CASE("testa checagem do movimento dama casos negativos"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" DAM ", 1, 1, BRANCAS);
+    tabuleiro->adiciona_peca(" DAM ", 5, 5, PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,1,1,3,3);
+    Movimento mov2(tabuleiro,jogador1,1,1,1,5);
+    Movimento mov3(tabuleiro,jogador2,5,5,3,3);
+    Movimento mov4(tabuleiro,jogador2,5,5,5,1); 
+    CHECK_NOTHROW(mov1.validar_movimento());
+    CHECK_NOTHROW(mov2.validar_movimento());
+    CHECK_NOTHROW(mov3.validar_movimento());
+    CHECK_NOTHROW(mov4.validar_movimento());
+}
+
+TEST_CASE("testa checagem do movimento cavalo casos negativos"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    
+    tabuleiro->adiciona_peca(" CAV ", 1, 1, BRANCAS);
+    tabuleiro->adiciona_peca(" CAV ", 5, 5, PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1, 1,1,2,2 );
+    Movimento mov2(tabuleiro,jogador2,5,5,6,6);
+
+    CHECK_THROWS_AS(mov1.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov2.validar_movimento(),std::exception);
+}
+
+TEST_CASE("testa checagem do movimento cavalo casos positivo"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    
+    tabuleiro->adiciona_peca(" CAV ", 1, 1, BRANCAS);
+    tabuleiro->adiciona_peca(" CAV ", 5, 5, PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,1,1,3,2);
+    Movimento mov2(tabuleiro,jogador1, 1,1,3,0);
+    Movimento mov3(tabuleiro,jogador2,5,5,7,4);
+    Movimento mov4(tabuleiro,jogador2,5,5,3,4);
+
+    CHECK_NOTHROW(mov1.validar_movimento());
+    CHECK_NOTHROW(mov2.validar_movimento());
+    CHECK_NOTHROW(mov3.validar_movimento());
+    CHECK_NOTHROW(mov4.validar_movimento());
+}
+TEST_CASE("testa checagem do movimento bispo casos negativos"){
+
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" BIS ", 3, 3, BRANCAS);
+    tabuleiro->adiciona_peca(" BIS ", 5, 5,  PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,3,3,3,5);
+    Movimento mov2(tabuleiro,jogador2,5,5,5,0);
+    Movimento mov3(tabuleiro,jogador1, 3,3,0,3);
+    Movimento mov4(tabuleiro,jogador2,5,5,0,5);
+    Movimento mov5(tabuleiro,jogador2,5,5,2,2);
+
+    CHECK_THROWS_AS(mov1.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov2.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov3.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov4.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov5.validar_movimento(),std::exception);
+}
+TEST_CASE("testa checagem do movimento bispo casos positivos"){
+    
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" BIS ", 3, 3, BRANCAS);
+    tabuleiro->adiciona_peca(" BIS ", 5, 5,  PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,3,3,5,5);
+    Movimento mov2(tabuleiro,jogador1,3,3,0,6);
+    Movimento mov3(tabuleiro,jogador2,5,5,7,3);
+    Movimento mov4(tabuleiro,jogador2,5,5,3,7);
+
+    CHECK_NOTHROW(mov1.validar_movimento());
+    CHECK_NOTHROW(mov2.validar_movimento());
+    CHECK_NOTHROW(mov3.validar_movimento());
+    CHECK_NOTHROW(mov4.validar_movimento());
+
+}
+
+TEST_CASE("testa checagem do movimento rei casos negativos"){
+
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" REI ", 4, 4, BRANCAS);
+    tabuleiro->adiciona_peca(" REI ", 5, 5,  PRETAS);
+
+    Movimento mov1(tabuleiro,jogador1,4,4,4,0);
+    Movimento mov2(tabuleiro,jogador1,4,4,6,6);
+    Movimento mov3(tabuleiro,jogador2,5,5,7,7);
+    Movimento mov4(tabuleiro,jogador2,5,5,4,7);
+    
+    CHECK_THROWS_AS(mov1.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov2.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov3.validar_movimento(),std::exception);
+    CHECK_THROWS_AS(mov4.validar_movimento(),std::exception);
+
+}
+TEST_CASE("testa checagem do movimento rei casos positivos"){
+
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+    Jogador *jogador2=new Jogador(tabuleiro,PRETAS);
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" REI ", 4, 4, BRANCAS);
+    tabuleiro->adiciona_peca(" REI ", 5, 5,  PRETAS);
+
+    Movimento mov1(tabuleiro, jogador1, 4,4,5,5);
+    Movimento mov2(tabuleiro, jogador1, 4,4,3,5);
+    Movimento mov3(tabuleiro, jogador1, 4,4,3,3);
+    Movimento mov4(tabuleiro, jogador2, 5,5,6,6);
+    Movimento mov5(tabuleiro, jogador2, 5,5,4,4);
+    Movimento mov6(tabuleiro, jogador2, 5,5,4,6);
+    
+    CHECK_NOTHROW(mov1.validar_movimento());
+    CHECK_NOTHROW(mov2.validar_movimento());
+    CHECK_NOTHROW(mov3.validar_movimento());
+    CHECK_NOTHROW(mov4.validar_movimento());
+    CHECK_NOTHROW(mov5.validar_movimento());
+    CHECK_NOTHROW(mov6.validar_movimento());
+}
+
+TEST_CASE("testa executar movimento"){
+    Tabuleiro *tabuleiro= new Tabuleiro(TAMANHO_DO_TABULEIRO);
+    tabuleiro->constroi_tabuleiro();
+
+    Jogador *jogador1=new Jogador(tabuleiro,BRANCAS);
+   
+    tabuleiro->limpa_tabuleiro();
+    tabuleiro->adiciona_peca(" REI ", 4, 4, BRANCAS);
+
+    Movimento mov1(tabuleiro,jogador1,4,4,5,5);
+    mov1.executar_movimento();
+    CHECK(tabuleiro->get_casa(4, 4)==nullptr);
+    CHECK(tabuleiro->get_casa(5, 5)!=nullptr);
 }
