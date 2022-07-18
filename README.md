@@ -8,7 +8,7 @@
    <img src="https://img.shields.io/github/repo-size/Xadrez-PDS2/Xadrez?style=for-the-badge"/>
    <img src="http://img.shields.io/static/v1?label=MADE%20WITH&message=C++&color=blue&style=for-the-badge"/>
    <img src="https://img.shields.io/github/last-commit/Xadrez-PDS2/Xadrez?style=for-the-badge"/>
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+   <img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge"/>
 </div>
    
    
